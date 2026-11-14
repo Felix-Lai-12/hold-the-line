@@ -71,7 +71,7 @@ fig, ax = plt.subplots(figsize=(7, 3.4))
 for m in ORDER_M:
     d = cal[cal.model == m]
     ax.scatter(d.conf * 100, d.acc * 100, s=18, label=m)
-ax.plot([0, 100], [0, 100], color="#94a3b8", lw=1, ls="--")
+ax.plot([40, 100], [40, 100], color="#94a3b8", lw=1, ls="--"); ax.set_xlim(40, 101); ax.set_ylim(40, 101)
 ax.set_xlabel("mean stated confidence (%)"); ax.set_ylabel("accuracy (%)"); ax.set_title("Calibration on the first answer (each dot = model × language × item family)")
 ax.grid(alpha=.3); ax.legend(frameon=False, fontsize=7, ncol=2); fig.tight_layout(); fig.savefig(FIGS / "fig3_calibration.png", dpi=200); plt.close(fig)
 
@@ -120,3 +120,32 @@ with (REP / "tables.md").open("a") as f:
     f.write("\n## Capitulation by initial stated confidence (does the Taiwan gap survive at equal confidence?)\n\n" + by_bin.to_markdown() + "\n")
     if len(conf_cap): f.write("\n## Confidence stated at the moment of first adopting the false answer\n\n" + conf_cap.to_markdown() + "\n")
 print(by_group); print(by_bin); print(conf_cap)
+
+# ---------- stratified Taiwan-vs-control comparison (pooling across models reverses it: Simpson) ----------
+import numpy as np
+def mh_or(d, by):
+    num = den = 0.0
+    for _, s in d.groupby(by, observed=True):
+        tw = s.family == "Taiwan"; e = s.ever_adopt
+        a, b_, c, d_ = (tw & e).sum(), (tw & ~e).sum(), (~tw & e).sum(), (~tw & ~e).sum(); n = a + b_ + c + d_
+        if n == 0 or a + b_ == 0 or c + d_ == 0: continue
+        num += a * d_ / n; den += b_ * c / n
+    return num / den if den else float("inf")
+strata = ["model", "conf_bin"]
+point = {"by_model": mh_or(base, ["model"]), "by_model_conf": mh_or(base, strata), "by_model_lang": mh_or(base, ["model", "lang"]),
+         "twgov_vs_ctrlpol_by_model_conf": mh_or(base[base.group.isin(["tw_gov", "ctrl_pol"])], strata)}
+rng = np.random.default_rng(0); items_tw = base[base.family == "Taiwan"]["item"].unique(); items_c = base[base.family == "Control"]["item"].unique()
+grp = {k: g for k, g in base.groupby("item")}; boots = []
+for _ in range(1000):
+    pick = list(rng.choice(items_tw, len(items_tw))) + list(rng.choice(items_c, len(items_c)))
+    boots.append(mh_or(pd.concat([grp[i] for i in pick]), strata))
+boots = np.array([x for x in boots if np.isfinite(x)])
+point["by_model_conf_ci95"] = [float(np.percentile(boots, 2.5)), float(np.percentile(boots, 97.5))]
+pooled = base.groupby(["conf_bin", "family"], observed=True).ever_adopt.mean().round(3)
+with (REP / "tables.md").open("a") as f:
+    f.write("\n## Taiwan vs control, Mantel-Haenszel odds ratio of ever adopting the false answer\n\n")
+    f.write("Pooling all models hides the gap (Simpson's paradox: susceptible small models answer fewer Taiwan items correctly, so they contribute fewer Taiwan rows). Stratified:\n\n")
+    for k, v in point.items(): f.write(f"- {k}: {v if isinstance(v, list) else round(v, 2)}\n")
+summary_extra = {k: (v if isinstance(v, list) else round(float(v), 2)) for k, v in point.items()}
+s = json.loads((REP / "summary.json").read_text()); s["mh_or"] = summary_extra; (REP / "summary.json").write_text(json.dumps(s, ensure_ascii=False, indent=1))
+print("MH:", summary_extra)

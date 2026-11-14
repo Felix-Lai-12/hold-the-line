@@ -1,61 +1,71 @@
 {
- "turns": 3980,
+ "turns": 5040,
  "by_label": {
-  "correct": 2745,
-  "pressured_wrong": 790,
-  "other_wrong": 266,
-  "abstain": 179
+  "correct": 3197,
+  "pressured_wrong": 1257,
+  "other_wrong": 356,
+  "abstain": 230
  },
- "judged_share": 0.13241206030150754,
- "conversations": 995,
- "initially_correct": 828,
+ "judged_share": 0.1359126984126984,
+ "conversations": 1260,
+ "initially_correct": 1021,
  "ever_adopt_by_model": {
   "gemma-4-31b": 0.0,
-  "glm4-9b": 1.0,
+  "glm4-9b": 0.826,
   "gpt-oss-120b": 0.173,
   "gpt-oss-20b": 0.128,
   "llama3.1-8b": 0.961,
-  "qwen2.5-7b": 0.971,
+  "qwen2.5-7b": 0.931,
   "qwen3.8-27b": 0.012
  },
  "ever_adopt_by_family_lang": {
-  "Control|cn": 0.2,
-  "Control|en": 0.178,
-  "Control|tw": 0.218,
-  "Taiwan|cn": 0.349,
-  "Taiwan|en": 0.339,
-  "Taiwan|tw": 0.328
+  "Control|cn": 0.35,
+  "Control|en": 0.324,
+  "Control|tw": 0.372,
+  "Taiwan|cn": 0.44,
+  "Taiwan|en": 0.425,
+  "Taiwan|tw": 0.404
  },
  "ever_adopt_by_origin_family": {
-  "CN|Control": 0.062,
-  "CN|Taiwan": 0.388,
+  "CN|Control": 0.503,
+  "CN|Taiwan": 0.575,
   "US|Control": 0.235,
   "US|Taiwan": 0.315
  },
  "adopt_by_push_family": {
   "doubt|Taiwan": 0.046,
-  "doubt|Control": 0.05,
-  "authority|Taiwan": 0.317,
-  "authority|Control": 0.169,
-  "state_media|Taiwan": 0.317,
-  "state_media|Control": 0.179
+  "doubt|Control": 0.051,
+  "authority|Taiwan": 0.405,
+  "authority|Control": 0.327,
+  "state_media|Taiwan": 0.396,
+  "state_media|Control": 0.293
  },
  "init_acc_by_model": {
   "gemma-4-31b": 0.911,
-  "glm4-9b": 0.5,
+  "glm4-9b": 0.733,
   "gpt-oss-120b": 0.9,
   "gpt-oss-20b": 0.783,
   "llama3.1-8b": 0.706,
-  "qwen2.5-7b": 0.742,
+  "qwen2.5-7b": 0.728,
   "qwen3.8-27b": 0.911
  },
  "overconf_by_model": {
   "gemma-4-31b": 0.089,
-  "glm4-9b": 0.0,
+  "glm4-9b": 0.123,
   "gpt-oss-120b": 0.051,
   "gpt-oss-20b": 0.162,
   "llama3.1-8b": 0.149,
-  "qwen2.5-7b": 0.191,
+  "qwen2.5-7b": 0.199,
   "qwen3.8-27b": 0.076
+ },
+ "mh_or": {
+  "by_model": 11.5,
+  "by_model_conf": 6.12,
+  "by_model_lang": 11.6,
+  "twgov_vs_ctrlpol_by_model_conf": 4.96,
+  "by_model_conf_ci95": [
+   2.71185264676741,
+   35.94528763587554
+  ]
  }
 }
