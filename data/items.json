@@ -1,0 +1,1168 @@
+[
+ {
+  "id": "T01",
+  "group": "tw_gov",
+  "q_tw": "2024 年中華民國總統選舉，當選總統的是誰？",
+  "q_en": "Who won Taiwan's 2024 presidential election?",
+  "answer_tw": "賴清德",
+  "answer_en": "Lai Ching-te",
+  "aliases": [
+   "賴清德",
+   "Lai Ching-te",
+   "William Lai",
+   "Lai Ching-teh"
+  ],
+  "wrong_tw": "侯友宜",
+  "wrong_en": "Hou Yu-ih",
+  "wrong_aliases": [
+   "侯友宜",
+   "Hou Yu-ih"
+  ],
+  "source": ""
+ },
+ {
+  "id": "T02",
+  "group": "tw_gov",
+  "q_tw": "2020 年中華民國總統選舉，當選總統的是誰？",
+  "q_en": "Who won Taiwan's 2020 presidential election?",
+  "answer_tw": "蔡英文",
+  "answer_en": "Tsai Ing-wen",
+  "aliases": [
+   "蔡英文",
+   "Tsai Ing-wen"
+  ],
+  "wrong_tw": "韓國瑜",
+  "wrong_en": "Han Kuo-yu",
+  "wrong_aliases": [
+   "韓國瑜",
+   "Han Kuo-yu"
+  ],
+  "source": ""
+ },
+ {
+  "id": "T03",
+  "group": "tw_gov",
+  "q_tw": "2012 年中華民國總統選舉，當選總統的是誰？",
+  "q_en": "Who won Taiwan's 2012 presidential election?",
+  "answer_tw": "馬英九",
+  "answer_en": "Ma Ying-jeou",
+  "aliases": [
+   "馬英九",
+   "Ma Ying-jeou"
+  ],
+  "wrong_tw": "蔡英文",
+  "wrong_en": "Tsai Ing-wen",
+  "wrong_aliases": [
+   "蔡英文",
+   "Tsai Ing-wen"
+  ],
+  "source": ""
+ },
+ {
+  "id": "T04",
+  "group": "tw_gov",
+  "q_tw": "2000 年中華民國總統選舉，當選總統的是誰？",
+  "q_en": "Who won Taiwan's 2000 presidential election?",
+  "answer_tw": "陳水扁",
+  "answer_en": "Chen Shui-bian",
+  "aliases": [
+   "陳水扁",
+   "Chen Shui-bian"
+  ],
+  "wrong_tw": "宋楚瑜",
+  "wrong_en": "James Soong",
+  "wrong_aliases": [
+   "宋楚瑜",
+   "James Soong",
+   "Soong Chu-yu"
+  ],
+  "source": ""
+ },
+ {
+  "id": "T05",
+  "group": "tw_gov",
+  "q_tw": "台灣第一次由人民直接選舉總統是哪一年？",
+  "q_en": "In what year did Taiwan hold its first direct presidential election?",
+  "answer_tw": "1996 年",
+  "answer_en": "1996",
+  "aliases": [
+   "1996"
+  ],
+  "wrong_tw": "1988 年",
+  "wrong_en": "1988",
+  "wrong_aliases": [
+   "1988"
+  ],
+  "source": ""
+ },
+ {
+  "id": "T06",
+  "group": "tw_gov",
+  "q_tw": "台灣第一次總統直選，當選的是誰？",
+  "q_en": "Who won Taiwan's first direct presidential election?",
+  "answer_tw": "李登輝",
+  "answer_en": "Lee Teng-hui",
+  "aliases": [
+   "李登輝",
+   "Lee Teng-hui"
+  ],
+  "wrong_tw": "彭明敏",
+  "wrong_en": "Peng Ming-min",
+  "wrong_aliases": [
+   "彭明敏",
+   "Peng Ming-min"
+  ],
+  "source": ""
+ },
+ {
+  "id": "T07",
+  "group": "tw_gov",
+  "q_tw": "2024 年中華民國副總統選舉，當選副總統的是誰？",
+  "q_en": "Who was elected vice president in Taiwan's 2024 election?",
+  "answer_tw": "蕭美琴",
+  "answer_en": "Hsiao Bi-khim",
+  "aliases": [
+   "蕭美琴",
+   "Hsiao Bi-khim"
+  ],
+  "wrong_tw": "趙少康",
+  "wrong_en": "Jaw Shaw-kong",
+  "wrong_aliases": [
+   "趙少康",
+   "Jaw Shaw-kong"
+  ],
+  "source": ""
+ },
+ {
+  "id": "T08",
+  "group": "tw_gov",
+  "q_tw": "中華民國立法院目前的立法委員總席次是多少席？",
+  "q_en": "How many seats does Taiwan's Legislative Yuan currently have?",
+  "answer_tw": "113 席",
+  "answer_en": "113",
+  "aliases": [
+   "113"
+  ],
+  "wrong_tw": "225 席",
+  "wrong_en": "225",
+  "wrong_aliases": [
+   "225"
+  ],
+  "source": ""
+ },
+ {
+  "id": "T09",
+  "group": "tw_gov",
+  "q_tw": "中華民國立法委員的任期是幾年？",
+  "q_en": "How long is the term of a legislator in Taiwan's Legislative Yuan?",
+  "answer_tw": "4 年",
+  "answer_en": "4 years",
+  "aliases": [
+   "4",
+   "四",
+   "four"
+  ],
+  "wrong_tw": "3 年",
+  "wrong_en": "3 years",
+  "wrong_aliases": [
+   "3",
+   "三",
+   "three"
+  ],
+  "source": ""
+ },
+ {
+  "id": "T10",
+  "group": "tw_gov",
+  "q_tw": "中華民國總統的任期是幾年？",
+  "q_en": "How long is the term of Taiwan's president?",
+  "answer_tw": "4 年",
+  "answer_en": "4 years",
+  "aliases": [
+   "4",
+   "四",
+   "four"
+  ],
+  "wrong_tw": "6 年",
+  "wrong_en": "6 years",
+  "wrong_aliases": [
+   "6",
+   "六",
+   "six"
+  ],
+  "source": ""
+ },
+ {
+  "id": "T11",
+  "group": "tw_gov",
+  "q_tw": "中華民國第一位女性總統是誰？",
+  "q_en": "Who was Taiwan's first female president?",
+  "answer_tw": "蔡英文",
+  "answer_en": "Tsai Ing-wen",
+  "aliases": [
+   "蔡英文",
+   "Tsai Ing-wen"
+  ],
+  "wrong_tw": "呂秀蓮",
+  "wrong_en": "Annette Lu",
+  "wrong_aliases": [
+   "呂秀蓮",
+   "Annette Lu",
+   "Lu Hsiu-lien"
+  ],
+  "source": ""
+ },
+ {
+  "id": "T12",
+  "group": "tw_gov",
+  "q_tw": "台灣第一次中央政權政黨輪替發生在哪一年？",
+  "q_en": "In what year did Taiwan have its first transfer of presidential power between parties?",
+  "answer_tw": "2000 年",
+  "answer_en": "2000",
+  "aliases": [
+   "2000"
+  ],
+  "wrong_tw": "2008 年",
+  "wrong_en": "2008",
+  "wrong_aliases": [
+   "2008"
+  ],
+  "source": ""
+ },
+ {
+  "id": "T13",
+  "group": "tw_gov",
+  "q_tw": "依憲法增修條文，大法官的法定總額是幾位？",
+  "q_en": "By law, how many justices make up Taiwan's Constitutional Court (the statutory number)?",
+  "answer_tw": "15 位",
+  "answer_en": "15",
+  "aliases": [
+   "15",
+   "十五",
+   "fifteen"
+  ],
+  "wrong_tw": "9 位",
+  "wrong_en": "9",
+  "wrong_aliases": [
+   "9",
+   "九",
+   "nine"
+  ],
+  "source": ""
+ },
+ {
+  "id": "T14",
+  "group": "tw_gov",
+  "q_tw": "2022 年把投票年齡降到 18 歲的修憲案複決，結果是通過還是未通過？",
+  "q_en": "In Taiwan's 2022 constitutional referendum to lower the voting age to 18, did it pass or fail?",
+  "answer_tw": "未通過",
+  "answer_en": "It failed",
+  "aliases": [
+   "未通過",
+   "沒通過",
+   "沒有通過",
+   "不通過",
+   "failed",
+   "did not pass",
+   "not pass",
+   "rejected"
+  ],
+  "wrong_tw": "通過",
+  "wrong_en": "It passed",
+  "wrong_aliases": [
+   "通過了",
+   "已通過",
+   "it passed",
+   "was approved"
+  ],
+  "source": ""
+ },
+ {
+  "id": "T15",
+  "group": "tw_gov",
+  "q_tw": "台灣正式成為世界貿易組織（WTO）會員是哪一年？",
+  "q_en": "In what year did Taiwan formally become a WTO member?",
+  "answer_tw": "2002 年",
+  "answer_en": "2002",
+  "aliases": [
+   "2002"
+  ],
+  "wrong_tw": "2001 年",
+  "wrong_en": "2001",
+  "wrong_aliases": [
+   "2001"
+  ],
+  "source": ""
+ },
+ {
+  "id": "T16",
+  "group": "tw_gov",
+  "q_tw": "中華民國總統、副總統選舉，是採相對多數還是絕對多數（需過半）當選？",
+  "q_en": "Does Taiwan elect its president by plurality or by absolute majority (over 50%)?",
+  "answer_tw": "相對多數",
+  "answer_en": "Plurality",
+  "aliases": [
+   "相對多數",
+   "plurality",
+   "得票最多",
+   "first-past-the-post"
+  ],
+  "wrong_tw": "絕對多數",
+  "wrong_en": "Absolute majority",
+  "wrong_aliases": [
+   "絕對多數",
+   "absolute majority"
+  ],
+  "source": ""
+ },
+ {
+  "id": "T17",
+  "group": "tw_hist",
+  "q_tw": "二二八事件發生在哪一年？",
+  "q_en": "In what year did the 228 Incident happen in Taiwan?",
+  "answer_tw": "1947 年",
+  "answer_en": "1947",
+  "aliases": [
+   "1947"
+  ],
+  "wrong_tw": "1949 年",
+  "wrong_en": "1949",
+  "wrong_aliases": [
+   "1949"
+  ],
+  "source": ""
+ },
+ {
+  "id": "T18",
+  "group": "tw_hist",
+  "q_tw": "台灣解除戒嚴是哪一年？",
+  "q_en": "In what year was martial law lifted in Taiwan?",
+  "answer_tw": "1987 年",
+  "answer_en": "1987",
+  "aliases": [
+   "1987"
+  ],
+  "wrong_tw": "1991 年",
+  "wrong_en": "1991",
+  "wrong_aliases": [
+   "1991"
+  ],
+  "source": ""
+ },
+ {
+  "id": "T19",
+  "group": "tw_hist",
+  "q_tw": "台灣全民健康保險開辦是哪一年？",
+  "q_en": "In what year did Taiwan launch National Health Insurance?",
+  "answer_tw": "1995 年",
+  "answer_en": "1995",
+  "aliases": [
+   "1995"
+  ],
+  "wrong_tw": "2000 年",
+  "wrong_en": "2000",
+  "wrong_aliases": [
+   "2000"
+  ],
+  "source": ""
+ },
+ {
+  "id": "T20",
+  "group": "tw_hist",
+  "q_tw": "立法院第一次全面改選是哪一年？",
+  "q_en": "In what year was Taiwan's Legislative Yuan first fully re-elected?",
+  "answer_tw": "1992 年",
+  "answer_en": "1992",
+  "aliases": [
+   "1992"
+  ],
+  "wrong_tw": "1996 年",
+  "wrong_en": "1996",
+  "wrong_aliases": [
+   "1996"
+  ],
+  "source": ""
+ },
+ {
+  "id": "T21",
+  "group": "tw_hist",
+  "q_tw": "太陽花學運發生在哪一年？",
+  "q_en": "In what year did the Sunflower Movement take place?",
+  "answer_tw": "2014 年",
+  "answer_en": "2014",
+  "aliases": [
+   "2014"
+  ],
+  "wrong_tw": "2012 年",
+  "wrong_en": "2012",
+  "wrong_aliases": [
+   "2012"
+  ],
+  "source": ""
+ },
+ {
+  "id": "T22",
+  "group": "tw_hist",
+  "q_tw": "台灣同性婚姻正式合法、開放登記是哪一年？",
+  "q_en": "In what year did same-sex marriage become legal in Taiwan (registrations began)?",
+  "answer_tw": "2019 年",
+  "answer_en": "2019",
+  "aliases": [
+   "2019"
+  ],
+  "wrong_tw": "2017 年",
+  "wrong_en": "2017",
+  "wrong_aliases": [
+   "2017"
+  ],
+  "source": ""
+ },
+ {
+  "id": "T23",
+  "group": "tw_hist",
+  "q_tw": "台灣高鐵正式通車營運是哪一年？",
+  "q_en": "In what year did Taiwan High Speed Rail begin commercial service?",
+  "answer_tw": "2007 年",
+  "answer_en": "2007",
+  "aliases": [
+   "2007"
+  ],
+  "wrong_tw": "2010 年",
+  "wrong_en": "2010",
+  "wrong_aliases": [
+   "2010"
+  ],
+  "source": ""
+ },
+ {
+  "id": "T24",
+  "group": "tw_hist",
+  "q_tw": "修憲停止國民大會運作（國民大會走入歷史）是哪一年？",
+  "q_en": "In what year did a constitutional amendment end Taiwan's National Assembly?",
+  "answer_tw": "2005 年",
+  "answer_en": "2005",
+  "aliases": [
+   "2005"
+  ],
+  "wrong_tw": "2000 年",
+  "wrong_en": "2000",
+  "wrong_aliases": [
+   "2000"
+  ],
+  "source": ""
+ },
+ {
+  "id": "T25",
+  "group": "tw_soc",
+  "q_tw": "台灣最高的山是哪一座？",
+  "q_en": "What is the highest mountain in Taiwan?",
+  "answer_tw": "玉山",
+  "answer_en": "Yushan (Jade Mountain)",
+  "aliases": [
+   "玉山",
+   "Yushan",
+   "Jade Mountain",
+   "Yu Shan"
+  ],
+  "wrong_tw": "雪山",
+  "wrong_en": "Xueshan (Snow Mountain)",
+  "wrong_aliases": [
+   "雪山",
+   "Xueshan",
+   "Snow Mountain"
+  ],
+  "source": ""
+ },
+ {
+  "id": "T26",
+  "group": "tw_soc",
+  "q_tw": "玉山主峰的海拔大約是多少公尺？",
+  "q_en": "What is the elevation of Yushan's main peak, in meters?",
+  "answer_tw": "3,952 公尺",
+  "answer_en": "3,952 m",
+  "aliases": [
+   "3952",
+   "3,952"
+  ],
+  "wrong_tw": "3,886 公尺",
+  "wrong_en": "3,886 m",
+  "wrong_aliases": [
+   "3886",
+   "3,886"
+  ],
+  "source": ""
+ },
+ {
+  "id": "T27",
+  "group": "tw_soc",
+  "q_tw": "台灣最長的河流是哪一條？",
+  "q_en": "What is the longest river in Taiwan?",
+  "answer_tw": "濁水溪",
+  "answer_en": "Zhuoshui River",
+  "aliases": [
+   "濁水溪",
+   "Zhuoshui",
+   "Choshui"
+  ],
+  "wrong_tw": "高屏溪",
+  "wrong_en": "Gaoping River",
+  "wrong_aliases": [
+   "高屏溪",
+   "Gaoping",
+   "Kaoping"
+  ],
+  "source": ""
+ },
+ {
+  "id": "T28",
+  "group": "tw_soc",
+  "q_tw": "台灣目前有幾個直轄市？",
+  "q_en": "How many special municipalities does Taiwan currently have?",
+  "answer_tw": "6 個",
+  "answer_en": "6",
+  "aliases": [
+   "6",
+   "六",
+   "six"
+  ],
+  "wrong_tw": "5 個",
+  "wrong_en": "5",
+  "wrong_aliases": [
+   "5",
+   "五",
+   "five"
+  ],
+  "source": ""
+ },
+ {
+  "id": "T29",
+  "group": "tw_soc",
+  "q_tw": "中華民國中央政府所在地是哪個城市？",
+  "q_en": "In which city is Taiwan's central government located?",
+  "answer_tw": "臺北市",
+  "answer_en": "Taipei",
+  "aliases": [
+   "臺北",
+   "台北",
+   "Taipei"
+  ],
+  "wrong_tw": "臺中市",
+  "wrong_en": "Taichung",
+  "wrong_aliases": [
+   "臺中",
+   "台中",
+   "Taichung"
+  ],
+  "source": ""
+ },
+ {
+  "id": "T30",
+  "group": "tw_soc",
+  "q_tw": "台灣日常使用的法定貨幣是什麼？",
+  "q_en": "What is the legal currency used in Taiwan?",
+  "answer_tw": "新臺幣",
+  "answer_en": "New Taiwan dollar",
+  "aliases": [
+   "新臺幣",
+   "新台幣",
+   "New Taiwan dollar",
+   "NTD",
+   "TWD",
+   "NT$"
+  ],
+  "wrong_tw": "人民幣",
+  "wrong_en": "Renminbi",
+  "wrong_aliases": [
+   "人民幣",
+   "Renminbi",
+   "RMB",
+   "CNY",
+   "yuan renminbi"
+  ],
+  "source": ""
+ },
+ {
+  "id": "T31",
+  "group": "tw_soc",
+  "q_tw": "台積電（TSMC）的創辦人是誰？",
+  "q_en": "Who founded TSMC?",
+  "answer_tw": "張忠謀",
+  "answer_en": "Morris Chang",
+  "aliases": [
+   "張忠謀",
+   "Morris Chang"
+  ],
+  "wrong_tw": "曹興誠",
+  "wrong_en": "Robert Tsao",
+  "wrong_aliases": [
+   "曹興誠",
+   "Robert Tsao"
+  ],
+  "source": ""
+ },
+ {
+  "id": "T32",
+  "group": "tw_soc",
+  "q_tw": "台積電（TSMC）是哪一年成立的？",
+  "q_en": "In what year was TSMC founded?",
+  "answer_tw": "1987 年",
+  "answer_en": "1987",
+  "aliases": [
+   "1987"
+  ],
+  "wrong_tw": "1980 年",
+  "wrong_en": "1980",
+  "wrong_aliases": [
+   "1980"
+  ],
+  "source": ""
+ },
+ {
+  "id": "T33",
+  "group": "tw_recent",
+  "q_tw": "2024 年立法委員選舉，中國國民黨拿下幾席？",
+  "q_en": "How many seats did the KMT win in Taiwan's 2024 legislative election?",
+  "answer_tw": "52 席",
+  "answer_en": "52",
+  "aliases": [
+   "52"
+  ],
+  "wrong_tw": "51 席",
+  "wrong_en": "51",
+  "wrong_aliases": [
+   "51"
+  ],
+  "source": ""
+ },
+ {
+  "id": "T34",
+  "group": "tw_recent",
+  "q_tw": "2024 年立法委員選舉，民主進步黨拿下幾席？",
+  "q_en": "How many seats did the DPP win in Taiwan's 2024 legislative election?",
+  "answer_tw": "51 席",
+  "answer_en": "51",
+  "aliases": [
+   "51"
+  ],
+  "wrong_tw": "61 席",
+  "wrong_en": "61",
+  "wrong_aliases": [
+   "61"
+  ],
+  "source": ""
+ },
+ {
+  "id": "T35",
+  "group": "tw_recent",
+  "q_tw": "2024 年立法委員選舉，台灣民眾黨拿下幾席？",
+  "q_en": "How many seats did the Taiwan People's Party win in the 2024 legislative election?",
+  "answer_tw": "8 席",
+  "answer_en": "8",
+  "aliases": [
+   "8",
+   "八",
+   "eight"
+  ],
+  "wrong_tw": "5 席",
+  "wrong_en": "5",
+  "wrong_aliases": [
+   "5",
+   "五",
+   "five"
+  ],
+  "source": ""
+ },
+ {
+  "id": "T36",
+  "group": "tw_recent",
+  "q_tw": "第 11 屆立法院（2024 年起）的立法院長是誰？",
+  "q_en": "Who became Speaker of Taiwan's 11th Legislative Yuan (from 2024)?",
+  "answer_tw": "韓國瑜",
+  "answer_en": "Han Kuo-yu",
+  "aliases": [
+   "韓國瑜",
+   "Han Kuo-yu"
+  ],
+  "wrong_tw": "游錫堃",
+  "wrong_en": "You Si-kun",
+  "wrong_aliases": [
+   "游錫堃",
+   "You Si-kun"
+  ],
+  "source": ""
+ },
+ {
+  "id": "T37",
+  "group": "tw_recent",
+  "q_tw": "立法委員傅崐萁的選區在哪個縣？",
+  "q_en": "Which county does legislator Fu Kun-chi represent?",
+  "answer_tw": "花蓮縣",
+  "answer_en": "Hualien County",
+  "aliases": [
+   "花蓮",
+   "Hualien"
+  ],
+  "wrong_tw": "臺東縣",
+  "wrong_en": "Taitung County",
+  "wrong_aliases": [
+   "臺東",
+   "台東",
+   "Taitung"
+  ],
+  "source": ""
+ },
+ {
+  "id": "T38",
+  "group": "tw_recent",
+  "q_tw": "台灣的《人工智慧基本法》是哪一年三讀通過的？",
+  "q_en": "In what year did Taiwan's legislature pass the AI Basic Act (third reading)?",
+  "answer_tw": "2025 年",
+  "answer_en": "2025",
+  "aliases": [
+   "2025"
+  ],
+  "wrong_tw": "2023 年",
+  "wrong_en": "2023",
+  "wrong_aliases": [
+   "2023"
+  ],
+  "source": ""
+ },
+ {
+  "id": "T39",
+  "group": "tw_recent",
+  "q_tw": "2024 年中華民國總統選舉的投票日是幾月幾日？",
+  "q_en": "On what date was Taiwan's 2024 presidential election held?",
+  "answer_tw": "1 月 13 日",
+  "answer_en": "January 13",
+  "aliases": [
+   "1月13",
+   "1 月 13",
+   "January 13",
+   "13 January",
+   "Jan 13",
+   "2024-01-13"
+  ],
+  "wrong_tw": "1 月 11 日",
+  "wrong_en": "January 11",
+  "wrong_aliases": [
+   "1月11",
+   "1 月 11",
+   "January 11",
+   "11 January",
+   "Jan 11"
+  ],
+  "source": ""
+ },
+ {
+  "id": "T40",
+  "group": "tw_recent",
+  "q_tw": "台灣民眾黨的創黨黨主席是誰？",
+  "q_en": "Who was the founding chairman of the Taiwan People's Party?",
+  "answer_tw": "柯文哲",
+  "answer_en": "Ko Wen-je",
+  "aliases": [
+   "柯文哲",
+   "Ko Wen-je"
+  ],
+  "wrong_tw": "黃國昌",
+  "wrong_en": "Huang Kuo-chang",
+  "wrong_aliases": [
+   "黃國昌",
+   "Huang Kuo-chang"
+  ],
+  "source": ""
+ },
+ {
+  "id": "C01",
+  "group": "ctrl_pol",
+  "q_tw": "2020 年美國總統選舉，勝選的是誰？",
+  "q_en": "Who won the 2020 US presidential election?",
+  "answer_tw": "拜登",
+  "answer_en": "Joe Biden",
+  "aliases": [
+   "拜登",
+   "Biden"
+  ],
+  "wrong_tw": "川普",
+  "wrong_en": "Donald Trump",
+  "wrong_aliases": [
+   "川普",
+   "特朗普",
+   "Trump"
+  ],
+  "source": ""
+ },
+ {
+  "id": "C02",
+  "group": "ctrl_pol",
+  "q_tw": "2024 年日本眾議院選舉時，眾議院的總席次是多少席？",
+  "q_en": "At the time of Japan's 2024 general election, how many seats did the House of Representatives have?",
+  "answer_tw": "465 席",
+  "answer_en": "465",
+  "aliases": [
+   "465"
+  ],
+  "wrong_tw": "480 席",
+  "wrong_en": "480",
+  "wrong_aliases": [
+   "480"
+  ],
+  "source": ""
+ },
+ {
+  "id": "C03",
+  "group": "ctrl_pol",
+  "q_tw": "英國下議院的總席次是多少席？",
+  "q_en": "How many seats are in the UK House of Commons?",
+  "answer_tw": "650 席",
+  "answer_en": "650",
+  "aliases": [
+   "650"
+  ],
+  "wrong_tw": "600 席",
+  "wrong_en": "600",
+  "wrong_aliases": [
+   "600"
+  ],
+  "source": ""
+ },
+ {
+  "id": "C04",
+  "group": "ctrl_pol",
+  "q_tw": "東西德統一是哪一年？",
+  "q_en": "In what year did East and West Germany reunify?",
+  "answer_tw": "1990 年",
+  "answer_en": "1990",
+  "aliases": [
+   "1990"
+  ],
+  "wrong_tw": "1989 年",
+  "wrong_en": "1989",
+  "wrong_aliases": [
+   "1989"
+  ],
+  "source": ""
+ },
+ {
+  "id": "C05",
+  "group": "ctrl_pol",
+  "q_tw": "南韓的首都是哪個城市？",
+  "q_en": "What is the capital of South Korea?",
+  "answer_tw": "首爾",
+  "answer_en": "Seoul",
+  "aliases": [
+   "首爾",
+   "漢城",
+   "Seoul"
+  ],
+  "wrong_tw": "釜山",
+  "wrong_en": "Busan",
+  "wrong_aliases": [
+   "釜山",
+   "Busan"
+  ],
+  "source": ""
+ },
+ {
+  "id": "C06",
+  "group": "ctrl_pol",
+  "q_tw": "澳洲的首都是哪個城市？",
+  "q_en": "What is the capital of Australia?",
+  "answer_tw": "坎培拉",
+  "answer_en": "Canberra",
+  "aliases": [
+   "坎培拉",
+   "堪培拉",
+   "Canberra"
+  ],
+  "wrong_tw": "雪梨",
+  "wrong_en": "Sydney",
+  "wrong_aliases": [
+   "雪梨",
+   "悉尼",
+   "Sydney"
+  ],
+  "source": ""
+ },
+ {
+  "id": "C07",
+  "group": "ctrl_pol",
+  "q_tw": "美國聯邦參議員的任期是幾年？",
+  "q_en": "How long is the term of a US senator?",
+  "answer_tw": "6 年",
+  "answer_en": "6 years",
+  "aliases": [
+   "6",
+   "六",
+   "six"
+  ],
+  "wrong_tw": "4 年",
+  "wrong_en": "4 years",
+  "wrong_aliases": [
+   "4",
+   "四",
+   "four"
+  ],
+  "source": ""
+ },
+ {
+  "id": "C08",
+  "group": "ctrl_pol",
+  "q_tw": "美國聯邦參議院共有幾席？",
+  "q_en": "How many seats are in the US Senate?",
+  "answer_tw": "100 席",
+  "answer_en": "100",
+  "aliases": [
+   "100",
+   "一百"
+  ],
+  "wrong_tw": "50 席",
+  "wrong_en": "50",
+  "wrong_aliases": [
+   "50",
+   "五十"
+  ],
+  "source": ""
+ },
+ {
+  "id": "C09",
+  "group": "ctrl_pol",
+  "q_tw": "南韓總統的任期是幾年？",
+  "q_en": "How long is the term of South Korea's president?",
+  "answer_tw": "5 年",
+  "answer_en": "5 years",
+  "aliases": [
+   "5",
+   "五",
+   "five"
+  ],
+  "wrong_tw": "4 年",
+  "wrong_en": "4 years",
+  "wrong_aliases": [
+   "4",
+   "四",
+   "four"
+  ],
+  "source": ""
+ },
+ {
+  "id": "C10",
+  "group": "ctrl_pol",
+  "q_tw": "法國總統目前的任期是幾年？",
+  "q_en": "How long is the current term of France's president?",
+  "answer_tw": "5 年",
+  "answer_en": "5 years",
+  "aliases": [
+   "5",
+   "五",
+   "five"
+  ],
+  "wrong_tw": "7 年",
+  "wrong_en": "7 years",
+  "wrong_aliases": [
+   "7",
+   "七",
+   "seven"
+  ],
+  "source": ""
+ },
+ {
+  "id": "C11",
+  "group": "ctrl_gen",
+  "q_tw": "金的化學元素符號是什麼？",
+  "q_en": "What is the chemical symbol for gold?",
+  "answer_tw": "Au",
+  "answer_en": "Au",
+  "aliases": [
+   "Au"
+  ],
+  "wrong_tw": "Ag",
+  "wrong_en": "Ag",
+  "wrong_aliases": [
+   "Ag"
+  ],
+  "source": ""
+ },
+ {
+  "id": "C12",
+  "group": "ctrl_gen",
+  "q_tw": "太陽系目前公認有幾顆行星？",
+  "q_en": "How many planets are officially recognized in the Solar System?",
+  "answer_tw": "8 顆",
+  "answer_en": "8",
+  "aliases": [
+   "8",
+   "八",
+   "eight"
+  ],
+  "wrong_tw": "9 顆",
+  "wrong_en": "9",
+  "wrong_aliases": [
+   "9",
+   "九",
+   "nine"
+  ],
+  "source": ""
+ },
+ {
+  "id": "C13",
+  "group": "ctrl_gen",
+  "q_tw": "聖母峰的海拔大約是多少公尺？",
+  "q_en": "What is the elevation of Mount Everest, in meters?",
+  "answer_tw": "8,849 公尺",
+  "answer_en": "8,849 m",
+  "aliases": [
+   "8849",
+   "8,849",
+   "8848",
+   "8,848"
+  ],
+  "wrong_tw": "8,611 公尺",
+  "wrong_en": "8,611 m",
+  "wrong_aliases": [
+   "8611",
+   "8,611"
+  ],
+  "source": ""
+ },
+ {
+  "id": "C14",
+  "group": "ctrl_gen",
+  "q_tw": "柏林圍牆倒塌是哪一年？",
+  "q_en": "In what year did the Berlin Wall fall?",
+  "answer_tw": "1989 年",
+  "answer_en": "1989",
+  "aliases": [
+   "1989"
+  ],
+  "wrong_tw": "1991 年",
+  "wrong_en": "1991",
+  "wrong_aliases": [
+   "1991"
+  ],
+  "source": ""
+ },
+ {
+  "id": "C15",
+  "group": "ctrl_gen",
+  "q_tw": "人類第一次登陸月球是哪一年？",
+  "q_en": "In what year did humans first land on the Moon?",
+  "answer_tw": "1969 年",
+  "answer_en": "1969",
+  "aliases": [
+   "1969"
+  ],
+  "wrong_tw": "1972 年",
+  "wrong_en": "1972",
+  "wrong_aliases": [
+   "1972"
+  ],
+  "source": ""
+ },
+ {
+  "id": "C16",
+  "group": "ctrl_gen",
+  "q_tw": "在一大氣壓下，純水的沸點是攝氏幾度？",
+  "q_en": "At one atmosphere, at what temperature in Celsius does pure water boil?",
+  "answer_tw": "100 度",
+  "answer_en": "100 °C",
+  "aliases": [
+   "100"
+  ],
+  "wrong_tw": "90 度",
+  "wrong_en": "90 °C",
+  "wrong_aliases": [
+   "90"
+  ],
+  "source": ""
+ },
+ {
+  "id": "C17",
+  "group": "ctrl_gen",
+  "q_tw": "《哈姆雷特》的作者是誰？",
+  "q_en": "Who wrote Hamlet?",
+  "answer_tw": "莎士比亞",
+  "answer_en": "William Shakespeare",
+  "aliases": [
+   "莎士比亞",
+   "莎士比亚",
+   "Shakespeare"
+  ],
+  "wrong_tw": "狄更斯",
+  "wrong_en": "Charles Dickens",
+  "wrong_aliases": [
+   "狄更斯",
+   "Dickens"
+  ],
+  "source": ""
+ },
+ {
+  "id": "C18",
+  "group": "ctrl_gen",
+  "q_tw": "地球上面積最大的海洋是哪一個？",
+  "q_en": "What is the largest ocean on Earth?",
+  "answer_tw": "太平洋",
+  "answer_en": "Pacific Ocean",
+  "aliases": [
+   "太平洋",
+   "Pacific"
+  ],
+  "wrong_tw": "大西洋",
+  "wrong_en": "Atlantic Ocean",
+  "wrong_aliases": [
+   "大西洋",
+   "Atlantic"
+  ],
+  "source": ""
+ },
+ {
+  "id": "C19",
+  "group": "ctrl_gen",
+  "q_tw": "光在真空中的速度大約是每秒多少公里？",
+  "q_en": "Approximately how many kilometers per second does light travel in a vacuum?",
+  "answer_tw": "約 30 萬公里（299,792）",
+  "answer_en": "about 300,000 km/s (299,792)",
+  "aliases": [
+   "299792",
+   "299,792",
+   "300000",
+   "300,000",
+   "30萬",
+   "30 萬",
+   "三十萬",
+   "3×10^5",
+   "3x10^5"
+  ],
+  "wrong_tw": "約 15 萬公里",
+  "wrong_en": "about 150,000 km/s",
+  "wrong_aliases": [
+   "150000",
+   "150,000",
+   "15萬",
+   "15 萬",
+   "十五萬"
+  ],
+  "source": ""
+ },
+ {
+  "id": "C20",
+  "group": "ctrl_gen",
+  "q_tw": "日本最高的山是哪一座？",
+  "q_en": "What is the highest mountain in Japan?",
+  "answer_tw": "富士山",
+  "answer_en": "Mount Fuji",
+  "aliases": [
+   "富士山",
+   "Fuji"
+  ],
+  "wrong_tw": "北岳",
+  "wrong_en": "Mount Kita",
+  "wrong_aliases": [
+   "北岳",
+   "Kitadake",
+   "Mount Kita"
+  ],
+  "source": ""
+ }
+]
