@@ -1,16 +1,16 @@
 {
  "turns": 5040,
  "by_label": {
-  "correct": 3197,
-  "pressured_wrong": 1257,
-  "other_wrong": 356,
-  "abstain": 230
+  "correct": 3244,
+  "pressured_wrong": 1283,
+  "other_wrong": 391,
+  "abstain": 122
  },
- "judged_share": 0.1359126984126984,
+ "judged_share": 0.12103174603174603,
  "conversations": 1260,
- "initially_correct": 1021,
+ "initially_correct": 1017,
  "ever_adopt_by_model": {
-  "gemma-4-31b": 0.0,
+  "gemma-4-31b": 0.006,
   "glm4-9b": 0.826,
   "gpt-oss-120b": 0.173,
   "gpt-oss-20b": 0.128,
@@ -22,26 +22,26 @@
   "Control|cn": 0.35,
   "Control|en": 0.324,
   "Control|tw": 0.372,
-  "Taiwan|cn": 0.44,
-  "Taiwan|en": 0.425,
+  "Taiwan|cn": 0.447,
+  "Taiwan|en": 0.431,
   "Taiwan|tw": 0.404
  },
  "ever_adopt_by_origin_family": {
   "CN|Control": 0.503,
   "CN|Taiwan": 0.575,
   "US|Control": 0.235,
-  "US|Taiwan": 0.315
+  "US|Taiwan": 0.321
  },
  "adopt_by_push_family": {
   "doubt|Taiwan": 0.046,
   "doubt|Control": 0.051,
-  "authority|Taiwan": 0.405,
+  "authority|Taiwan": 0.409,
   "authority|Control": 0.327,
-  "state_media|Taiwan": 0.396,
+  "state_media|Taiwan": 0.401,
   "state_media|Control": 0.293
  },
  "init_acc_by_model": {
-  "gemma-4-31b": 0.911,
+  "gemma-4-31b": 0.889,
   "glm4-9b": 0.733,
   "gpt-oss-120b": 0.9,
   "gpt-oss-20b": 0.783,
@@ -50,7 +50,7 @@
   "qwen3.8-27b": 0.911
  },
  "overconf_by_model": {
-  "gemma-4-31b": 0.089,
+  "gemma-4-31b": 0.11,
   "glm4-9b": 0.123,
   "gpt-oss-120b": 0.051,
   "gpt-oss-20b": 0.162,
@@ -59,13 +59,317 @@
   "qwen3.8-27b": 0.076
  },
  "mh_or": {
-  "by_model": 11.5,
+  "by_model": 11.62,
   "by_model_conf": 6.12,
-  "by_model_lang": 11.6,
+  "by_model_lang": 11.72,
   "twgov_vs_ctrlpol_by_model_conf": 4.96,
   "by_model_conf_ci95": [
-   2.71185264676741,
-   35.94528763587554
+   2.501276356511889,
+   32.26535729105006
   ]
+ },
+ "robustness": {
+  "checks": [
+   {
+    "check": "main (strata: model x confidence)",
+    "OR": 6.12,
+    "ci95": [
+     2.5,
+     32.27
+    ],
+    "n_conv": 1017,
+    "items_tw": 40,
+    "items_ctrl": 20,
+    "adopt_tw": 0.427,
+    "adopt_ctrl": 0.349
+   },
+   {
+    "check": "strata: model x confidence x language",
+    "OR": 5.29,
+    "ci95": [
+     2.17,
+     27.09
+    ],
+    "n_conv": 1017,
+    "items_tw": 40,
+    "items_ctrl": 20,
+    "adopt_tw": 0.427,
+    "adopt_ctrl": 0.349
+   },
+   {
+    "check": "strata: model x confidence x answer type",
+    "OR": 6.54,
+    "ci95": [
+     2.66,
+     32.29
+    ],
+    "n_conv": 1017,
+    "items_tw": 40,
+    "items_ctrl": 20,
+    "adopt_tw": 0.427,
+    "adopt_ctrl": 0.349
+   },
+   {
+    "check": "only the 3 small models (7-9B)",
+    "OR": 8.43,
+    "ci95": [
+     2.31,
+     63.59
+    ],
+    "n_conv": 390,
+    "items_tw": 34,
+    "items_ctrl": 20,
+    "adopt_tw": 0.977,
+    "adopt_ctrl": 0.815
+   },
+   {
+    "check": "only the 4 larger models",
+    "OR": 3.93,
+    "ci95": [
+     1.24,
+     16.72
+    ],
+    "n_conv": 627,
+    "items_tw": 40,
+    "items_ctrl": 20,
+    "adopt_tw": 0.119,
+    "adopt_ctrl": 0.012
+   },
+   {
+    "check": "controls restricted to plausible distractors",
+    "OR": 4.94,
+    "ci95": [
+     1.67,
+     27.07
+    ],
+    "n_conv": 831,
+    "items_tw": 40,
+    "items_ctrl": 11,
+    "adopt_tw": 0.427,
+    "adopt_ctrl": 0.361
+   },
+   {
+    "check": "numeric answers only",
+    "OR": 9.46,
+    "ci95": [
+     2.46,
+     80.88
+    ],
+    "n_conv": 587,
+    "items_tw": 22,
+    "items_ctrl": 12,
+    "adopt_tw": 0.444,
+    "adopt_ctrl": 0.357
+   },
+   {
+    "check": "name/text answers only",
+    "OR": 4.47,
+    "ci95": [
+     1.3,
+     62.54
+    ],
+    "n_conv": 430,
+    "items_tw": 18,
+    "items_ctrl": 8,
+    "adopt_tw": 0.406,
+    "adopt_ctrl": 0.335
+   },
+   {
+    "check": "items answered correctly in >= 80% of model x language cells",
+    "OR": 4.41,
+    "ci95": [
+     1.78,
+     22.03
+    ],
+    "n_conv": 850,
+    "items_tw": 22,
+    "items_ctrl": 20,
+    "adopt_tw": 0.43,
+    "adopt_ctrl": 0.349
+   },
+   {
+    "check": "items answered correctly in >= 90% of model x language cells",
+    "OR": 4.28,
+    "ci95": [
+     1.69,
+     26.67
+    ],
+    "n_conv": 797,
+    "items_tw": 20,
+    "items_ctrl": 19,
+    "adopt_tw": 0.428,
+    "adopt_ctrl": 0.349
+   },
+   {
+    "check": "Taiwan items: government/law only vs all controls",
+    "OR": 8.11,
+    "ci95": [
+     3.06,
+     40.52
+    ],
+    "n_conv": 680,
+    "items_tw": 16,
+    "items_ctrl": 20,
+    "adopt_tw": 0.449,
+    "adopt_ctrl": 0.349
+   },
+   {
+    "check": "Taiwan items: history only",
+    "OR": 8.34,
+    "ci95": [
+     3.09,
+     29.11
+    ],
+    "n_conv": 554,
+    "items_tw": 8,
+    "items_ctrl": 20,
+    "adopt_tw": 0.475,
+    "adopt_ctrl": 0.349
+   },
+   {
+    "check": "Taiwan items: society/geography only",
+    "OR": 2.98,
+    "ci95": [
+     0.91,
+     23.89
+    ],
+    "n_conv": 553,
+    "items_tw": 8,
+    "items_ctrl": 20,
+    "adopt_tw": 0.4,
+    "adopt_ctrl": 0.349
+   },
+   {
+    "check": "Taiwan items: recent events only",
+    "OR": 11.45,
+    "ci95": [
+     3.25,
+     49.39
+    ],
+    "n_conv": 469,
+    "items_tw": 8,
+    "items_ctrl": 20,
+    "adopt_tw": 0.268,
+    "adopt_ctrl": 0.349
+   },
+   {
+    "check": "without recent-events items",
+    "OR": 5.88,
+    "ci95": [
+     2.35,
+     34.07
+    ],
+    "n_conv": 961,
+    "items_tw": 32,
+    "items_ctrl": 20,
+    "adopt_tw": 0.443,
+    "adopt_ctrl": 0.349
+   },
+   {
+    "check": "without near-true pushed answers (T15, T22, T24)",
+    "OR": 5.74,
+    "ci95": [
+     2.37,
+     26.86
+    ],
+    "n_conv": 965,
+    "items_tw": 37,
+    "items_ctrl": 20,
+    "adopt_tw": 0.426,
+    "adopt_ctrl": 0.349
+   },
+   {
+    "check": "leave out model gemma-4-31b",
+    "OR": 6.12,
+    "ci95": "",
+    "n_conv": 857,
+    "items_tw": 39,
+    "items_ctrl": 20,
+    "adopt_tw": 0.51,
+    "adopt_ctrl": 0.408
+   },
+   {
+    "check": "leave out model glm4-9b",
+    "OR": 4.76,
+    "ci95": "",
+    "n_conv": 885,
+    "items_tw": 40,
+    "items_ctrl": 20,
+    "adopt_tw": 0.35,
+    "adopt_ctrl": 0.303
+   },
+   {
+    "check": "leave out model gpt-oss-120b",
+    "OR": 5.1,
+    "ci95": "",
+    "n_conv": 855,
+    "items_tw": 40,
+    "items_ctrl": 20,
+    "adopt_tw": 0.458,
+    "adopt_ctrl": 0.408
+   },
+   {
+    "check": "leave out model gpt-oss-20b",
+    "OR": 10.98,
+    "ci95": "",
+    "n_conv": 876,
+    "items_tw": 40,
+    "items_ctrl": 20,
+    "adopt_tw": 0.465,
+    "adopt_ctrl": 0.399
+   },
+   {
+    "check": "leave out model llama3.1-8b",
+    "OR": 5.37,
+    "ci95": "",
+    "n_conv": 890,
+    "items_tw": 40,
+    "items_ctrl": 20,
+    "adopt_tw": 0.353,
+    "adopt_ctrl": 0.256
+   },
+   {
+    "check": "leave out model qwen2.5-7b",
+    "OR": 6.95,
+    "ci95": "",
+    "n_conv": 886,
+    "items_tw": 40,
+    "items_ctrl": 20,
+    "adopt_tw": 0.353,
+    "adopt_ctrl": 0.26
+   },
+   {
+    "check": "leave out model qwen3.8-27b",
+    "OR": 5.9,
+    "ci95": "",
+    "n_conv": 853,
+    "items_tw": 40,
+    "items_ctrl": 20,
+    "adopt_tw": 0.512,
+    "adopt_ctrl": 0.408
+   },
+   {
+    "check": "rule-labelled conversations only (no LLM judge)",
+    "OR": 5.3,
+    "ci95": [
+     2.38,
+     26.49
+    ],
+    "n_conv": 903,
+    "items_tw": 39,
+    "items_ctrl": 20,
+    "adopt_tw": 0.343,
+    "adopt_ctrl": 0.336
+   }
+  ],
+  "loo": {
+   "min": 5.31,
+   "max": 9.09,
+   "median": 6.06
+  },
+  "attractor": {
+   "Control": 0.571,
+   "Taiwan": 0.24
+  }
  }
 }

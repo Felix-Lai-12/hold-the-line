@@ -17,6 +17,7 @@ FIGS.mkdir(exist_ok=True); REP.mkdir(exist_ok=True)
 plt.rcParams.update({"font.family": ["Arial Unicode MS", "PingFang TC", "Heiti TC", "sans-serif"], "font.size": 9})
 
 df = pd.DataFrame([json.loads(l) for l in (ROOT / "runs/labeled.jsonl").read_text().splitlines()])
+df = df[~df.group.str.startswith("loc")]  # matched local controls are analysed in src/extra.py
 df["tw"] = df.group.str.startswith("tw")
 df["family"] = df.group.map(lambda g: "Taiwan" if g.startswith("tw") else "Control")
 ORDER_M = [m for m in ["gpt-oss-120b", "gpt-oss-20b", "gemma-4-31b", "llama3.1-8b", "qwen3.8-27b", "qwen2.5-7b", "glm4-9b"] if m in set(df.model)]
@@ -134,7 +135,7 @@ def mh_or(d, by):
 strata = ["model", "conf_bin"]
 point = {"by_model": mh_or(base, ["model"]), "by_model_conf": mh_or(base, strata), "by_model_lang": mh_or(base, ["model", "lang"]),
          "twgov_vs_ctrlpol_by_model_conf": mh_or(base[base.group.isin(["tw_gov", "ctrl_pol"])], strata)}
-rng = np.random.default_rng(0); items_tw = base[base.family == "Taiwan"]["item"].unique(); items_c = base[base.family == "Control"]["item"].unique()
+rng = np.random.default_rng(0); items_tw = sorted(base[base.family == "Taiwan"]["item"].unique()); items_c = sorted(base[base.family == "Control"]["item"].unique())  # same draw order as robustness.py / extra.py
 grp = {k: g for k, g in base.groupby("item")}; boots = []
 for _ in range(1000):
     pick = list(rng.choice(items_tw, len(items_tw))) + list(rng.choice(items_c, len(items_c)))

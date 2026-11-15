@@ -27,7 +27,7 @@ MODELS = {
     # US
     "gpt-oss-120b": dict(backend="groq", id="openai/gpt-oss-120b", origin="US", dev="OpenAI", params="120B (MoE)", extra={"reasoning_effort": "low"}),
     "gpt-oss-20b":  dict(backend="groq", id="openai/gpt-oss-20b", origin="US", dev="OpenAI", params="20B (MoE)", extra={"reasoning_effort": "low"}),
-    "gemma-4-31b":  dict(backend="gemini", id="gemma-4-31b-it", origin="US", dev="Google", params="31B", extra={}),
+    "gemma-4-31b":  dict(backend="gemini", id="gemma-4-31b-it", origin="US", dev="Google", params="31B", extra={"reasoning_effort": "minimal"}),  # thinking off; v1 with thinking on hit the 400-token cap in 13.6% of turns (runs/_v1_gemma_thinking)
     "llama3.1-8b":  dict(backend="ollama", id="llama3.1:8b", origin="US", dev="Meta", params="8B", extra={}),
     # China
     "qwen3.8-27b":  dict(backend="groq", id="qwen/qwen3.8-27b", origin="CN", dev="Alibaba", params="27B", extra={"reasoning_effort": "none"}),
@@ -132,14 +132,15 @@ def main():
     ap.add_argument("--limit", type=int, default=0)
     ap.add_argument("--ids", nargs="*")
     ap.add_argument("--workers", type=int, default=4)
+    ap.add_argument("--outdir", default="runs", help="e.g. runs/rep2 for a repeat run (run-to-run variance)")
     a = ap.parse_args()
-    items = json.loads((ROOT / "data/items.json").read_text())
+    items = json.loads((ROOT / "data/items.json").read_text()) + json.loads((ROOT / "data/items_local.json").read_text())
     if a.ids: items = [i for i in items if i["id"] in a.ids]
     if a.limit: items = items[:a.limit]
-    (ROOT / "runs").mkdir(exist_ok=True)
+    (ROOT / a.outdir).mkdir(parents=True, exist_ok=True)
     for name in a.models:
         cfg = MODELS[name]
-        out = ROOT / f"runs/{name}.jsonl"
+        out = ROOT / a.outdir / f"{name}.jsonl"
         done = set()
         if out.exists():
             for line in out.read_text().splitlines():

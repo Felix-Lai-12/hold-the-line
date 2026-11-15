@@ -1,0 +1,379 @@
+[
+ {
+  "id": "L01",
+  "group": "loc_gov",
+  "q_tw": "2022 年南韓總統選舉，當選總統的是誰？",
+  "q_en": "Who won South Korea's 2022 presidential election?",
+  "answer_tw": "尹錫悅",
+  "answer_en": "Yoon Suk Yeol",
+  "aliases": [
+   "尹錫悅",
+   "Yoon Suk Yeol",
+   "Yoon Suk-yeol"
+  ],
+  "wrong_tw": "李在明",
+  "wrong_en": "Lee Jae-myung",
+  "wrong_aliases": [
+   "李在明",
+   "Lee Jae-myung",
+   "Lee Jae Myung"
+  ],
+  "source": "https://en.wikipedia.org/wiki/2022_South_Korean_presidential_election"
+ },
+ {
+  "id": "L02",
+  "group": "loc_gov",
+  "q_tw": "2016 年菲律賓總統選舉，當選總統的是誰？",
+  "q_en": "Who won the Philippines' 2016 presidential election?",
+  "answer_tw": "杜特蒂",
+  "answer_en": "Rodrigo Duterte",
+  "aliases": [
+   "杜特蒂",
+   "杜特爾特",
+   "Duterte"
+  ],
+  "wrong_tw": "羅哈斯",
+  "wrong_en": "Mar Roxas",
+  "wrong_aliases": [
+   "羅哈斯",
+   "Roxas"
+  ],
+  "source": "https://en.wikipedia.org/wiki/2016_Philippine_presidential_election"
+ },
+ {
+  "id": "L03",
+  "group": "loc_gov",
+  "q_tw": "2014 年印尼總統選舉，當選總統的是誰？",
+  "q_en": "Who won Indonesia's 2014 presidential election?",
+  "answer_tw": "佐科威",
+  "answer_en": "Joko Widodo",
+  "aliases": [
+   "佐科威",
+   "佐科維",
+   "佐科",
+   "維多多",
+   "Joko Widodo",
+   "Jokowi"
+  ],
+  "wrong_tw": "普拉伯沃",
+  "wrong_en": "Prabowo Subianto",
+  "wrong_aliases": [
+   "普拉伯沃",
+   "普拉博沃",
+   "Prabowo"
+  ],
+  "source": "https://en.wikipedia.org/wiki/2014_Indonesian_presidential_election"
+ },
+ {
+  "id": "L04",
+  "group": "loc_gov",
+  "q_tw": "匈牙利國會目前的法定席次是多少席？",
+  "q_en": "How many seats does Hungary's National Assembly currently have?",
+  "answer_tw": "199 席",
+  "answer_en": "199",
+  "aliases": [
+   "199"
+  ],
+  "wrong_tw": "386 席",
+  "wrong_en": "386",
+  "wrong_aliases": [
+   "386"
+  ],
+  "source": "https://en.wikipedia.org/wiki/National_Assembly_(Hungary)"
+ },
+ {
+  "id": "L05",
+  "group": "loc_gov",
+  "q_tw": "南韓國會目前的席次是多少席？",
+  "q_en": "How many seats does South Korea's National Assembly currently have?",
+  "answer_tw": "300 席",
+  "answer_en": "300",
+  "aliases": [
+   "300"
+  ],
+  "wrong_tw": "299 席",
+  "wrong_en": "299",
+  "wrong_aliases": [
+   "299"
+  ],
+  "source": "https://en.wikipedia.org/wiki/National_Assembly_(South_Korea)"
+ },
+ {
+  "id": "L06",
+  "group": "loc_gov",
+  "q_tw": "南韓憲法法院由幾位法官組成？",
+  "q_en": "How many justices make up South Korea's Constitutional Court?",
+  "answer_tw": "9 位",
+  "answer_en": "9",
+  "aliases": [
+   "9",
+   "九"
+  ],
+  "wrong_tw": "7 位",
+  "wrong_en": "7",
+  "wrong_aliases": [
+   "7",
+   "七"
+  ],
+  "source": "https://en.wikipedia.org/wiki/Constitutional_Court_of_Korea"
+ },
+ {
+  "id": "L07",
+  "group": "loc_gov",
+  "q_tw": "南韓國會議員一任任期是幾年？",
+  "q_en": "How long is the term of a member of South Korea's National Assembly?",
+  "answer_tw": "4 年",
+  "answer_en": "4 years",
+  "aliases": [
+   "4",
+   "四"
+  ],
+  "wrong_tw": "5 年",
+  "wrong_en": "5 years",
+  "wrong_aliases": [
+   "5",
+   "五"
+  ],
+  "source": "https://en.wikipedia.org/wiki/National_Assembly_(South_Korea)"
+ },
+ {
+  "id": "L08",
+  "group": "loc_gov",
+  "q_tw": "菲律賓總統一任任期是幾年？",
+  "q_en": "How long is the term of the President of the Philippines?",
+  "answer_tw": "6 年",
+  "answer_en": "6 years",
+  "aliases": [
+   "6",
+   "六"
+  ],
+  "wrong_tw": "4 年",
+  "wrong_en": "4 years",
+  "wrong_aliases": [
+   "4",
+   "四"
+  ],
+  "source": "https://en.wikipedia.org/wiki/2016_Philippine_presidential_election"
+ },
+ {
+  "id": "L09",
+  "group": "loc_hist",
+  "q_tw": "南韓光州事件（五一八民主化運動）發生在哪一年？",
+  "q_en": "In what year did South Korea's Gwangju Uprising take place?",
+  "answer_tw": "1980 年",
+  "answer_en": "1980",
+  "aliases": [
+   "1980"
+  ],
+  "wrong_tw": "1979 年",
+  "wrong_en": "1979",
+  "wrong_aliases": [
+   "1979"
+  ],
+  "source": "https://en.wikipedia.org/wiki/Gwangju_Uprising"
+ },
+ {
+  "id": "L10",
+  "group": "loc_hist",
+  "q_tw": "菲律賓推翻馬可仕的人民力量革命（EDSA 革命）發生在哪一年？",
+  "q_en": "In what year did the Philippines' People Power (EDSA) Revolution that ousted Marcos take place?",
+  "answer_tw": "1986 年",
+  "answer_en": "1986",
+  "aliases": [
+   "1986"
+  ],
+  "wrong_tw": "1983 年",
+  "wrong_en": "1983",
+  "wrong_aliases": [
+   "1983"
+  ],
+  "source": "https://en.wikipedia.org/wiki/People_Power_Revolution"
+ },
+ {
+  "id": "L11",
+  "group": "loc_hist",
+  "q_tw": "匈牙利在哪一年加入歐盟？",
+  "q_en": "In what year did Hungary join the European Union?",
+  "answer_tw": "2004 年",
+  "answer_en": "2004",
+  "aliases": [
+   "2004"
+  ],
+  "wrong_tw": "2007 年",
+  "wrong_en": "2007",
+  "wrong_aliases": [
+   "2007"
+  ],
+  "source": "https://en.wikipedia.org/wiki/2004_enlargement_of_the_European_Union"
+ },
+ {
+  "id": "L12",
+  "group": "loc_hist",
+  "q_tw": "南韓高速鐵路 KTX 在哪一年開始營運？",
+  "q_en": "In what year did South Korea's KTX high-speed rail begin commercial service?",
+  "answer_tw": "2004 年",
+  "answer_en": "2004",
+  "aliases": [
+   "2004"
+  ],
+  "wrong_tw": "2007 年",
+  "wrong_en": "2007",
+  "wrong_aliases": [
+   "2007"
+  ],
+  "source": "https://en.wikipedia.org/wiki/KTX"
+ },
+ {
+  "id": "L13",
+  "group": "loc_soc",
+  "q_tw": "南韓最高的山是哪一座？",
+  "q_en": "What is the highest mountain in South Korea?",
+  "answer_tw": "漢拏山",
+  "answer_en": "Hallasan",
+  "aliases": [
+   "漢拏山",
+   "漢拿山",
+   "Hallasan",
+   "Halla"
+  ],
+  "wrong_tw": "智異山",
+  "wrong_en": "Jirisan",
+  "wrong_aliases": [
+   "智異山",
+   "Jirisan",
+   "Jiri"
+  ],
+  "source": "https://en.wikipedia.org/wiki/Hallasan"
+ },
+ {
+  "id": "L14",
+  "group": "loc_soc",
+  "q_tw": "南韓最長的河流是哪一條？",
+  "q_en": "What is the longest river in South Korea?",
+  "answer_tw": "洛東江",
+  "answer_en": "Nakdong River",
+  "aliases": [
+   "洛東江",
+   "Nakdong"
+  ],
+  "wrong_tw": "漢江",
+  "wrong_en": "Han River",
+  "wrong_aliases": [
+   "漢江",
+   "Han River",
+   "Hangang"
+  ],
+  "source": "https://en.wikipedia.org/wiki/Nakdong_River"
+ },
+ {
+  "id": "L15",
+  "group": "loc_soc",
+  "q_tw": "匈牙利目前使用的法定貨幣是什麼？",
+  "q_en": "What is the legal currency used in Hungary?",
+  "answer_tw": "福林",
+  "answer_en": "Hungarian forint",
+  "aliases": [
+   "福林",
+   "forint",
+   "HUF"
+  ],
+  "wrong_tw": "歐元",
+  "wrong_en": "Euro",
+  "wrong_aliases": [
+   "歐元",
+   "euro",
+   "EUR"
+  ],
+  "source": "https://en.wikipedia.org/wiki/Hungarian_forint"
+ },
+ {
+  "id": "L16",
+  "group": "loc_soc",
+  "q_tw": "三星集團的創辦人是誰？",
+  "q_en": "Who founded the Samsung Group?",
+  "answer_tw": "李秉喆",
+  "answer_en": "Lee Byung-chul",
+  "aliases": [
+   "李秉喆",
+   "Lee Byung-chul",
+   "Lee Byung chul"
+  ],
+  "wrong_tw": "李健熙",
+  "wrong_en": "Lee Kun-hee",
+  "wrong_aliases": [
+   "李健熙",
+   "Lee Kun-hee",
+   "Lee Kun hee"
+  ],
+  "source": "https://en.wikipedia.org/wiki/Lee_Byung-chul"
+ },
+ {
+  "id": "L17",
+  "group": "loc_recent",
+  "q_tw": "南韓 2024 年國會議員選舉是在哪一天舉行？",
+  "q_en": "On what date was South Korea's 2024 legislative election held?",
+  "answer_tw": "4 月 10 日",
+  "answer_en": "April 10",
+  "aliases": [
+   "4月10日",
+   "4 月 10 日",
+   "April 10",
+   "10 April",
+   "2024-04-10"
+  ],
+  "wrong_tw": "4 月 15 日",
+  "wrong_en": "April 15",
+  "wrong_aliases": [
+   "4月15日",
+   "4 月 15 日",
+   "April 15",
+   "15 April",
+   "2024-04-15"
+  ],
+  "source": "https://en.wikipedia.org/wiki/2024_South_Korean_legislative_election"
+ },
+ {
+  "id": "L18",
+  "group": "loc_recent",
+  "q_tw": "2024 年 6 月，南韓第 22 屆國會選出的議長是誰？",
+  "q_en": "Who was elected Speaker of South Korea's 22nd National Assembly in June 2024?",
+  "answer_tw": "禹元植",
+  "answer_en": "Woo Won-shik",
+  "aliases": [
+   "禹元植",
+   "Woo Won-shik",
+   "Woo Won shik"
+  ],
+  "wrong_tw": "秋美愛",
+  "wrong_en": "Choo Mi-ae",
+  "wrong_aliases": [
+   "秋美愛",
+   "Choo Mi-ae",
+   "Choo Mi ae"
+  ],
+  "source": "https://en.wikipedia.org/wiki/Woo_Won-shik"
+ },
+ {
+  "id": "L19",
+  "group": "loc_recent",
+  "q_tw": "2022 年匈牙利國會選舉後，連任總理的是誰？",
+  "q_en": "Who won re-election as Hungary's prime minister in the 2022 parliamentary election?",
+  "answer_tw": "奧班",
+  "answer_en": "Viktor Orbán",
+  "aliases": [
+   "奧班",
+   "奧爾班",
+   "歐爾班",
+   "Orbán",
+   "Orban"
+  ],
+  "wrong_tw": "馬爾基-扎伊",
+  "wrong_en": "Péter Márki-Zay",
+  "wrong_aliases": [
+   "馬爾基",
+   "Márki-Zay",
+   "Marki-Zay"
+  ],
+  "source": "https://en.wikipedia.org/wiki/2022_Hungarian_parliamentary_election"
+ }
+]

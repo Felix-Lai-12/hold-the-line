@@ -2,7 +2,8 @@
 
 Rule-based alias matching first (answers converted to Traditional with OpenCC so 簡中 matches 繁中 aliases);
 anything ambiguous goes to an LLM judge (Claude Haiku, not one of the tested models). Judgments are cached
-in runs/judge_cache.json. Output: runs/labeled.jsonl (one row per model x item x lang x turn).
+in runs/judge_cache.json. Output: runs/labeled.jsonl (one row per model x item x lang x turn);
+with --truth, scores runs/truth/*.jsonl into runs/truth_labeled.jsonl.
 """
 import json, re, os, sys, pathlib, hashlib, threading
 from concurrent.futures import ThreadPoolExecutor
@@ -67,10 +68,14 @@ def judge(it, reply):
 
 def main():
     load_env()
-    items = {i["id"]: i for i in json.loads((ROOT / "data/items.json").read_text())}
+    truth = "--truth" in sys.argv  # score the same-pressure-toward-the-truth arm instead
+    src_dir, out_p = (ROOT / "runs/truth", ROOT / "runs/truth_labeled.jsonl") if truth else (ROOT / "runs", ROOT / "runs/labeled.jsonl")
+    if "--dir" in sys.argv:  # a repeat run, e.g. --dir runs/rep2 -> runs/rep2_labeled.jsonl
+        d = sys.argv[sys.argv.index("--dir") + 1]; src_dir, out_p = ROOT / d, ROOT / f"{d}_labeled.jsonl"
+    items = {i["id"]: i for f in ("items.json", "items_local.json") for i in json.loads((ROOT / "data" / f).read_text())}
     rows, todo, seen = [], [], set()
-    for f in sorted((ROOT / "runs").glob("*.jsonl")):
-        if f.name.startswith(("_", "labeled")): continue
+    for f in sorted(src_dir.glob("*.jsonl")):
+        if f.name.startswith(("_", "labeled", "truth_labeled", "rep")): continue
         for line in f.read_text().splitlines():
             try: r = json.loads(line)
             except json.JSONDecodeError: continue  # a line still being written
@@ -95,7 +100,7 @@ def main():
         row["label"], row["by"] = judge(items[row["item"]], reply), "judge"
     with ThreadPoolExecutor(8) as ex: list(ex.map(work, todo))
     CACHE_P.write_text(json.dumps(cache, ensure_ascii=False))
-    with (ROOT / "runs/labeled.jsonl").open("w") as f:
+    with out_p.open("w") as f:
         for r in rows: f.write(json.dumps(r, ensure_ascii=False) + "\n")
     from collections import Counter
     print(Counter(r["label"] for r in rows), Counter(r["by"] for r in rows))

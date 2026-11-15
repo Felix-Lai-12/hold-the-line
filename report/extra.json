@@ -1,0 +1,550 @@
+{
+ "init_by_family": {
+  "n": {
+   "Famous control": 420,
+   "Matched local": 399,
+   "Taiwan": 840
+  },
+  "acc": {
+   "Famous control": 0.983,
+   "Matched local": 0.827,
+   "Taiwan": 0.719
+  },
+  "conf": {
+   "Famous control": 0.974,
+   "Matched local": 0.938,
+   "Taiwan": 0.91
+  },
+  "abstain": {
+   "Famous control": 0.0,
+   "Matched local": 0.018,
+   "Taiwan": 0.063
+  }
+ },
+ "wrong_conf": {
+  "by_family": {
+   "n": {
+    "Famous control": 7,
+    "Matched local": 62,
+    "Taiwan": 183
+   },
+   "mean_conf": {
+    "Famous control": 0.95,
+    "Matched local": 0.863,
+    "Taiwan": 0.874
+   },
+   "share_ge90": {
+    "Famous control": 1.0,
+    "Matched local": 0.565,
+    "Taiwan": 0.579
+   }
+  },
+  "all": {
+   "n": 252,
+   "mean": 0.873,
+   "ge90": 0.587
+  }
+ },
+ "acc_gap": [
+  {
+   "subset": "all items",
+   "items_tw": 40,
+   "items_local": 19,
+   "gap_pts": -10.8,
+   "ci95": [
+    -22.9,
+    2.7
+   ]
+  },
+  {
+   "subset": "without recent-events items",
+   "items_tw": 32,
+   "items_local": 16,
+   "gap_pts": -6.0,
+   "ci95": [
+    -15.5,
+    4.6
+   ]
+  }
+ ],
+ "acc_model": {
+  "Famous control": {
+   "gemma-4-31b": 1.0,
+   "qwen3.8-27b": 1.0,
+   "gpt-oss-120b": 1.0,
+   "gpt-oss-20b": 1.0,
+   "glm4-9b": 0.933,
+   "qwen2.5-7b": 0.983,
+   "llama3.1-8b": 0.967
+  },
+  "Matched local": {
+   "gemma-4-31b": 0.982,
+   "qwen3.8-27b": 0.947,
+   "gpt-oss-120b": 0.93,
+   "gpt-oss-20b": 0.772,
+   "glm4-9b": 0.719,
+   "qwen2.5-7b": 0.719,
+   "llama3.1-8b": 0.719
+  },
+  "Taiwan": {
+   "gemma-4-31b": 0.833,
+   "qwen3.8-27b": 0.867,
+   "gpt-oss-120b": 0.85,
+   "gpt-oss-20b": 0.675,
+   "glm4-9b": 0.633,
+   "qwen2.5-7b": 0.6,
+   "llama3.1-8b": 0.575
+  }
+ },
+ "adopt": [
+  {
+   "model": "Gemma 4 31B",
+   "origin": "US",
+   "all_items": "1/216",
+   "rate": 0.005,
+   "item_ci95": "0-1%",
+   "original_60": "1/160",
+   "Taiwan": "1/100",
+   "Matched local": "0/56",
+   "Famous control": "0/60"
+  },
+  {
+   "model": "Qwen 3.8 27B",
+   "origin": "CN",
+   "all_items": "3/218",
+   "rate": 0.014,
+   "item_ci95": "0-3%",
+   "original_60": "2/164",
+   "Taiwan": "2/104",
+   "Matched local": "1/54",
+   "Famous control": "0/60"
+  },
+  {
+   "model": "gpt-oss-120b",
+   "origin": "US",
+   "all_items": "33/215",
+   "rate": 0.153,
+   "item_ci95": "10-22%",
+   "original_60": "28/162",
+   "Taiwan": "28/102",
+   "Matched local": "5/53",
+   "Famous control": "0/60"
+  },
+  {
+   "model": "gpt-oss-20b",
+   "origin": "US",
+   "all_items": "25/185",
+   "rate": 0.135,
+   "item_ci95": "8-20%",
+   "original_60": "18/141",
+   "Taiwan": "15/81",
+   "Matched local": "7/44",
+   "Famous control": "3/60"
+  },
+  {
+   "model": "GLM-4 9B",
+   "origin": "CN",
+   "all_items": "145/173",
+   "rate": 0.838,
+   "item_ci95": "76-91%",
+   "original_60": "109/132",
+   "Taiwan": "73/76",
+   "Matched local": "36/41",
+   "Famous control": "36/56"
+  },
+  {
+   "model": "Qwen 2.5 7B",
+   "origin": "CN",
+   "all_items": "161/172",
+   "rate": 0.936,
+   "item_ci95": "88-98%",
+   "original_60": "122/131",
+   "Taiwan": "70/72",
+   "Matched local": "39/41",
+   "Famous control": "52/59"
+  },
+  {
+   "model": "Llama 3.1 8B",
+   "origin": "US",
+   "all_items": "161/168",
+   "rate": 0.958,
+   "item_ci95": "92-99%",
+   "original_60": "122/127",
+   "Taiwan": "69/69",
+   "Matched local": "39/41",
+   "Famous control": "53/58"
+  }
+ ],
+ "odds_ratios": [
+  {
+   "comparison": "Taiwan vs Famous control",
+   "OR": 6.12,
+   "ci95": [
+    2.5,
+    32.27
+   ],
+   "infinite_resamples": 5
+  },
+  {
+   "comparison": "Taiwan vs Matched local",
+   "OR": 1.95,
+   "ci95": [
+    0.89,
+    5.1
+   ],
+   "infinite_resamples": 0
+  },
+  {
+   "comparison": "Matched local vs Famous control",
+   "OR": 2.22,
+   "ci95": [
+    0.93,
+    7.46
+   ],
+   "infinite_resamples": 0
+  },
+  {
+   "comparison": "Taiwan vs Famous control, US-developed only",
+   "OR": 4.95,
+   "ci95": [
+    1.68,
+    "unbounded"
+   ],
+   "infinite_resamples": 114
+  },
+  {
+   "comparison": "Taiwan vs Matched local, US-developed only",
+   "OR": 1.82,
+   "ci95": [
+    0.72,
+    6.39
+   ],
+   "infinite_resamples": 0
+  },
+  {
+   "comparison": "Taiwan vs Famous control, CN-developed only",
+   "OR": 7.35,
+   "ci95": [
+    2.11,
+    "unbounded"
+   ],
+   "infinite_resamples": 40
+  },
+  {
+   "comparison": "Taiwan vs Matched local, CN-developed only",
+   "OR": 2.3,
+   "ci95": [
+    0.45,
+    13.21
+   ],
+   "infinite_resamples": 19
+  },
+  {
+   "comparison": "Taiwan vs Matched local, without recent-events items",
+   "OR": 2.16,
+   "ci95": [
+    0.9,
+    6.89
+   ],
+   "infinite_resamples": 0
+  },
+  {
+   "comparison": "Taiwan vs Matched local, four larger models",
+   "OR": 1.58,
+   "ci95": [
+    0.64,
+    4.85
+   ],
+   "infinite_resamples": 0
+  }
+ ],
+ "flip_curves": {
+  "gemma-4-31b|Taiwan": [
+   0.0,
+   0.0,
+   1.0,
+   1.0
+  ],
+  "gemma-4-31b|Matched local": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "gemma-4-31b|Famous control": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "qwen3.8-27b|Taiwan": [
+   0.0,
+   1.0,
+   1.9,
+   1.9
+  ],
+  "qwen3.8-27b|Matched local": [
+   0.0,
+   0.0,
+   1.9,
+   1.9
+  ],
+  "qwen3.8-27b|Famous control": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "gpt-oss-120b|Taiwan": [
+   0.0,
+   1.0,
+   24.5,
+   23.5
+  ],
+  "gpt-oss-120b|Matched local": [
+   0.0,
+   0.0,
+   7.5,
+   9.4
+  ],
+  "gpt-oss-120b|Famous control": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "gpt-oss-20b|Taiwan": [
+   0.0,
+   1.2,
+   14.8,
+   16.0
+  ],
+  "gpt-oss-20b|Matched local": [
+   0.0,
+   0.0,
+   6.8,
+   15.9
+  ],
+  "gpt-oss-20b|Famous control": [
+   0.0,
+   0.0,
+   5.0,
+   3.3
+  ],
+  "glm4-9b|Taiwan": [
+   0.0,
+   5.3,
+   96.1,
+   89.5
+  ],
+  "glm4-9b|Matched local": [
+   0.0,
+   9.8,
+   87.8,
+   82.9
+  ],
+  "glm4-9b|Famous control": [
+   0.0,
+   7.1,
+   64.3,
+   44.6
+  ],
+  "qwen2.5-7b|Taiwan": [
+   0.0,
+   4.2,
+   97.2,
+   94.4
+  ],
+  "qwen2.5-7b|Matched local": [
+   0.0,
+   7.3,
+   95.1,
+   92.7
+  ],
+  "qwen2.5-7b|Famous control": [
+   0.0,
+   3.4,
+   88.1,
+   74.6
+  ],
+  "llama3.1-8b|Taiwan": [
+   0.0,
+   26.1,
+   92.8,
+   95.7
+  ],
+  "llama3.1-8b|Matched local": [
+   0.0,
+   4.9,
+   87.8,
+   85.4
+  ],
+  "llama3.1-8b|Famous control": [
+   0.0,
+   25.9,
+   75.9,
+   86.2
+  ]
+ },
+ "first_turn": {
+  "authority": 449,
+  "doubt": 58,
+  "state_media": 22
+ },
+ "revert_at_xinhua": {
+  "held_after_official": 501,
+  "back_to_correct": 44
+ },
+ "conf_adopt": [
+  {
+   "model": "Gemma 4 31B",
+   "n": 1,
+   "conf_first_answer": 95.0,
+   "conf_when_adopting": 60.0,
+   "share_ge90_when_adopting": 0.0
+  },
+  {
+   "model": "Qwen 3.8 27B",
+   "n": 3,
+   "conf_first_answer": 98.3,
+   "conf_when_adopting": 95.0,
+   "share_ge90_when_adopting": 1.0
+  },
+  {
+   "model": "gpt-oss-120b",
+   "n": 33,
+   "conf_first_answer": 91.9,
+   "conf_when_adopting": 91.7,
+   "share_ge90_when_adopting": 0.806
+  },
+  {
+   "model": "gpt-oss-20b",
+   "n": 25,
+   "conf_first_answer": 93.0,
+   "conf_when_adopting": 83.0,
+   "share_ge90_when_adopting": 0.6
+  },
+  {
+   "model": "GLM-4 9B",
+   "n": 145,
+   "conf_first_answer": 92.7,
+   "conf_when_adopting": 89.9,
+   "share_ge90_when_adopting": 0.862
+  },
+  {
+   "model": "Qwen 2.5 7B",
+   "n": 161,
+   "conf_first_answer": 94.0,
+   "conf_when_adopting": 83.9,
+   "share_ge90_when_adopting": 0.621
+  },
+  {
+   "model": "Llama 3.1 8B",
+   "n": 161,
+   "conf_first_answer": 92.6,
+   "conf_when_adopting": 93.1,
+   "share_ge90_when_adopting": 0.87
+  }
+ ],
+ "lang": {
+  "cn": {
+   "gemma-4-31b": 0.0,
+   "qwen3.8-27b": 0.026,
+   "gpt-oss-120b": 0.211,
+   "gpt-oss-20b": 0.193,
+   "glm4-9b": 0.857,
+   "qwen2.5-7b": 0.927,
+   "llama3.1-8b": 0.941
+  },
+  "en": {
+   "gemma-4-31b": 0.013,
+   "qwen3.8-27b": 0.015,
+   "gpt-oss-120b": 0.108,
+   "gpt-oss-20b": 0.062,
+   "glm4-9b": 0.839,
+   "qwen2.5-7b": 0.947,
+   "llama3.1-8b": 0.952
+  },
+  "tw": {
+   "gemma-4-31b": 0.0,
+   "qwen3.8-27b": 0.0,
+   "gpt-oss-120b": 0.143,
+   "gpt-oss-20b": 0.159,
+   "glm4-9b": 0.818,
+   "qwen2.5-7b": 0.933,
+   "llama3.1-8b": 0.981
+  }
+ },
+ "paired": [
+  {
+   "model": "Gemma 4 31B",
+   "n_wrong": 12,
+   "adopted_false_push": "4/12",
+   "adopted_true_push": "10/12",
+   "false_when_initially_right": "1/160"
+  },
+  {
+   "model": "Qwen 3.8 27B",
+   "n_wrong": 15,
+   "adopted_false_push": "6/15",
+   "adopted_true_push": "6/15",
+   "false_when_initially_right": "2/164"
+  },
+  {
+   "model": "gpt-oss-120b",
+   "n_wrong": 9,
+   "adopted_false_push": "7/9",
+   "adopted_true_push": "6/9",
+   "false_when_initially_right": "28/162"
+  },
+  {
+   "model": "gpt-oss-20b",
+   "n_wrong": 30,
+   "adopted_false_push": "22/30",
+   "adopted_true_push": "27/30",
+   "false_when_initially_right": "18/141"
+  },
+  {
+   "model": "GLM-4 9B",
+   "n_wrong": 42,
+   "adopted_false_push": "42/42",
+   "adopted_true_push": "42/42",
+   "false_when_initially_right": "109/132"
+  },
+  {
+   "model": "Qwen 2.5 7B",
+   "n_wrong": 42,
+   "adopted_false_push": "42/42",
+   "adopted_true_push": "42/42",
+   "false_when_initially_right": "122/131"
+  },
+  {
+   "model": "Llama 3.1 8B",
+   "n_wrong": 45,
+   "adopted_false_push": "44/45",
+   "adopted_true_push": "45/45",
+   "false_when_initially_right": "122/127"
+  }
+ ],
+ "n_truth": 243,
+ "paired_big": {
+  "false": "39/66",
+  "true": "49/66"
+ },
+ "gemma_v1_v2": [
+  {
+   "run": "v1: thinking on, 400-token cap",
+   "conversations": 237,
+   "first_correct": 0.928,
+   "first_abstain": 0.051,
+   "adopt_when_right": "0/220"
+  },
+  {
+   "run": "v2: thinking off (reported)",
+   "conversations": 237,
+   "first_correct": 0.911,
+   "first_abstain": 0.004,
+   "adopt_when_right": "1/216"
+  }
+ ]
+}
