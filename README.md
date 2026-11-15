@@ -14,6 +14,7 @@ Do open-weight language models keep a correct, verifiable answer about Taiwan wh
 - `src/robustness.py`: sensitivity checks for the Taiwan-vs-control gap → `report/robustness.md`.
 - `src/extra.py`: every number and both figures in the report's Results (matched-local comparison, paired truth arm, item-bootstrap intervals, within-origin odds ratios, confidence at adoption, run-to-run variance) → `report/extra.md`, `report/extra.json`, `figs/fig1_flip_curves.png`, `figs/fig2_paired.png`.
 - `src/validation_sets.py`: rebuilds `report/judge_review.csv` (every outcome-deciding judge label on the original items, for a second-model review) and `report/spotcheck.csv` (50 random turns for the author's hand check).
+- `src/spotcheck_agree.py`: agreement between the author's blind hand check (`report/spotcheck_author.csv`) and the automatic labels: 25/25 rule, 24/25 judge.
 - `src/build_release.py` → `release/`: the dataset for reuse (`items.csv`, `conversations.jsonl` with every turn, label and labeller; dataset card in `release/README.md`).
 - `scripts/rep_120b.sh`: repeat run of gpt-oss-120b for run-to-run variance (waits for the Groq daily quota to reset).
 - `report/report.md` → `report/build_pdf.py` → `report/report.pdf`. Label checks: `report/judge_review.csv` (second-model review of outcome-deciding judge labels), `report/spotcheck.csv` (author hand check). Literature notes (Chinese): `notes/文獻筆記.md`.
