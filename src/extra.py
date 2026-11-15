@@ -121,7 +121,7 @@ js["odds_ratios"] = ors
 section("Event counts behind the larger-model comparisons", right[~right.model.isin(SMALL)].groupby("family").ever_adopt.agg(["sum", "size"]).to_markdown())
 
 # ---------- flip curves ----------
-fig, axs = plt.subplots(2, 4, figsize=(7.2, 4.4), sharey=True); axes = axs.ravel()
+fig, axs = plt.subplots(2, 4, figsize=(7.2, 3.9), sharey=True); axes = axs.ravel()
 curve = {}
 for ax, m in zip(axes, ORDER):
     for f in FAMS:
@@ -139,7 +139,7 @@ for ax, m in zip(axes, ORDER):
         curve[f"{m}|{f}"] = [round(v, 1) for v in ys]
     ax.set_title(f"{NICE[m]} ({ORIGIN[m]})", fontsize=8.5); ax.set_xticks(range(4)); ax.set_xticklabels(["first", "doubt", "official\nrecord", "Xinhua"], fontsize=7); ax.tick_params(axis="y", labelsize=7)
     ax.set_ylim(-3, 103); ax.grid(axis="y", alpha=.3)
-axes[0].set_ylabel("% holding the false answer", fontsize=8); axes[4].set_ylabel("% holding the false answer", fontsize=8)
+axes[0].set_ylabel("% giving the false answer", fontsize=8); axes[4].set_ylabel("% giving the false answer", fontsize=8)
 h, l = axes[0].get_legend_handles_labels(); axes[7].axis("off"); axes[7].legend(h, l, loc="center", frameon=False, fontsize=8.5, title="Item family", title_fontsize=8.5)
 fig.tight_layout(); fig.savefig(ROOT / "figs/fig1_flip_curves.png", dpi=200); plt.close(fig)
 js["flip_curves"] = curve
@@ -192,8 +192,20 @@ if tp.exists():
     js["paired"] = rows; js["n_truth"] = int(len(tr)); js["paired_big"] = dict(false=kn(big.ever_adopt), true=kn(big.adopt_true))
     disc = pair[pair.ever_adopt != pair.adopt_true]
     out.append(f"Four larger models, paired table:\n\n{pd.crosstab(big.ever_adopt, big.adopt_true).to_markdown()}\n\nDiscordant pairs fall in {disc['item'].nunique()} items. Paired conversations starting as abstentions: {int((pair['init'] == 'abstain').sum())} (of which 7-9B models: {int((pair[pair.model.isin(SMALL)]['init'] == 'abstain').sum())}).\n")
-    rb = right[~right.model.isin(SMALL)]; js["big_right"] = kn(rb.ever_adopt)
-    out.append(f"Four larger models, false adoption when initially right: {kn(rb.ever_adopt)}.\n")
+    rb = right[~right.model.isin(SMALL) & (right.family != "Matched local")]; js["big_right_60"] = kn(rb.ever_adopt)
+    out.append(f"Four larger models, false adoption when initially right (60 original items): {kn(rb.ever_adopt)}.\n")
+    # discernment gap: true-push minus false-push adoption on the same conversations
+    gap = {NICE[m]: round((pair[pair.model == m].adopt_true.mean() - pair[pair.model == m].ever_adopt.mean()) * 100) for m in ORDER if (pair.model == m).any()}
+    out.append(f"Discernment gap (true-push minus false-push adoption, percentage points, same conversations): {gap}\n"); js["discernment_gap"] = gap
+    # within-item control: larger models, model-item pairs right in one language and wrong/unsure in another
+    o = conv[(conv.family != "Matched local") & ~conv.model.isin(SMALL)].copy()
+    o["state"] = o["init"].map(lambda x: "right" if x == "correct" else ("wrong_or_unsure" if x in ("other_wrong", "abstain") else "other"))
+    st = o.groupby(["model", "item"]).state.agg(set)
+    keys = [k for k, v in st.items() if {"right", "wrong_or_unsure"} <= v]
+    sub = o.set_index(["model", "item"]).loc[keys].reset_index()
+    wr, ww = sub[sub.state == "right"], sub[sub.state == "wrong_or_unsure"]
+    out.append(f"Within-item control (four larger models, {len(keys)} model-item pairs right in one language and wrong or unsure in another): false adoption {kn(wr.ever_adopt)} when right vs {kn(ww.ever_adopt)} when wrong or unsure.\n")
+    js["within_item"] = dict(pairs=len(keys), right=kn(wr.ever_adopt), wrong=kn(ww.ever_adopt))
     # replicate for free: the truth arm's doubt turn repeats the main arm's exact history and prompt at temperature 0
     rep = conv[(conv.family != "Matched local")].merge(tr[["model", "item", "lang", "doubt"]].rename(columns={"doubt": "doubt_rep"}), on=["model", "item", "lang"])
     agr = rep.assign(same=rep.doubt == rep.doubt_rep).groupby("model").same.agg(["sum", "size"]).reindex(ORDER)

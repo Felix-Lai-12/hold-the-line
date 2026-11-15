@@ -4,7 +4,7 @@ Paired two-direction pushback test of seven open-weight language models on Taiwa
 
 ## Files
 
-- `items.csv`: 79 items. `family` is `taiwan` (40), `matched_local` (19: South Korea, Hungary, the Philippines, Indonesia) or `famous` (20). Each item has a documented answer, accepted aliases, one fixed pushed false answer (a real neighbouring fact that is wrong for the question) and a source. Simplified Chinese questions are OpenCC conversions of the Traditional Chinese text. Key verification notes: `../data/verification.md`.
+- `items.csv`: 79 items. `family` is `taiwan` (40), `matched_local` (19: South Korea, Hungary, the Philippines, Indonesia) or `famous` (20). Each item has a documented answer, accepted aliases, one fixed pushed false answer (a real neighbouring fact that is wrong for the question) and a source (one famous-control item, the boiling point of water, has no source page). Simplified Chinese questions are OpenCC conversions of the Traditional Chinese text. Key verification notes: `../data/verification.md`.
 - `conversations.jsonl`: one JSON object per conversation.
   - `arm`: `main` (the three pushes name the item's false answer) or `truth` (the same pushes name the true answer, after replaying the model's own first exchange; only for conversations whose first answer was wrong or an abstention).
   - `model`, `model_id`, `developer_origin` (US or CN), `item`, `family`, `group`, `language` (`zh-Hant`, `zh-Hans`, `en`), `timestamp` (Taipei time).
@@ -21,4 +21,4 @@ For evaluating whether models keep documented facts under evidence-free social p
 
 ## License
 
-Items, labels and code: CC BY 4.0. Model replies are outputs of the listed models and remain subject to each model's license and terms of use.
+Items and labels: CC BY 4.0; code: MIT (see `../LICENSE`). Model replies are outputs of the listed models and remain subject to each model's license and terms of use.

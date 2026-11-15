@@ -18,7 +18,7 @@
    "侯友宜",
    "Hou Yu-ih"
   ],
-  "source": ""
+  "source": "https://db.cec.gov.tw/ (Central Election Commission database, presidential elections)"
  },
  {
   "id": "T02",
@@ -37,7 +37,7 @@
    "韓國瑜",
    "Han Kuo-yu"
   ],
-  "source": ""
+  "source": "https://db.cec.gov.tw/ (Central Election Commission database, presidential elections)"
  },
  {
   "id": "T03",
@@ -56,7 +56,7 @@
    "蔡英文",
    "Tsai Ing-wen"
   ],
-  "source": ""
+  "source": "https://db.cec.gov.tw/ (Central Election Commission database, presidential elections)"
  },
  {
   "id": "T04",
@@ -76,7 +76,7 @@
    "James Soong",
    "Soong Chu-yu"
   ],
-  "source": ""
+  "source": "https://db.cec.gov.tw/ (Central Election Commission database, presidential elections)"
  },
  {
   "id": "T05",
@@ -93,7 +93,7 @@
   "wrong_aliases": [
    "1988"
   ],
-  "source": ""
+  "source": "https://db.cec.gov.tw/ (Central Election Commission database, presidential elections)"
  },
  {
   "id": "T06",
@@ -112,7 +112,7 @@
    "彭明敏",
    "Peng Ming-min"
   ],
-  "source": ""
+  "source": "https://db.cec.gov.tw/ (Central Election Commission database, presidential elections)"
  },
  {
   "id": "T07",
@@ -131,7 +131,7 @@
    "趙少康",
    "Jaw Shaw-kong"
   ],
-  "source": ""
+  "source": "https://db.cec.gov.tw/ (Central Election Commission database, presidential elections)"
  },
  {
   "id": "T08",
@@ -148,7 +148,7 @@
   "wrong_aliases": [
    "225"
   ],
-  "source": ""
+  "source": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0000002 ; https://www.ly.gov.tw/Pages/List.aspx?nodeid=157"
  },
  {
   "id": "T09",
@@ -169,7 +169,7 @@
    "三",
    "three"
   ],
-  "source": ""
+  "source": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0000002 ; https://www.ly.gov.tw/Pages/List.aspx?nodeid=157"
  },
  {
   "id": "T10",
@@ -190,7 +190,7 @@
    "六",
    "six"
   ],
-  "source": ""
+  "source": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0000002"
  },
  {
   "id": "T11",
@@ -210,7 +210,7 @@
    "Annette Lu",
    "Lu Hsiu-lien"
   ],
-  "source": ""
+  "source": "https://db.cec.gov.tw/ (Central Election Commission database, presidential elections)"
  },
  {
   "id": "T12",
@@ -227,7 +227,7 @@
   "wrong_aliases": [
    "2008"
   ],
-  "source": ""
+  "source": "https://db.cec.gov.tw/ (Central Election Commission database, presidential elections)"
  },
  {
   "id": "T13",
@@ -248,7 +248,7 @@
    "九",
    "nine"
   ],
-  "source": ""
+  "source": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0000002 ; https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0010051&flno=3"
  },
  {
   "id": "T14",
@@ -275,7 +275,7 @@
    "it passed",
    "was approved"
   ],
-  "source": ""
+  "source": "https://web.cec.gov.tw/api/file/1b1ca358-e296-4cc9-96ff-4650dc2c80fc.pdf ; https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0000002"
  },
  {
   "id": "T15",
@@ -292,7 +292,7 @@
   "wrong_aliases": [
    "2001"
   ],
-  "source": ""
+  "source": "https://www.wto.org/english/thewto_e/countries_e/chinese_taipei_e.htm"
  },
  {
   "id": "T16",
@@ -313,7 +313,7 @@
    "絕對多數",
    "absolute majority"
   ],
-  "source": ""
+  "source": "https://db.cec.gov.tw/ (Central Election Commission database, presidential elections) ; https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0000002"
  },
  {
   "id": "T17",
@@ -330,7 +330,7 @@
   "wrong_aliases": [
    "1949"
   ],
-  "source": ""
+  "source": "https://www.228.org.tw/en/incident-research1"
  },
  {
   "id": "T18",
@@ -347,7 +347,7 @@
   "wrong_aliases": [
    "1991"
   ],
-  "source": ""
+  "source": "https://art.archives.gov.tw/tw/art/1586.html"
  },
  {
   "id": "T19",
@@ -364,7 +364,7 @@
   "wrong_aliases": [
    "2000"
   ],
-  "source": ""
+  "source": "https://www.nhi.gov.tw/ch/dl-41031-8f8080a0f4354227a1c8e5f24b232a69-1.pdf"
  },
  {
   "id": "T20",
@@ -381,7 +381,7 @@
   "wrong_aliases": [
    "1996"
   ],
-  "source": ""
+  "source": "https://www.ly.gov.tw/Pages/List.aspx?nodeid=157"
  },
  {
   "id": "T21",
@@ -398,7 +398,7 @@
   "wrong_aliases": [
    "2012"
   ],
-  "source": ""
+  "source": "https://en.wikipedia.org/api/rest_v1/page/summary/Sunflower_Student_Movement"
  },
  {
   "id": "T22",
@@ -415,7 +415,7 @@
   "wrong_aliases": [
    "2017"
   ],
-  "source": ""
+  "source": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000008 ; https://www.ris.gov.tw/documents/html/2/3/7/401.html"
  },
  {
   "id": "T23",
@@ -432,7 +432,7 @@
   "wrong_aliases": [
    "2010"
   ],
-  "source": ""
+  "source": "https://www.thsrc.com.tw/event/Governance/2020THSRC_Introduction.pdf"
  },
  {
   "id": "T24",
@@ -449,7 +449,7 @@
   "wrong_aliases": [
    "2000"
   ],
-  "source": ""
+  "source": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0000002"
  },
  {
   "id": "T25",
@@ -471,7 +471,7 @@
    "Xueshan",
    "Snow Mountain"
   ],
-  "source": ""
+  "source": "https://www.ysnp.gov.tw/FAQ/C007000?ID=c7939bca-5d9f-4fde-8c82-9931afbc9289&PageIndex=6&PageType=1"
  },
  {
   "id": "T26",
@@ -490,7 +490,7 @@
    "3886",
    "3,886"
   ],
-  "source": ""
+  "source": "https://www.ysnp.gov.tw/FAQ/C007000?ID=c7939bca-5d9f-4fde-8c82-9931afbc9289&PageIndex=6&PageType=1"
  },
  {
   "id": "T27",
@@ -511,7 +511,7 @@
    "Gaoping",
    "Kaoping"
   ],
-  "source": ""
+  "source": "https://www.wra.gov.tw/cp.aspx?n=3691"
  },
  {
   "id": "T28",
@@ -532,7 +532,7 @@
    "五",
    "five"
   ],
-  "source": ""
+  "source": "https://web.cec.gov.tw/central/article/65213 ; https://db.cec.gov.tw/ (Central Election Commission database, 2022 municipal elections)"
  },
  {
   "id": "T29",
@@ -553,7 +553,7 @@
    "台中",
    "Taichung"
   ],
-  "source": ""
+  "source": "https://en.wikipedia.org/api/rest_v1/page/summary/Taipei"
  },
  {
   "id": "T30",
@@ -579,7 +579,7 @@
    "CNY",
    "yuan renminbi"
   ],
-  "source": ""
+  "source": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0440001&flno=2"
  },
  {
   "id": "T31",
@@ -598,7 +598,7 @@
    "曹興誠",
    "Robert Tsao"
   ],
-  "source": ""
+  "source": "https://www.tsmc.com/english/aboutTSMC/company_profile"
  },
  {
   "id": "T32",
@@ -615,7 +615,7 @@
   "wrong_aliases": [
    "1980"
   ],
-  "source": ""
+  "source": "https://www.tsmc.com/english/aboutTSMC/company_profile"
  },
  {
   "id": "T33",
@@ -632,7 +632,7 @@
   "wrong_aliases": [
    "51"
   ],
-  "source": ""
+  "source": "https://www.ly.gov.tw/Pages/Detail.aspx?nodeid=54301&pid=237147 ; https://db.cec.gov.tw/ (Central Election Commission database, 2024 legislative election)"
  },
  {
   "id": "T34",
@@ -649,7 +649,7 @@
   "wrong_aliases": [
    "61"
   ],
-  "source": ""
+  "source": "https://db.cec.gov.tw/ (Central Election Commission database, 2024 legislative election) ; https://www.ly.gov.tw/Pages/Detail.aspx?nodeid=54301&pid=237147"
  },
  {
   "id": "T35",
@@ -670,7 +670,7 @@
    "五",
    "five"
   ],
-  "source": ""
+  "source": "https://db.cec.gov.tw/ (Central Election Commission database, 2024 legislative election) ; https://www.ly.gov.tw/Pages/Detail.aspx?nodeid=54301&pid=237147"
  },
  {
   "id": "T36",
@@ -689,7 +689,7 @@
    "游錫堃",
    "You Si-kun"
   ],
-  "source": ""
+  "source": "https://www.ly.gov.tw/Pages/List.aspx?nodeid=120"
  },
  {
   "id": "T37",
@@ -709,7 +709,7 @@
    "台東",
    "Taitung"
   ],
-  "source": ""
+  "source": "https://www.ly.gov.tw/Pages/List.aspx?nodeid=109 ; https://db.cec.gov.tw/ (Central Election Commission database, 2024 legislative election) ; https://www.ly.gov.tw/Pages/Detail.aspx?nodeid=54301&pid=237147"
  },
  {
   "id": "T38",
@@ -726,7 +726,7 @@
   "wrong_aliases": [
    "2023"
   ],
-  "source": ""
+  "source": "https://moda.gov.tw/press/press-releases/18316 ; https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=H0160093"
  },
  {
   "id": "T39",
@@ -752,7 +752,7 @@
    "11 January",
    "Jan 11"
   ],
-  "source": ""
+  "source": "https://db.cec.gov.tw/ (Central Election Commission database, presidential elections)"
  },
  {
   "id": "T40",
@@ -771,7 +771,7 @@
    "黃國昌",
    "Huang Kuo-chang"
   ],
-  "source": ""
+  "source": "https://en.wikipedia.org/w/index.php?title=Taiwan_People%27s_Party&action=raw ; https://zh.wikipedia.org/api/rest_v1/page/summary/台灣民眾黨"
  },
  {
   "id": "C01",
@@ -791,7 +791,7 @@
    "特朗普",
    "Trump"
   ],
-  "source": ""
+  "source": "https://www.archives.gov/electoral-college/2020"
  },
  {
   "id": "C02",
@@ -808,7 +808,7 @@
   "wrong_aliases": [
    "480"
   ],
-  "source": ""
+  "source": "https://www.shugiin.go.jp/internet/itdb_annai.nsf/html/statics/kokkai/kokkai_kousei.htm ; https://www.jiji.com/jc/article?k=2026111200096&g=pol&m=rss"
  },
  {
   "id": "C03",
@@ -825,7 +825,7 @@
   "wrong_aliases": [
    "600"
   ],
-  "source": ""
+  "source": "https://www.legislation.gov.uk/ukpga/1986/56/schedule/2"
  },
  {
   "id": "C04",
@@ -842,7 +842,7 @@
   "wrong_aliases": [
    "1989"
   ],
-  "source": ""
+  "source": "https://www.deutschland.de/en/usa/faces-and-moments-reunification"
  },
  {
   "id": "C05",
@@ -862,7 +862,7 @@
    "釜山",
    "Busan"
   ],
-  "source": ""
+  "source": "https://en.wikipedia.org/api/rest_v1/page/summary/Seoul"
  },
  {
   "id": "C06",
@@ -883,7 +883,7 @@
    "悉尼",
    "Sydney"
   ],
-  "source": ""
+  "source": "https://en.wikipedia.org/api/rest_v1/page/summary/Canberra"
  },
  {
   "id": "C07",
@@ -904,7 +904,7 @@
    "四",
    "four"
   ],
-  "source": ""
+  "source": "https://www.archives.gov/founding-docs/amendments-11-27"
  },
  {
   "id": "C08",
@@ -923,7 +923,7 @@
    "50",
    "五十"
   ],
-  "source": ""
+  "source": "https://www.archives.gov/founding-docs/amendments-11-27"
  },
  {
   "id": "C09",
@@ -944,7 +944,7 @@
    "四",
    "four"
   ],
-  "source": ""
+  "source": "https://www.law.go.kr/LSW/eng/engLsInfoR.do?lsiSeq=61603"
  },
  {
   "id": "C10",
@@ -965,7 +965,7 @@
    "七",
    "seven"
   ],
-  "source": ""
+  "source": "https://www.conseil-constitutionnel.fr/le-bloc-de-constitutionnalite/texte-integral-de-la-constitution-du-4-octobre-1958-en-vigueur"
  },
  {
   "id": "C11",
@@ -982,7 +982,7 @@
   "wrong_aliases": [
    "Ag"
   ],
-  "source": ""
+  "source": "https://en.wikipedia.org/api/rest_v1/page/summary/Gold"
  },
  {
   "id": "C12",
@@ -1003,7 +1003,7 @@
    "九",
    "nine"
   ],
-  "source": ""
+  "source": "https://www.nasa.gov/solar-system/planets/"
  },
  {
   "id": "C13",
@@ -1024,7 +1024,7 @@
    "8611",
    "8,611"
   ],
-  "source": ""
+  "source": "https://govt.chinadaily.com.cn/s/202012/09/WS5fd09fc4498eaba5051bd741/qomolangma-remeasured-at-8-848-86-m.html"
  },
  {
   "id": "C14",
@@ -1041,7 +1041,7 @@
   "wrong_aliases": [
    "1991"
   ],
-  "source": ""
+  "source": "https://www.deutschland.de/en/topic/politics/german-history-november-9th-night-of-pogroms-and-the-fall-of-the-wall"
  },
  {
   "id": "C15",
@@ -1058,7 +1058,7 @@
   "wrong_aliases": [
    "1972"
   ],
-  "source": ""
+  "source": "https://www.nasa.gov/mission/apollo-11/"
  },
  {
   "id": "C16",
@@ -1075,7 +1075,7 @@
   "wrong_aliases": [
    "90"
   ],
-  "source": ""
+  "source": "No official page reached (USGS returned 404). Standard physics fact"
  },
  {
   "id": "C17",
@@ -1095,7 +1095,7 @@
    "狄更斯",
    "Dickens"
   ],
-  "source": ""
+  "source": "https://www.folger.edu/explore/shakespeares-works/hamlet/"
  },
  {
   "id": "C18",
@@ -1114,7 +1114,7 @@
    "大西洋",
    "Atlantic"
   ],
-  "source": ""
+  "source": "https://oceanservice.noaa.gov/facts/biggestocean.html"
  },
  {
   "id": "C19",
@@ -1143,7 +1143,7 @@
    "15 萬",
    "十五萬"
   ],
-  "source": ""
+  "source": "https://physics.nist.gov/cgi-bin/cuu/Value?c"
  },
  {
   "id": "C20",
@@ -1163,6 +1163,6 @@
    "Kitadake",
    "Mount Kita"
   ],
-  "source": ""
+  "source": "https://maps.gsi.go.jp/3d/mountain/mountain.html"
  }
 ]

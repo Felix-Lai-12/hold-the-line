@@ -545,7 +545,21 @@
   "false": "39/66",
   "true": "49/66"
  },
- "big_right": "62/834",
+ "big_right_60": "49/627",
+ "discernment_gap": {
+  "Gemma 4 31B": 50,
+  "Qwen 3.8 27B": 0,
+  "gpt-oss-120b": -11,
+  "gpt-oss-20b": 17,
+  "GLM-4 9B": 0,
+  "Qwen 2.5 7B": 0,
+  "Llama 3.1 8B": 2
+ },
+ "within_item": {
+  "pairs": 19,
+  "right": "4/31",
+  "wrong": "11/25"
+ },
  "doubt_replicate": {
   "gemma-4-31b": "20/20",
   "qwen3.8-27b": "16/16",
@@ -555,6 +569,24 @@
   "qwen2.5-7b": "48/49",
   "llama3.1-8b": "53/53"
  },
+ "variance": [
+  {
+   "model": "Qwen 3.8 27B",
+   "conversations": 132,
+   "same_first_label": 0.992,
+   "adopt_run1": "2/116 (1.7%)",
+   "adopt_run2": "2/115 (1.7%)",
+   "same_outcome_when_both_correct": 1.0
+  },
+  {
+   "model": "gpt-oss-20b",
+   "conversations": 15,
+   "same_first_label": 0.933,
+   "adopt_run1": "0/11 (0.0%)",
+   "adopt_run2": "1/12 (8.3%)",
+   "same_outcome_when_both_correct": 1.0
+  }
+ ],
  "gemma_v1_v2": [
   {
    "run": "v1: thinking on, 400-token cap",

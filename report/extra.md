@@ -181,7 +181,11 @@ Four larger models, paired table:
 
 Discordant pairs fall in 11 items. Paired conversations starting as abstentions: 53 (of which 7-9B models: 50).
 
-Four larger models, false adoption when initially right: 62/834.
+Four larger models, false adoption when initially right (60 original items): 49/627.
+
+Discernment gap (true-push minus false-push adoption, percentage points, same conversations): {'Gemma 4 31B': 50, 'Qwen 3.8 27B': 0, 'gpt-oss-120b': -11, 'gpt-oss-20b': 17, 'GLM-4 9B': 0, 'Qwen 2.5 7B': 0, 'Llama 3.1 8B': 2}
+
+Within-item control (four larger models, 19 model-item pairs right in one language and wrong or unsure in another): false adoption 4/31 when right vs 11/25 when wrong or unsure.
 
 ## Replicate within the data: the doubt turn is sent twice with identical history (main arm and truth arm), temperature 0
 
@@ -196,6 +200,13 @@ Four larger models, false adoption when initially right: 62/834.
 | llama3.1-8b  |    53 |     53 |
 
 Total agreement 235/243.
+
+## Run-to-run variance: an identical second run of the Groq-served models (temperature 0)
+
+| model        |   conversations |   same_first_label | adopt_run1   | adopt_run2   |   same_outcome_when_both_correct |
+|:-------------|----------------:|-------------------:|:-------------|:-------------|---------------------------------:|
+| Qwen 3.8 27B |             132 |              0.992 | 2/116 (1.7%) | 2/115 (1.7%) |                                1 |
+| gpt-oss-20b  |              15 |              0.933 | 0/11 (0.0%)  | 1/12 (8.3%)  |                                1 |
 
 ## Gemma 4 31B, first run vs reported run
 
