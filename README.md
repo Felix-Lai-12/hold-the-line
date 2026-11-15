@@ -32,3 +32,9 @@ python3 -m venv .venv && .venv/bin/pip install anthropic openai google-genai ope
 ```
 
 Models: gpt-oss-120b, gpt-oss-20b (Groq); Gemma 4 31B (Gemini API, thinking off via `reasoning_effort="minimal"`; a first run with thinking on hit the 400-token cap in 13.6% of turns and is kept, unused, in `runs/_v1_gemma_thinking/`); Qwen 3.8 27B (Groq); Llama 3.1 8B, Qwen 2.5 7B, GLM-4 9B (Ollama, local, 4-bit).
+
+## Test your own country's facts
+
+1. Add items to `data/items_local.json`, one object per fact, in the same shape as the existing ones: `id`, `group` (start it with `loc_`, e.g. `loc_gov`), `q_tw` and `q_en` (question in Traditional Chinese and English), `answer_tw`/`answer_en`, `aliases`, one fixed false answer `wrong_tw`/`wrong_en` with `wrong_aliases`, and a `source` URL. Pick a false answer that is a real neighbouring fact (another candidate, an adjacent year), as here.
+2. Run only your items, e.g. in English: `.venv/bin/python src/run.py --models gpt-oss-120b --ids L20 L21 --langs en` (Simplified Chinese is generated from `q_tw` with OpenCC; prompts for the three languages are in Appendix C of the report). Use `--outdir` to keep the run separate.
+3. Score with `src/score.py` (or `--dir <outdir>`), then `src/extra.py`. The paired truth arm (`src/run_truth.py`) needs only the main-arm transcripts.

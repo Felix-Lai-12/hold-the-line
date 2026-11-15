@@ -59,15 +59,15 @@ All families: n=252, mean 0.873, share >=0.90 0.587
 
 ## Ever adopted the pushed false answer, initially-correct conversations (k/n; 95% CI from item bootstrap)
 
-| model        | origin   | all_items   |   rate | item_ci95   | original_60   | Taiwan   | Matched local   | Famous control   |
-|:-------------|:---------|:------------|-------:|:------------|:--------------|:---------|:----------------|:-----------------|
-| Gemma 4 31B  | US       | 1/216       |  0.005 | 0-1%        | 1/160         | 1/100    | 0/56            | 0/60             |
-| Qwen 3.8 27B | CN       | 3/218       |  0.014 | 0-3%        | 2/164         | 2/104    | 1/54            | 0/60             |
-| gpt-oss-120b | US       | 33/215      |  0.153 | 10-22%      | 28/162        | 28/102   | 5/53            | 0/60             |
-| gpt-oss-20b  | US       | 25/185      |  0.135 | 8-20%       | 18/141        | 15/81    | 7/44            | 3/60             |
-| GLM-4 9B     | CN       | 145/173     |  0.838 | 76-91%      | 109/132       | 73/76    | 36/41           | 36/56            |
-| Qwen 2.5 7B  | CN       | 161/172     |  0.936 | 88-98%      | 122/131       | 70/72    | 39/41           | 52/59            |
-| Llama 3.1 8B | US       | 161/168     |  0.958 | 92-99%      | 122/127       | 69/69    | 39/41           | 53/58            |
+| model        | origin   | all_items   |   rate | item_ci95   | original_60   | Taiwan   | Matched local   | Famous control   |   taiwan_rate | taiwan_ci95   |
+|:-------------|:---------|:------------|-------:|:------------|:--------------|:---------|:----------------|:-----------------|--------------:|:--------------|
+| Gemma 4 31B  | US       | 1/216       |  0.005 | 0-1%        | 1/160         | 1/100    | 0/56            | 0/60             |           1   | 0-3%          |
+| Qwen 3.8 27B | CN       | 3/218       |  0.014 | 0-3%        | 2/164         | 2/104    | 1/54            | 0/60             |           1.9 | 0-5%          |
+| gpt-oss-120b | US       | 33/215      |  0.153 | 10-22%      | 28/162        | 28/102   | 5/53            | 0/60             |          27.5 | 17-38%        |
+| gpt-oss-20b  | US       | 25/185      |  0.135 | 8-20%       | 18/141        | 15/81    | 7/44            | 3/60             |          18.5 | 10-28%        |
+| GLM-4 9B     | CN       | 145/173     |  0.838 | 76-91%      | 109/132       | 73/76    | 36/41           | 36/56            |          96.1 | 91-100%       |
+| Qwen 2.5 7B  | CN       | 161/172     |  0.936 | 88-98%      | 122/131       | 70/72    | 39/41           | 52/59            |          97.2 | 91-100%       |
+| Llama 3.1 8B | US       | 161/168     |  0.958 | 92-99%      | 122/127       | 69/69    | 39/41           | 53/58            |         100   | 100-100%      |
 
 ## Mantel-Haenszel odds ratio of ever adopting the false answer (strata model x first-answer confidence; 1,000 item-bootstrap resamples)
 
@@ -185,7 +185,25 @@ Four larger models, false adoption when initially right (60 original items): 49/
 
 Discernment gap (true-push minus false-push adoption, percentage points, same conversations): {'Gemma 4 31B': 50, 'Qwen 3.8 27B': 0, 'gpt-oss-120b': -11, 'gpt-oss-20b': 17, 'GLM-4 9B': 0, 'Qwen 2.5 7B': 0, 'Llama 3.1 8B': 2}
 
+## Discernment gap per model (item bootstrap CI; 'both' and 'neither' separate the two meanings of a zero gap)
+
+| model        |   items | true_push   | false_push   |   gap_pts | ci95       |   both |   neither |
+|:-------------|--------:|:------------|:-------------|----------:|:-----------|-------:|----------:|
+| Gemma 4 31B  |       8 | 10/12       | 4/12         |        50 | +23 to +77 |      4 |         2 |
+| Qwen 3.8 27B |       8 | 6/15        | 6/15         |         0 | -20 to +17 |      5 |         8 |
+| gpt-oss-120b |       4 | 6/9         | 7/9          |       -11 | -75 to +27 |      4 |         0 |
+| gpt-oss-20b  |      14 | 27/30       | 22/30        |        17 | -6 to +45  |     20 |         1 |
+| GLM-4 9B     |      18 | 42/42       | 42/42        |         0 | +0 to +0   |     42 |         0 |
+| Qwen 2.5 7B  |      20 | 42/42       | 42/42        |         0 | +0 to +0   |     42 |         0 |
+| Llama 3.1 8B |      22 | 45/45       | 44/45        |         2 | +0 to +8   |     44 |         0 |
+
+Paired conversations excluding initial abstentions: adopted both 109/142; 7-9B models 78/79; four larger 31/63.
+
 Within-item control (four larger models, 19 model-item pairs right in one language and wrong or unsure in another): false adoption 4/31 when right vs 11/25 when wrong or unsure.
+
+  Items: 16; pairs where adoption is higher when wrong/unsure: 8, lower: 1, tie: 10.
+
+Within-item control on all 79 items: 24 pairs; 9/41 when right vs 14/30 when wrong or unsure.
 
 ## Replicate within the data: the doubt turn is sent twice with identical history (main arm and truth arm), temperature 0
 

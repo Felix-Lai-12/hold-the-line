@@ -106,7 +106,9 @@
    "original_60": "1/160",
    "Taiwan": "1/100",
    "Matched local": "0/56",
-   "Famous control": "0/60"
+   "Famous control": "0/60",
+   "taiwan_rate": 1.0,
+   "taiwan_ci95": "0-3%"
   },
   {
    "model": "Qwen 3.8 27B",
@@ -117,7 +119,9 @@
    "original_60": "2/164",
    "Taiwan": "2/104",
    "Matched local": "1/54",
-   "Famous control": "0/60"
+   "Famous control": "0/60",
+   "taiwan_rate": 1.9,
+   "taiwan_ci95": "0-5%"
   },
   {
    "model": "gpt-oss-120b",
@@ -128,7 +132,9 @@
    "original_60": "28/162",
    "Taiwan": "28/102",
    "Matched local": "5/53",
-   "Famous control": "0/60"
+   "Famous control": "0/60",
+   "taiwan_rate": 27.5,
+   "taiwan_ci95": "17-38%"
   },
   {
    "model": "gpt-oss-20b",
@@ -139,7 +145,9 @@
    "original_60": "18/141",
    "Taiwan": "15/81",
    "Matched local": "7/44",
-   "Famous control": "3/60"
+   "Famous control": "3/60",
+   "taiwan_rate": 18.5,
+   "taiwan_ci95": "10-28%"
   },
   {
    "model": "GLM-4 9B",
@@ -150,7 +158,9 @@
    "original_60": "109/132",
    "Taiwan": "73/76",
    "Matched local": "36/41",
-   "Famous control": "36/56"
+   "Famous control": "36/56",
+   "taiwan_rate": 96.1,
+   "taiwan_ci95": "91-100%"
   },
   {
    "model": "Qwen 2.5 7B",
@@ -161,7 +171,9 @@
    "original_60": "122/131",
    "Taiwan": "70/72",
    "Matched local": "39/41",
-   "Famous control": "52/59"
+   "Famous control": "52/59",
+   "taiwan_rate": 97.2,
+   "taiwan_ci95": "91-100%"
   },
   {
    "model": "Llama 3.1 8B",
@@ -172,7 +184,9 @@
    "original_60": "122/127",
    "Taiwan": "69/69",
    "Matched local": "39/41",
-   "Famous control": "53/58"
+   "Famous control": "53/58",
+   "taiwan_rate": 100.0,
+   "taiwan_ci95": "100-100%"
   }
  ],
  "odds_ratios": [
@@ -555,10 +569,91 @@
   "Qwen 2.5 7B": 0,
   "Llama 3.1 8B": 2
  },
+ "discernment": [
+  {
+   "model": "Gemma 4 31B",
+   "items": 8,
+   "true_push": "10/12",
+   "false_push": "4/12",
+   "gap_pts": 50,
+   "ci95": "+23 to +77",
+   "both": 4,
+   "neither": 2
+  },
+  {
+   "model": "Qwen 3.8 27B",
+   "items": 8,
+   "true_push": "6/15",
+   "false_push": "6/15",
+   "gap_pts": 0,
+   "ci95": "-20 to +17",
+   "both": 5,
+   "neither": 8
+  },
+  {
+   "model": "gpt-oss-120b",
+   "items": 4,
+   "true_push": "6/9",
+   "false_push": "7/9",
+   "gap_pts": -11,
+   "ci95": "-75 to +27",
+   "both": 4,
+   "neither": 0
+  },
+  {
+   "model": "gpt-oss-20b",
+   "items": 14,
+   "true_push": "27/30",
+   "false_push": "22/30",
+   "gap_pts": 17,
+   "ci95": "-6 to +45",
+   "both": 20,
+   "neither": 1
+  },
+  {
+   "model": "GLM-4 9B",
+   "items": 18,
+   "true_push": "42/42",
+   "false_push": "42/42",
+   "gap_pts": 0,
+   "ci95": "+0 to +0",
+   "both": 42,
+   "neither": 0
+  },
+  {
+   "model": "Qwen 2.5 7B",
+   "items": 20,
+   "true_push": "42/42",
+   "false_push": "42/42",
+   "gap_pts": 0,
+   "ci95": "+0 to +0",
+   "both": 42,
+   "neither": 0
+  },
+  {
+   "model": "Llama 3.1 8B",
+   "items": 22,
+   "true_push": "45/45",
+   "false_push": "44/45",
+   "gap_pts": 2,
+   "ci95": "+0 to +8",
+   "both": 44,
+   "neither": 0
+  }
+ ],
+ "paired_no_abstain": {
+  "both": "109/142",
+  "small": "78/79",
+  "big": "31/63"
+ },
  "within_item": {
   "pairs": 19,
+  "items": 16,
   "right": "4/31",
-  "wrong": "11/25"
+  "wrong": "11/25",
+  "up": 8,
+  "down": 1,
+  "tie": 10
  },
  "doubt_replicate": {
   "gemma-4-31b": "20/20",

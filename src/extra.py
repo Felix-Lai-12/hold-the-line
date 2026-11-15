@@ -103,6 +103,8 @@ for m in ORDER:
     r = dict(model=NICE[m], origin=ORIGIN[m], all_items=kn(s.ever_adopt), rate=round(s.ever_adopt.mean(), 3), item_ci95=f"{lo*100:.0f}-{hi*100:.0f}%")
     r["original_60"] = kn(s[s.family != "Matched local"].ever_adopt)
     for f in FAMS: r[f] = kn(s[s.family == f].ever_adopt)
+    st = s[s.family == "Taiwan"]; tlo, thi = item_boot_rate(st, "ever_adopt")
+    r["taiwan_rate"] = round(st.ever_adopt.mean() * 100, 1); r["taiwan_ci95"] = f"{tlo*100:.0f}-{thi*100:.0f}%"
     rows.append(r)
 section("Ever adopted the pushed false answer, initially-correct conversations (k/n; 95% CI from item bootstrap)", pd.DataFrame(rows).to_markdown(index=False))
 js["adopt"] = rows
@@ -137,10 +139,10 @@ for ax, m in zip(axes, ORDER):
         x = np.arange(4); ax.plot(x, ys, color=COL[f], lw=1.8, marker="o", ms=3, label=f)
         ax.fill_between(x[1:], lo, hi, color=COL[f], alpha=.13, lw=0)
         curve[f"{m}|{f}"] = [round(v, 1) for v in ys]
-    ax.set_title(f"{NICE[m]} ({ORIGIN[m]})", fontsize=8.5); ax.set_xticks(range(4)); ax.set_xticklabels(["first", "doubt", "official\nrecord", "Xinhua"], fontsize=7); ax.tick_params(axis="y", labelsize=7)
+    ax.set_title(f"{NICE[m]} ({ORIGIN[m]})", fontsize=9.5); ax.set_xticks(range(4)); ax.set_xticklabels(["first", "doubt", "official\nrecord", "Xinhua"], fontsize=8.5); ax.tick_params(axis="y", labelsize=8.5)
     ax.set_ylim(-3, 103); ax.grid(axis="y", alpha=.3)
-axes[0].set_ylabel("% giving the false answer", fontsize=8); axes[4].set_ylabel("% giving the false answer", fontsize=8)
-h, l = axes[0].get_legend_handles_labels(); axes[7].axis("off"); axes[7].legend(h, l, loc="center", frameon=False, fontsize=8.5, title="Item family", title_fontsize=8.5)
+axes[0].set_ylabel("% giving the false answer", fontsize=9); axes[4].set_ylabel("% giving the false answer", fontsize=9)
+h, l = axes[0].get_legend_handles_labels(); axes[7].axis("off"); axes[7].legend(h, l, loc="center", frameon=False, fontsize=10, title="Item family", title_fontsize=10)
 fig.tight_layout(); fig.savefig(ROOT / "figs/fig1_flip_curves.png", dpi=200); plt.close(fig)
 js["flip_curves"] = curve
 
@@ -197,6 +199,21 @@ if tp.exists():
     # discernment gap: true-push minus false-push adoption on the same conversations
     gap = {NICE[m]: round((pair[pair.model == m].adopt_true.mean() - pair[pair.model == m].ever_adopt.mean()) * 100) for m in ORDER if (pair.model == m).any()}
     out.append(f"Discernment gap (true-push minus false-push adoption, percentage points, same conversations): {gap}\n"); js["discernment_gap"] = gap
+    rows = []
+    for m in ORDER:
+        s = pair[pair.model == m]
+        if not len(s): continue
+        g = s.groupby("item")[["adopt_true", "ever_adopt"]].agg(["sum", "size"]); rng = np.random.default_rng(0); idx = np.arange(len(g))
+        t, f_, n = g[("adopt_true", "sum")].values, g[("ever_adopt", "sum")].values, g[("adopt_true", "size")].values
+        bs = [(t[q].sum() - f_[q].sum()) / n[q].sum() * 100 for q in (rng.choice(idx, len(idx)) for _ in range(B))]
+        lo, hi = np.percentile(bs, [2.5, 97.5])
+        rows.append(dict(model=NICE[m], items=s["item"].nunique(), true_push=kn(s.adopt_true), false_push=kn(s.ever_adopt), gap_pts=gap[NICE[m]],
+                         ci95=f"{lo:+.0f} to {hi:+.0f}", both=int((s.adopt_true & s.ever_adopt).sum()), neither=int((~s.adopt_true & ~s.ever_adopt).sum())))
+    section("Discernment gap per model (item bootstrap CI; 'both' and 'neither' separate the two meanings of a zero gap)", pd.DataFrame(rows).to_markdown(index=False))
+    js["discernment"] = rows
+    na = pair[pair["init"] != "abstain"]; both = na.adopt_true & na.ever_adopt
+    out.append(f"Paired conversations excluding initial abstentions: adopted both {int(both.sum())}/{len(na)}; 7-9B models {int(both[na.model.isin(SMALL)].sum())}/{int(na.model.isin(SMALL).sum())}; four larger {int(both[~na.model.isin(SMALL)].sum())}/{int((~na.model.isin(SMALL)).sum())}.\n")
+    js["paired_no_abstain"] = dict(both=kn(both), small=kn(both[na.model.isin(SMALL)]), big=kn(both[~na.model.isin(SMALL)]))
     # within-item control: larger models, model-item pairs right in one language and wrong/unsure in another
     o = conv[(conv.family != "Matched local") & ~conv.model.isin(SMALL)].copy()
     o["state"] = o["init"].map(lambda x: "right" if x == "correct" else ("wrong_or_unsure" if x in ("other_wrong", "abstain") else "other"))
@@ -205,7 +222,15 @@ if tp.exists():
     sub = o.set_index(["model", "item"]).loc[keys].reset_index()
     wr, ww = sub[sub.state == "right"], sub[sub.state == "wrong_or_unsure"]
     out.append(f"Within-item control (four larger models, {len(keys)} model-item pairs right in one language and wrong or unsure in another): false adoption {kn(wr.ever_adopt)} when right vs {kn(ww.ever_adopt)} when wrong or unsure.\n")
-    js["within_item"] = dict(pairs=len(keys), right=kn(wr.ever_adopt), wrong=kn(ww.ever_adopt))
+    d = sub.groupby(["model", "item", "state"]).ever_adopt.mean().unstack()
+    up, down = int((d.wrong_or_unsure > d.right).sum()), int((d.wrong_or_unsure < d.right).sum())
+    out.append(f"  Items: {sub['item'].nunique()}; pairs where adoption is higher when wrong/unsure: {up}, lower: {down}, tie: {len(d) - up - down}.\n")
+    js["within_item"] = dict(pairs=len(keys), items=int(sub["item"].nunique()), right=kn(wr.ever_adopt), wrong=kn(ww.ever_adopt), up=up, down=down, tie=len(d) - up - down)
+    o2 = conv[~conv.model.isin(SMALL)].copy()
+    o2["state"] = o2["init"].map(lambda x: "right" if x == "correct" else ("wrong_or_unsure" if x in ("other_wrong", "abstain") else "other"))
+    st2 = o2.groupby(["model", "item"]).state.agg(set); k2 = [k for k, v in st2.items() if {"right", "wrong_or_unsure"} <= v]
+    sub2 = o2.set_index(["model", "item"]).loc[k2].reset_index()
+    out.append(f"Within-item control on all 79 items: {len(k2)} pairs; {kn(sub2[sub2.state == 'right'].ever_adopt)} when right vs {kn(sub2[sub2.state == 'wrong_or_unsure'].ever_adopt)} when wrong or unsure.\n")
     # replicate for free: the truth arm's doubt turn repeats the main arm's exact history and prompt at temperature 0
     rep = conv[(conv.family != "Matched local")].merge(tr[["model", "item", "lang", "doubt"]].rename(columns={"doubt": "doubt_rep"}), on=["model", "item", "lang"])
     agr = rep.assign(same=rep.doubt == rep.doubt_rep).groupby("model").same.agg(["sum", "size"]).reindex(ORDER)
@@ -218,11 +243,11 @@ if tp.exists():
         a, b = s.ever_adopt.mean() * 100, s.adopt_true.mean() * 100
         ax.plot([a, b], [yi + .13, yi - .13], color="#bbb", lw=2, zorder=1)  # offset so equal rates stay visible
         ax.scatter([a], [yi + .13], color="#c0392b", zorder=2); ax.scatter([b], [yi - .13], color="#2471a3", marker="s", zorder=2)
-        ax.text(104, yi, f"n={len(s)}", va="center", fontsize=7)
+        ax.text(104, yi, f"n={len(s)}", va="center", fontsize=9)
     ax.scatter([], [], color="#c0392b", label="pushed toward the FALSE answer"); ax.scatter([], [], color="#2471a3", marker="s", label="pushed toward the TRUE answer")
-    ax.set_yticks(y); ax.set_yticklabels([f"{NICE[m]} ({ORIGIN[m]})" for m in ORDER], fontsize=8); ax.set_xlim(-3, 112)
-    ax.set_xlabel("% of initially wrong conversations that adopt the pushed answer", fontsize=8)
-    ax.legend(loc="lower center", bbox_to_anchor=(0.45, 1.0), ncol=2, frameon=False, fontsize=7.5); ax.grid(axis="x", alpha=.3)
+    ax.set_yticks(y); ax.set_yticklabels([f"{NICE[m]} ({ORIGIN[m]})" for m in ORDER], fontsize=9.5); ax.set_xlim(-3, 114)
+    ax.set_xlabel("% of initially wrong conversations that adopt the pushed answer", fontsize=9.5)
+    ax.legend(loc="lower center", bbox_to_anchor=(0.45, 1.0), ncol=2, frameon=False, fontsize=9.5); ax.grid(axis="x", alpha=.3)
     fig.tight_layout(); fig.savefig(ROOT / "figs/fig2_paired.png", dpi=200); plt.close(fig)
 
 # ---------- run-to-run variance (repeat run of the Groq-served models) ----------
