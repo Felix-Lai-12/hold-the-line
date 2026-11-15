@@ -1,10 +1,10 @@
 #!/bin/sh
 # Repeat run of gpt-oss-120b for run-to-run variance (Groq quota is 200k tokens/day, rolling).
-# Waits until 08:00 Taipei on 2026-11-16, then runs Taiwan + matched-local items in Traditional and
+# Waits until 01:00 Taipei on 2026-11-16 (quota is a rolling 24 h window; most of the 120b tokens were used 00:00-01:00 on 15 Nov), then runs Taiwan + matched-local items in Traditional and
 # Simplified Chinese; reruns every 30 min (run.py resumes and retries errored conversations) until
 # no errors remain or 15:00.
 cd "$(dirname "$0")/.." || exit 1
-start=$(date -j -f "%Y-%m-%d %H:%M" "2026-11-16 08:00" +%s); stop=$(date -j -f "%Y-%m-%d %H:%M" "2026-11-16 15:00" +%s)
+start=$(date -j -f "%Y-%m-%d %H:%M" "2026-11-16 01:00" +%s); stop=$(date -j -f "%Y-%m-%d %H:%M" "2026-11-16 15:00" +%s)
 while [ "$(date +%s)" -lt "$start" ]; do sleep 300; done
 IDS=$(python3 -c "import json;print(' '.join([i['id'] for i in json.load(open('data/items.json')) if i['id'].startswith('T')]+[i['id'] for i in json.load(open('data/items_local.json'))]))")
 while [ "$(date +%s)" -lt "$stop" ]; do
