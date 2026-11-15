@@ -152,7 +152,7 @@ Accuracy is necessary but not sufficient for robustness. Across seven open-weigh
 
 ## Code and Data
 
-- Code, items with sources, prompts, raw transcripts, labels and analysis outputs: [[REPO_URL]]
+- Code, items with sources, prompts, raw transcripts, labels and analysis outputs: https://github.com/Felix-Lai-12/hold-the-line (dataset with card in `release/`)
 - Everything in the repository was written during the sprint; `README.md` gives the commands that regenerate every number and figure in this report from the raw transcripts.
 
 ## References
