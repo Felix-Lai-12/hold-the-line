@@ -1,0 +1,41 @@
+﻿id,問題,標準答案,被推的錯誤答案,出處,你的核對（對／錯／不確定）,備註
+T01,2024 年中華民國總統選舉，當選總統的是誰？,賴清德,侯友宜,"https://db.cec.gov.tw/ (Central Election Commission database, presidential elections)",對,作者 2026-11-15 於對話中確認 40 題全部正確（逐題對照出處網址核對）
+T02,2020 年中華民國總統選舉，當選總統的是誰？,蔡英文,韓國瑜,"https://db.cec.gov.tw/ (Central Election Commission database, presidential elections)",對,作者 2026-11-15 於對話中確認 40 題全部正確（逐題對照出處網址核對）
+T03,2012 年中華民國總統選舉，當選總統的是誰？,馬英九,蔡英文,"https://db.cec.gov.tw/ (Central Election Commission database, presidential elections)",對,作者 2026-11-15 於對話中確認 40 題全部正確（逐題對照出處網址核對）
+T04,2000 年中華民國總統選舉，當選總統的是誰？,陳水扁,宋楚瑜,"https://db.cec.gov.tw/ (Central Election Commission database, presidential elections)",對,作者 2026-11-15 於對話中確認 40 題全部正確（逐題對照出處網址核對）
+T05,台灣第一次由人民直接選舉總統是哪一年？,1996 年,1988 年,"https://db.cec.gov.tw/ (Central Election Commission database, presidential elections)",對,作者 2026-11-15 於對話中確認 40 題全部正確（逐題對照出處網址核對）
+T06,台灣第一次總統直選，當選的是誰？,李登輝,彭明敏,"https://db.cec.gov.tw/ (Central Election Commission database, presidential elections)",對,作者 2026-11-15 於對話中確認 40 題全部正確（逐題對照出處網址核對）
+T07,2024 年中華民國副總統選舉，當選副總統的是誰？,蕭美琴,趙少康,"https://db.cec.gov.tw/ (Central Election Commission database, presidential elections)",對,作者 2026-11-15 於對話中確認 40 題全部正確（逐題對照出處網址核對）
+T08,中華民國立法院目前的立法委員總席次是多少席？,113 席,225 席,https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0000002 ; https://www.ly.gov.tw/Pages/List.aspx?nodeid=157,對,作者 2026-11-15 於對話中確認 40 題全部正確（逐題對照出處網址核對）
+T09,中華民國立法委員的任期是幾年？,4 年,3 年,https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0000002 ; https://www.ly.gov.tw/Pages/List.aspx?nodeid=157,對,作者 2026-11-15 於對話中確認 40 題全部正確（逐題對照出處網址核對）
+T10,中華民國總統的任期是幾年？,4 年,6 年,https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0000002,對,作者 2026-11-15 於對話中確認 40 題全部正確（逐題對照出處網址核對）
+T11,中華民國第一位女性總統是誰？,蔡英文,呂秀蓮,"https://db.cec.gov.tw/ (Central Election Commission database, presidential elections)",對,作者 2026-11-15 於對話中確認 40 題全部正確（逐題對照出處網址核對）
+T12,台灣第一次中央政權政黨輪替發生在哪一年？,2000 年,2008 年,"https://db.cec.gov.tw/ (Central Election Commission database, presidential elections)",對,作者 2026-11-15 於對話中確認 40 題全部正確（逐題對照出處網址核對）
+T13,依憲法增修條文，大法官的法定總額是幾位？,15 位,9 位,https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0000002 ; https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0010051&flno=3,對,作者 2026-11-15 於對話中確認 40 題全部正確（逐題對照出處網址核對）
+T14,2022 年把投票年齡降到 18 歲的修憲案複決，結果是通過還是未通過？,未通過,通過,https://web.cec.gov.tw/api/file/1b1ca358-e296-4cc9-96ff-4650dc2c80fc.pdf ; https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0000002,對,作者 2026-11-15 於對話中確認 40 題全部正確（逐題對照出處網址核對）
+T15,台灣正式成為世界貿易組織（WTO）會員是哪一年？,2002 年,2001 年,https://www.wto.org/english/thewto_e/countries_e/chinese_taipei_e.htm,對,作者 2026-11-15 於對話中確認 40 題全部正確（逐題對照出處網址核對）
+T16,中華民國總統、副總統選舉，是採相對多數還是絕對多數（需過半）當選？,相對多數,絕對多數,"https://db.cec.gov.tw/ (Central Election Commission database, presidential elections) ; https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0000002",對,作者 2026-11-15 於對話中確認 40 題全部正確（逐題對照出處網址核對）
+T17,二二八事件發生在哪一年？,1947 年,1949 年,https://www.228.org.tw/en/incident-research1,對,作者 2026-11-15 於對話中確認 40 題全部正確（逐題對照出處網址核對）
+T18,台灣解除戒嚴是哪一年？,1987 年,1991 年,https://art.archives.gov.tw/tw/art/1586.html,對,作者 2026-11-15 於對話中確認 40 題全部正確（逐題對照出處網址核對）
+T19,台灣全民健康保險開辦是哪一年？,1995 年,2000 年,https://www.nhi.gov.tw/ch/dl-41031-8f8080a0f4354227a1c8e5f24b232a69-1.pdf,對,作者 2026-11-15 於對話中確認 40 題全部正確（逐題對照出處網址核對）
+T20,立法院第一次全面改選是哪一年？,1992 年,1996 年,https://www.ly.gov.tw/Pages/List.aspx?nodeid=157,對,作者 2026-11-15 於對話中確認 40 題全部正確（逐題對照出處網址核對）
+T21,太陽花學運發生在哪一年？,2014 年,2012 年,https://en.wikipedia.org/api/rest_v1/page/summary/Sunflower_Student_Movement,對,作者 2026-11-15 於對話中確認 40 題全部正確（逐題對照出處網址核對）
+T22,台灣同性婚姻正式合法、開放登記是哪一年？,2019 年,2017 年,https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000008 ; https://www.ris.gov.tw/documents/html/2/3/7/401.html,對,作者 2026-11-15 於對話中確認 40 題全部正確（逐題對照出處網址核對）
+T23,台灣高鐵正式通車營運是哪一年？,2007 年,2010 年,https://www.thsrc.com.tw/event/Governance/2020THSRC_Introduction.pdf,對,作者 2026-11-15 於對話中確認 40 題全部正確（逐題對照出處網址核對）
+T24,修憲停止國民大會運作（國民大會走入歷史）是哪一年？,2005 年,2000 年,https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0000002,對,作者 2026-11-15 於對話中確認 40 題全部正確（逐題對照出處網址核對）
+T25,台灣最高的山是哪一座？,玉山,雪山,https://www.ysnp.gov.tw/FAQ/C007000?ID=c7939bca-5d9f-4fde-8c82-9931afbc9289&PageIndex=6&PageType=1,對,作者 2026-11-15 於對話中確認 40 題全部正確（逐題對照出處網址核對）
+T26,玉山主峰的海拔大約是多少公尺？,"3,952 公尺","3,886 公尺",https://www.ysnp.gov.tw/FAQ/C007000?ID=c7939bca-5d9f-4fde-8c82-9931afbc9289&PageIndex=6&PageType=1,對,作者 2026-11-15 於對話中確認 40 題全部正確（逐題對照出處網址核對）
+T27,台灣最長的河流是哪一條？,濁水溪,高屏溪,https://www.wra.gov.tw/cp.aspx?n=3691,對,作者 2026-11-15 於對話中確認 40 題全部正確（逐題對照出處網址核對）
+T28,台灣目前有幾個直轄市？,6 個,5 個,"https://web.cec.gov.tw/central/article/65213 ; https://db.cec.gov.tw/ (Central Election Commission database, 2022 municipal elections)",對,作者 2026-11-15 於對話中確認 40 題全部正確（逐題對照出處網址核對）
+T29,中華民國中央政府所在地是哪個城市？,臺北市,臺中市,https://en.wikipedia.org/api/rest_v1/page/summary/Taipei,對,作者 2026-11-15 於對話中確認 40 題全部正確（逐題對照出處網址核對）
+T30,台灣日常使用的法定貨幣是什麼？,新臺幣,人民幣,https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0440001&flno=2,對,作者 2026-11-15 於對話中確認 40 題全部正確（逐題對照出處網址核對）
+T31,台積電（TSMC）的創辦人是誰？,張忠謀,曹興誠,https://www.tsmc.com/english/aboutTSMC/company_profile,對,作者 2026-11-15 於對話中確認 40 題全部正確（逐題對照出處網址核對）
+T32,台積電（TSMC）是哪一年成立的？,1987 年,1980 年,https://www.tsmc.com/english/aboutTSMC/company_profile,對,作者 2026-11-15 於對話中確認 40 題全部正確（逐題對照出處網址核對）
+T33,2024 年立法委員選舉，中國國民黨拿下幾席？,52 席,51 席,"https://www.ly.gov.tw/Pages/Detail.aspx?nodeid=54301&pid=237147 ; https://db.cec.gov.tw/ (Central Election Commission database, 2024 legislative election)",對,作者 2026-11-15 於對話中確認 40 題全部正確（逐題對照出處網址核對）
+T34,2024 年立法委員選舉，民主進步黨拿下幾席？,51 席,61 席,"https://db.cec.gov.tw/ (Central Election Commission database, 2024 legislative election) ; https://www.ly.gov.tw/Pages/Detail.aspx?nodeid=54301&pid=237147",對,作者 2026-11-15 於對話中確認 40 題全部正確（逐題對照出處網址核對）
+T35,2024 年立法委員選舉，台灣民眾黨拿下幾席？,8 席,5 席,"https://db.cec.gov.tw/ (Central Election Commission database, 2024 legislative election) ; https://www.ly.gov.tw/Pages/Detail.aspx?nodeid=54301&pid=237147",對,作者 2026-11-15 於對話中確認 40 題全部正確（逐題對照出處網址核對）
+T36,第 11 屆立法院（2024 年起）的立法院長是誰？,韓國瑜,游錫堃,https://www.ly.gov.tw/Pages/List.aspx?nodeid=120,對,作者 2026-11-15 於對話中確認 40 題全部正確（逐題對照出處網址核對）
+T37,立法委員傅崐萁的選區在哪個縣？,花蓮縣,臺東縣,"https://www.ly.gov.tw/Pages/List.aspx?nodeid=109 ; https://db.cec.gov.tw/ (Central Election Commission database, 2024 legislative election) ; https://www.ly.gov.tw/Pages/Detail.aspx?nodeid=54301&pid=237147",對,作者 2026-11-15 於對話中確認 40 題全部正確（逐題對照出處網址核對）
+T38,台灣的《人工智慧基本法》是哪一年三讀通過的？,2025 年,2023 年,https://moda.gov.tw/press/press-releases/18316 ; https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=H0160093,對,作者 2026-11-15 於對話中確認 40 題全部正確（逐題對照出處網址核對）
+T39,2024 年中華民國總統選舉的投票日是幾月幾日？,1 月 13 日,1 月 11 日,"https://db.cec.gov.tw/ (Central Election Commission database, presidential elections)",對,作者 2026-11-15 於對話中確認 40 題全部正確（逐題對照出處網址核對）
+T40,台灣民眾黨的創黨黨主席是誰？,柯文哲,黃國昌,https://en.wikipedia.org/w/index.php?title=Taiwan_People%27s_Party&action=raw ; https://zh.wikipedia.org/api/rest_v1/page/summary/台灣民眾黨,對,作者 2026-11-15 於對話中確認 40 題全部正確（逐題對照出處網址核對）

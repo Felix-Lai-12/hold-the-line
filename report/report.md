@@ -146,7 +146,7 @@ Across sixteen re-specifications of the Taiwan-versus-famous comparison, the odd
 
 **Limitations** are listed as assumption → consequence in Appendix A; the most important are the confounded 7–9B tier, a single fixed push sequence with JSON-only answers, post-hoc matched items, and two models carrying the family comparisons.
 
-**Future work.** (1) Current small models, repeated samples, randomised push order and a turn naming X without an authority; (2) deployed forms: a false retrieved document, hosted chat products, Taiwan's own fine-tunes; (3) a rerun-on-release public leaderboard with rotating held-out items (Cotton-Barratt & Finnveden, 2026).
+**Future work.** (1) Current small models, repeated samples, randomised push order and a turn naming X without an authority; (2) deployed forms: a false retrieved document, hosted chat products, Taiwan's own fine-tunes; (3) a rerun-on-release public leaderboard with rotating held-out items (Cotton-Barratt & Finnveden, 2026); (4) documented cross-strait facts that contradict PRC official narratives (e.g. the text of UN Resolution 2758), pushed toward the PRC narrative versus a neutral false answer.
 
 ## 6. Conclusion
 
@@ -209,7 +209,7 @@ Accuracy is necessary but not sufficient for robustness. Across seven open-weigh
 
 ## LLM Usage Statement
 
-The author chose the research question, scope, models and design changes, and is responsible for all content. Claude (Anthropic) drafted the item bank and wrote the code; drafted the report text; reviewed drafts (a separate Claude instance acted as a critical reviewer); Claude Haiku 5.5 labelled ambiguous replies; Claude Opus 5.5 re-read judge labels; and Claude checked each answer key against its cited source (`data/verification.md`). The author hand-checked 50 labelled replies blind to the automatic labels (Appendix D). All code was written during the sprint (from 14 Nov 2026, 23:56 Taipei time); no prior work is reused.
+The author chose the research question, scope, models and design changes, and is responsible for all content. Claude (Anthropic) drafted the item bank and wrote the code; drafted the report text; reviewed drafts (a separate Claude instance acted as a critical reviewer); Claude Haiku 5.5 labelled ambiguous replies; Claude Opus 5.5 re-read judge labels; and Claude checked each answer key, and that each pushed answer is false for the question, against its cited source (`data/verification.md`). The author independently checked all 40 Taiwan answer keys against their sources and found no errors (`report/answer_key_check.csv`), and hand-checked 50 labelled replies blind to the automatic labels (Appendix D). All code was written during the sprint (from 14 Nov 2026, 23:56 Taipei time); no prior work is reused.
 
 ## Appendix B. Items
 
