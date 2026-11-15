@@ -34,7 +34,8 @@ jr.to_csv(ROOT / "report/judge_review.csv", index=False)
 
 pick = pd.concat([df[df.by == "judge"].sample(25, random_state=0), df[df.by == "rule"].sample(25, random_state=0)]).sample(frac=1, random_state=0)
 q = lambda i, l: items[i]["q_en"] if l == "en" else items[i]["q_tw"]
-sc = pd.DataFrame({"#": range(1, len(pick) + 1), "model": pick.model.values, "item": pick["item"].values, "lang": pick.lang.values, "turn": pick.turn.values,
+LN = {"tw": "Traditional Chinese", "cn": "Simplified Chinese", "en": "English"}
+sc = pd.DataFrame({"#": range(1, len(pick) + 1), "model": pick.model.values, "item": pick["item"].values, "language": pick.lang.map(LN).values, "turn": pick.turn.values,
                    "question": [q(i, l) for i, l in zip(pick["item"], pick.lang)],
                    "correct answer": [f'{items[i]["answer_tw"]} / {items[i]["answer_en"]}' for i in pick["item"]],
                    "pushed false answer": [f'{items[i]["wrong_tw"]} / {items[i]["wrong_en"]}' for i in pick["item"]],

@@ -121,7 +121,7 @@ js["odds_ratios"] = ors
 section("Event counts behind the larger-model comparisons", right[~right.model.isin(SMALL)].groupby("family").ever_adopt.agg(["sum", "size"]).to_markdown())
 
 # ---------- flip curves ----------
-fig, axs = plt.subplots(2, 4, figsize=(10, 5.0), sharey=True); axes = axs.ravel()
+fig, axs = plt.subplots(2, 4, figsize=(7.2, 4.4), sharey=True); axes = axs.ravel()
 curve = {}
 for ax, m in zip(axes, ORDER):
     for f in FAMS:
@@ -131,16 +131,16 @@ for ax, m in zip(axes, ORDER):
         g = s.groupby("item"); items = list(g.groups); rng = np.random.default_rng(0)
         per = {i: (g.get_group(i)[PUSH].eq("pressured_wrong").sum().values, len(g.get_group(i))) for i in items}
         bs = []
-        for _ in range(300):
+        for _ in range(B):
             pick = rng.choice(len(items), len(items)); k = sum(per[items[p]][0] for p in pick); n = sum(per[items[p]][1] for p in pick); bs.append(k / n * 100)
         lo, hi = np.percentile(bs, [2.5, 97.5], axis=0)
         x = np.arange(4); ax.plot(x, ys, color=COL[f], lw=1.8, marker="o", ms=3, label=f)
         ax.fill_between(x[1:], lo, hi, color=COL[f], alpha=.13, lw=0)
         curve[f"{m}|{f}"] = [round(v, 1) for v in ys]
-    ax.set_title(f"{NICE[m]} ({ORIGIN[m]})", fontsize=9); ax.set_xticks(range(4)); ax.set_xticklabels(["first", "doubt", "official\nrecord", "Xinhua"], fontsize=7)
+    ax.set_title(f"{NICE[m]} ({ORIGIN[m]})", fontsize=8.5); ax.set_xticks(range(4)); ax.set_xticklabels(["first", "doubt", "official\nrecord", "Xinhua"], fontsize=7); ax.tick_params(axis="y", labelsize=7)
     ax.set_ylim(-3, 103); ax.grid(axis="y", alpha=.3)
 axes[0].set_ylabel("% holding the false answer", fontsize=8); axes[4].set_ylabel("% holding the false answer", fontsize=8)
-h, l = axes[0].get_legend_handles_labels(); axes[7].axis("off"); axes[7].legend(h, l, loc="center", frameon=False, fontsize=10, title="Item family")
+h, l = axes[0].get_legend_handles_labels(); axes[7].axis("off"); axes[7].legend(h, l, loc="center", frameon=False, fontsize=8.5, title="Item family", title_fontsize=8.5)
 fig.tight_layout(); fig.savefig(ROOT / "figs/fig1_flip_curves.png", dpi=200); plt.close(fig)
 js["flip_curves"] = curve
 
@@ -163,11 +163,16 @@ for m in ORDER:
     at = np.array([r[f"conf_{t}"] for (_, r), t in zip(s.iterrows(), ft)], dtype=float)
     rows.append(dict(model=NICE[m], n=len(s), conf_first_answer=round(s.conf_init.mean(), 1), conf_when_adopting=round(np.nanmean(at), 1),
                      share_ge90_when_adopting=round(float(np.mean(at[~np.isnan(at)] >= 90)), 3)))
-section("Stated confidence: first (correct) answer vs the turn the false answer is adopted", pd.DataFrame(rows).to_markdown(index=False)); js["conf_adopt"] = rows
+hold = right[~right.ever_adopt & (right.authority == "correct")]
+for r_ in rows:
+    m = next(k for k, v in NICE.items() if v == r_["model"]); h = hold[hold.model == m].conf_authority
+    r_["holders_conf_at_official_record"] = round(h.mean(), 1) if len(h) else np.nan; r_["n_holders"] = len(h)
+section("Stated confidence: first (correct) answer vs the turn the false answer is adopted; holders = never adopt, still correct at the official-record turn", pd.DataFrame(rows).to_markdown(index=False)); js["conf_adopt"] = rows
 
 # ---------- language ----------
 lang = right.pivot_table(index="model", columns="lang", values="ever_adopt", aggfunc="mean").reindex(ORDER).round(3)
-section("Ever adopted, by language (initially correct)", lang.to_markdown()); js["lang"] = lang.to_dict()
+langn = right.pivot_table(index="model", columns="lang", values="ever_adopt", aggfunc="size").reindex(ORDER)
+section("Ever adopted, by language (initially correct)", lang.to_markdown() + "\n\nCell sizes:\n\n" + langn.to_markdown()); js["lang"] = lang.to_dict()
 
 # ---------- paired: initially wrong, false push vs true push (60 original items) ----------
 tp = ROOT / "runs/truth_labeled.jsonl"
@@ -185,6 +190,15 @@ if tp.exists():
     section("Initially wrong or abstaining (60 original items): the same first exchange pushed toward the false answer (main arm) and toward the true answer (truth arm)",
             pd.DataFrame(rows).to_markdown(index=False) + f"\n\nTruth-arm conversations: {len(tr)}; paired: {len(pair)}. Four larger models pooled: false {kn(big.ever_adopt)}, true {kn(big.adopt_true)}.\n\nPaired table (rows: adopted false push; columns: adopted true push):\n\n" + pd.crosstab(pair.ever_adopt, pair.adopt_true).to_markdown())
     js["paired"] = rows; js["n_truth"] = int(len(tr)); js["paired_big"] = dict(false=kn(big.ever_adopt), true=kn(big.adopt_true))
+    disc = pair[pair.ever_adopt != pair.adopt_true]
+    out.append(f"Four larger models, paired table:\n\n{pd.crosstab(big.ever_adopt, big.adopt_true).to_markdown()}\n\nDiscordant pairs fall in {disc['item'].nunique()} items. Paired conversations starting as abstentions: {int((pair['init'] == 'abstain').sum())} (of which 7-9B models: {int((pair[pair.model.isin(SMALL)]['init'] == 'abstain').sum())}).\n")
+    rb = right[~right.model.isin(SMALL)]; js["big_right"] = kn(rb.ever_adopt)
+    out.append(f"Four larger models, false adoption when initially right: {kn(rb.ever_adopt)}.\n")
+    # replicate for free: the truth arm's doubt turn repeats the main arm's exact history and prompt at temperature 0
+    rep = conv[(conv.family != "Matched local")].merge(tr[["model", "item", "lang", "doubt"]].rename(columns={"doubt": "doubt_rep"}), on=["model", "item", "lang"])
+    agr = rep.assign(same=rep.doubt == rep.doubt_rep).groupby("model").same.agg(["sum", "size"]).reindex(ORDER)
+    section("Replicate within the data: the doubt turn is sent twice with identical history (main arm and truth arm), temperature 0", agr.to_markdown() + f"\n\nTotal agreement {int(agr['sum'].sum())}/{int(agr['size'].sum())}.")
+    js["doubt_replicate"] = {k: f"{int(v['sum'])}/{int(v['size'])}" for k, v in agr.iterrows()}
     fig, ax = plt.subplots(figsize=(6.4, 3.0)); y = np.arange(len(ORDER))[::-1]
     for yi, m in zip(y, ORDER):
         s = pair[pair.model == m]
@@ -219,7 +233,14 @@ if vp.exists():
     g2 = conv[conv.model == "gemma-4-31b"]
     rows = [dict(run=n, conversations=len(d), first_correct=round((d["init"] == "correct").mean(), 3), first_abstain=round((d["init"] == "abstain").mean(), 3),
                  adopt_when_right=kn(d[d["init"] == "correct"].ever_adopt)) for n, d in [("v1: thinking on, 400-token cap", v1), ("v2: thinking off (reported)", g2)]]
-    section("Gemma 4 31B, first run vs reported run", pd.DataFrame(rows).to_markdown(index=False)); js["gemma_v1_v2"] = rows
+    import re as _re
+    nraw = nemp = 0
+    for line in (ROOT / "runs/_v1_gemma_thinking/gemma-4-31b.jsonl").read_text().splitlines():
+        rr = json.loads(line)
+        for t in rr["turns"]:
+            nraw += 1; nemp += not _re.sub(r"<(think|thought)>.*?</\1>", "", t["raw"], flags=_re.S).strip()
+    section("Gemma 4 31B, first run vs reported run", pd.DataFrame(rows).to_markdown(index=False) + f"\n\nv1 turns whose reply contains only (truncated) thinking and no answer text: {nemp}/{nraw}.")
+    js["gemma_v1_v2"] = rows; js["gemma_v1_empty"] = f"{nemp}/{nraw}"
 
 (ROOT / "report/extra.md").write_text("# Results numbers (generated by src/extra.py)\n\n" + "\n".join(out))
 (ROOT / "report/extra.json").write_text(json.dumps(js, ensure_ascii=False, indent=1, default=str))

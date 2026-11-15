@@ -115,17 +115,17 @@ Of 501 conversations holding the false answer after the official-record turn, 44
 | authority   |    0.409 |           0.361 |            0.327 |
 | state_media |    0.401 |           0.364 |            0.293 |
 
-## Stated confidence: first (correct) answer vs the turn the false answer is adopted
+## Stated confidence: first (correct) answer vs the turn the false answer is adopted; holders = never adopt, still correct at the official-record turn
 
-| model        |   n |   conf_first_answer |   conf_when_adopting |   share_ge90_when_adopting |
-|:-------------|----:|--------------------:|---------------------:|---------------------------:|
-| Gemma 4 31B  |   1 |                95   |                 60   |                      0     |
-| Qwen 3.8 27B |   3 |                98.3 |                 95   |                      1     |
-| gpt-oss-120b |  33 |                91.9 |                 91.7 |                      0.806 |
-| gpt-oss-20b  |  25 |                93   |                 83   |                      0.6   |
-| GLM-4 9B     | 145 |                92.7 |                 89.9 |                      0.862 |
-| Qwen 2.5 7B  | 161 |                94   |                 83.9 |                      0.621 |
-| Llama 3.1 8B | 161 |                92.6 |                 93.1 |                      0.87  |
+| model        |   n |   conf_first_answer |   conf_when_adopting |   share_ge90_when_adopting |   holders_conf_at_official_record |   n_holders |
+|:-------------|----:|--------------------:|---------------------:|---------------------------:|----------------------------------:|------------:|
+| Gemma 4 31B  |   1 |                95   |                 60   |                      0     |                             100   |         213 |
+| Qwen 3.8 27B |   3 |                98.3 |                 95   |                      1     |                              99.6 |         215 |
+| gpt-oss-120b |  33 |                91.9 |                 91.7 |                      0.806 |                              96.7 |         176 |
+| gpt-oss-20b  |  25 |                93   |                 83   |                      0.6   |                              96.9 |         160 |
+| GLM-4 9B     | 145 |                92.7 |                 89.9 |                      0.862 |                              80.4 |          27 |
+| Qwen 2.5 7B  | 161 |                94   |                 83.9 |                      0.621 |                              92.7 |          11 |
+| Llama 3.1 8B | 161 |                92.6 |                 93.1 |                      0.87  |                              69.9 |           7 |
 
 ## Ever adopted, by language (initially correct)
 
@@ -138,6 +138,18 @@ Of 501 conversations holding the false answer after the official-record turn, 44
 | glm4-9b      | 0.857 | 0.839 | 0.818 |
 | qwen2.5-7b   | 0.927 | 0.947 | 0.933 |
 | llama3.1-8b  | 0.941 | 0.952 | 0.981 |
+
+Cell sizes:
+
+| model        |   cn |   en |   tw |
+|:-------------|-----:|-----:|-----:|
+| gemma-4-31b  |   69 |   75 |   72 |
+| qwen3.8-27b  |   76 |   68 |   74 |
+| gpt-oss-120b |   71 |   74 |   70 |
+| gpt-oss-20b  |   57 |   65 |   63 |
+| glm4-9b      |   56 |   62 |   55 |
+| qwen2.5-7b   |   55 |   57 |   60 |
+| llama3.1-8b  |   51 |   63 |   54 |
 
 ## Initially wrong or abstaining (60 original items): the same first exchange pushed toward the false answer (main arm) and toward the true answer (truth arm)
 
@@ -160,9 +172,36 @@ Paired table (rows: adopted false push; columns: adopted true push):
 | False        |      11 |     17 |
 | True         |       6 |    161 |
 
+Four larger models, paired table:
+
+| ever_adopt   |   False |   True |
+|:-------------|--------:|-------:|
+| False        |      11 |     16 |
+| True         |       6 |     33 |
+
+Discordant pairs fall in 11 items. Paired conversations starting as abstentions: 53 (of which 7-9B models: 50).
+
+Four larger models, false adoption when initially right: 62/834.
+
+## Replicate within the data: the doubt turn is sent twice with identical history (main arm and truth arm), temperature 0
+
+| model        |   sum |   size |
+|:-------------|------:|-------:|
+| gemma-4-31b  |    20 |     20 |
+| qwen3.8-27b  |    16 |     16 |
+| gpt-oss-120b |    14 |     18 |
+| gpt-oss-20b  |    36 |     39 |
+| glm4-9b      |    48 |     48 |
+| qwen2.5-7b   |    48 |     49 |
+| llama3.1-8b  |    53 |     53 |
+
+Total agreement 235/243.
+
 ## Gemma 4 31B, first run vs reported run
 
 | run                            |   conversations |   first_correct |   first_abstain | adopt_when_right   |
 |:-------------------------------|----------------:|----------------:|----------------:|:-------------------|
 | v1: thinking on, 400-token cap |             237 |           0.928 |           0.051 | 0/220              |
 | v2: thinking off (reported)    |             237 |           0.911 |           0.004 | 1/216              |
+
+v1 turns whose reply contains only (truncated) thinking and no answer text: 129/948.

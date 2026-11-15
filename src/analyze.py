@@ -12,8 +12,8 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-FIGS, REP = ROOT / "figs", ROOT / "report"
-FIGS.mkdir(exist_ok=True); REP.mkdir(exist_ok=True)
+FIGS, REP = ROOT / "figs/supplementary", ROOT / "report"  # exploratory figures (60 original items); the report uses figs/fig1_flip_curves.png, figs/fig2_paired.png
+FIGS.mkdir(parents=True, exist_ok=True); REP.mkdir(exist_ok=True)
 plt.rcParams.update({"font.family": ["Arial Unicode MS", "PingFang TC", "Heiti TC", "sans-serif"], "font.size": 9})
 
 df = pd.DataFrame([json.loads(l) for l in (ROOT / "runs/labeled.jsonl").read_text().splitlines()])
@@ -59,14 +59,14 @@ def bar_grid(data, value, title, fname, ylabel):
     axes[0].set_ylabel(ylabel); axes[0].legend(frameon=False)
     fig.suptitle(title); fig.tight_layout(); fig.savefig(FIGS / fname, dpi=200); plt.close(fig)
 
-bar_grid(cap, "ever_adopt", "Adopted the pushed false answer at least once (of initially-correct answers)", "fig1_ever_adopt.png", "% of conversations")
+bar_grid(cap, "ever_adopt", "Adopted the pushed false answer at least once (of initially-correct answers)", "s1_ever_adopt_60items.png", "% of conversations")
 
 fig, ax = plt.subplots(figsize=(7, 3.4))
 for m in ORDER_M:
     d = base[base.model == m]
     ax.plot(["doubt", "authority", "state media"], [d[f"{p}_lost"].mean() * 100 for p in PUSH], marker="o", label=m)
 ax.set_ylabel("% no longer correct"); ax.set_title("Answers lost after each push (all languages, all items)")
-ax.grid(alpha=.3); ax.legend(frameon=False, fontsize=7, ncol=2); fig.tight_layout(); fig.savefig(FIGS / "fig2_by_push.png", dpi=200); plt.close(fig)
+ax.grid(alpha=.3); ax.legend(frameon=False, fontsize=7, ncol=2); fig.tight_layout(); fig.savefig(FIGS / "s2_by_push_60items.png", dpi=200); plt.close(fig)
 
 fig, ax = plt.subplots(figsize=(7, 3.4))
 for m in ORDER_M:
@@ -74,7 +74,7 @@ for m in ORDER_M:
     ax.scatter(d.conf * 100, d.acc * 100, s=18, label=m)
 ax.plot([40, 100], [40, 100], color="#94a3b8", lw=1, ls="--"); ax.set_xlim(40, 101); ax.set_ylim(40, 101)
 ax.set_xlabel("mean stated confidence (%)"); ax.set_ylabel("accuracy (%)"); ax.set_title("Calibration on the first answer (each dot = model × language × item family)")
-ax.grid(alpha=.3); ax.legend(frameon=False, fontsize=7, ncol=2); fig.tight_layout(); fig.savefig(FIGS / "fig3_calibration.png", dpi=200); plt.close(fig)
+ax.grid(alpha=.3); ax.legend(frameon=False, fontsize=7, ncol=2); fig.tight_layout(); fig.savefig(FIGS / "s3_calibration_60items.png", dpi=200); plt.close(fig)
 
 # ---------- tables ----------
 def pct(x): return "" if pd.isna(x) else f"{x*100:.0f}%"

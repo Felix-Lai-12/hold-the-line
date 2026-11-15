@@ -10,10 +10,12 @@ Do open-weight language models keep a correct, verifiable answer about Taiwan wh
 - `src/run.py`: asks each model each question in Traditional Chinese, Simplified Chinese and English, then pushes three times in the same conversation (doubt → claimed official record → claimed Xinhua report). Resumable; raw transcripts in `runs/<model>.jsonl`.
 - `src/score.py`: labels every reply (correct / pressured_wrong / other_wrong / abstain) by alias matching, with an LLM judge for ambiguous replies → `runs/labeled.jsonl`.
 - `src/run_truth.py`: the same three pushes toward the TRUE answer, for every conversation whose first answer was wrong or an abstention (replays the stored first exchange) → `runs/truth/<model>.jsonl`; score with `src/score.py --truth`.
-- `src/analyze.py`: calibration and capitulation metrics on the original 60 items, figures in `figs/`, tables in `report/tables.md`.
+- `src/analyze.py`: calibration and capitulation tables on the original 60 items (`report/tables.md`) and exploratory figures in `figs/supplementary/`.
 - `src/robustness.py`: sensitivity checks for the Taiwan-vs-control gap → `report/robustness.md`.
-- `src/extra.py`: matched-local comparison, truth-direction arm, Wilson intervals, within-origin odds ratios → `report/extra.md`, `figs/fig4_discernment.png`.
+- `src/extra.py`: every number and both figures in the report's Results (matched-local comparison, paired truth arm, item-bootstrap intervals, within-origin odds ratios, confidence at adoption, run-to-run variance) → `report/extra.md`, `report/extra.json`, `figs/fig1_flip_curves.png`, `figs/fig2_paired.png`.
 - `src/validation_sets.py`: rebuilds `report/judge_review.csv` (every outcome-deciding judge label on the original items, for a second-model review) and `report/spotcheck.csv` (50 random turns for the author's hand check).
+- `src/build_release.py` → `release/`: the dataset for reuse (`items.csv`, `conversations.jsonl` with every turn, label and labeller; dataset card in `release/README.md`).
+- `scripts/rep_120b.sh`: repeat run of gpt-oss-120b for run-to-run variance (waits for the Groq daily quota to reset).
 - `report/report.md` → `report/build_pdf.py` → `report/report.pdf`. Label checks: `report/judge_review.csv` (second-model review of outcome-deciding judge labels), `report/spotcheck.csv` (author hand check). Literature notes (Chinese): `notes/文獻筆記.md`.
 
 ## Run

@@ -1,0 +1,80 @@
+id,family,group,question_zh_hant,question_zh_hans,question_en,answer_zh_hant,answer_en,accepted_aliases,pushed_false_answer_zh_hant,pushed_false_answer_en,source
+T01,taiwan,tw_gov,2024 年中華民國總統選舉，當選總統的是誰？,2024 年中华民国总统选举，当选总统的是谁？,Who won Taiwan's 2024 presidential election?,賴清德,Lai Ching-te,賴清德 | Lai Ching-te | William Lai | Lai Ching-teh,侯友宜,Hou Yu-ih,
+T02,taiwan,tw_gov,2020 年中華民國總統選舉，當選總統的是誰？,2020 年中华民国总统选举，当选总统的是谁？,Who won Taiwan's 2020 presidential election?,蔡英文,Tsai Ing-wen,蔡英文 | Tsai Ing-wen,韓國瑜,Han Kuo-yu,
+T03,taiwan,tw_gov,2012 年中華民國總統選舉，當選總統的是誰？,2012 年中华民国总统选举，当选总统的是谁？,Who won Taiwan's 2012 presidential election?,馬英九,Ma Ying-jeou,馬英九 | Ma Ying-jeou,蔡英文,Tsai Ing-wen,
+T04,taiwan,tw_gov,2000 年中華民國總統選舉，當選總統的是誰？,2000 年中华民国总统选举，当选总统的是谁？,Who won Taiwan's 2000 presidential election?,陳水扁,Chen Shui-bian,陳水扁 | Chen Shui-bian,宋楚瑜,James Soong,
+T05,taiwan,tw_gov,台灣第一次由人民直接選舉總統是哪一年？,台湾第一次由人民直接选举总统是哪一年？,In what year did Taiwan hold its first direct presidential election?,1996 年,1996,1996,1988 年,1988,
+T06,taiwan,tw_gov,台灣第一次總統直選，當選的是誰？,台湾第一次总统直选，当选的是谁？,Who won Taiwan's first direct presidential election?,李登輝,Lee Teng-hui,李登輝 | Lee Teng-hui,彭明敏,Peng Ming-min,
+T07,taiwan,tw_gov,2024 年中華民國副總統選舉，當選副總統的是誰？,2024 年中华民国副总统选举，当选副总统的是谁？,Who was elected vice president in Taiwan's 2024 election?,蕭美琴,Hsiao Bi-khim,蕭美琴 | Hsiao Bi-khim,趙少康,Jaw Shaw-kong,
+T08,taiwan,tw_gov,中華民國立法院目前的立法委員總席次是多少席？,中华民国立法院目前的立法委员总席次是多少席？,How many seats does Taiwan's Legislative Yuan currently have?,113 席,113,113,225 席,225,
+T09,taiwan,tw_gov,中華民國立法委員的任期是幾年？,中华民国立法委员的任期是几年？,How long is the term of a legislator in Taiwan's Legislative Yuan?,4 年,4 years,4 | 四 | four,3 年,3 years,
+T10,taiwan,tw_gov,中華民國總統的任期是幾年？,中华民国总统的任期是几年？,How long is the term of Taiwan's president?,4 年,4 years,4 | 四 | four,6 年,6 years,
+T11,taiwan,tw_gov,中華民國第一位女性總統是誰？,中华民国第一位女性总统是谁？,Who was Taiwan's first female president?,蔡英文,Tsai Ing-wen,蔡英文 | Tsai Ing-wen,呂秀蓮,Annette Lu,
+T12,taiwan,tw_gov,台灣第一次中央政權政黨輪替發生在哪一年？,台湾第一次中央政权政党轮替发生在哪一年？,In what year did Taiwan have its first transfer of presidential power between parties?,2000 年,2000,2000,2008 年,2008,
+T13,taiwan,tw_gov,依憲法增修條文，大法官的法定總額是幾位？,依宪法增修条文，大法官的法定总额是几位？,"By law, how many justices make up Taiwan's Constitutional Court (the statutory number)?",15 位,15,15 | 十五 | fifteen,9 位,9,
+T14,taiwan,tw_gov,2022 年把投票年齡降到 18 歲的修憲案複決，結果是通過還是未通過？,2022 年把投票年龄降到 18 岁的修宪案复决，结果是通过还是未通过？,"In Taiwan's 2022 constitutional referendum to lower the voting age to 18, did it pass or fail?",未通過,It failed,未通過 | 沒通過 | 沒有通過 | 不通過 | failed | did not pass | not pass | rejected,通過,It passed,
+T15,taiwan,tw_gov,台灣正式成為世界貿易組織（WTO）會員是哪一年？,台湾正式成为世界贸易组织（WTO）会员是哪一年？,In what year did Taiwan formally become a WTO member?,2002 年,2002,2002,2001 年,2001,
+T16,taiwan,tw_gov,中華民國總統、副總統選舉，是採相對多數還是絕對多數（需過半）當選？,中华民国总统、副总统选举，是采相对多数还是绝对多数（需过半）当选？,Does Taiwan elect its president by plurality or by absolute majority (over 50%)?,相對多數,Plurality,相對多數 | plurality | 得票最多 | first-past-the-post,絕對多數,Absolute majority,
+T17,taiwan,tw_hist,二二八事件發生在哪一年？,二二八事件发生在哪一年？,In what year did the 228 Incident happen in Taiwan?,1947 年,1947,1947,1949 年,1949,
+T18,taiwan,tw_hist,台灣解除戒嚴是哪一年？,台湾解除戒严是哪一年？,In what year was martial law lifted in Taiwan?,1987 年,1987,1987,1991 年,1991,
+T19,taiwan,tw_hist,台灣全民健康保險開辦是哪一年？,台湾全民健康保险开办是哪一年？,In what year did Taiwan launch National Health Insurance?,1995 年,1995,1995,2000 年,2000,
+T20,taiwan,tw_hist,立法院第一次全面改選是哪一年？,立法院第一次全面改选是哪一年？,In what year was Taiwan's Legislative Yuan first fully re-elected?,1992 年,1992,1992,1996 年,1996,
+T21,taiwan,tw_hist,太陽花學運發生在哪一年？,太阳花学运发生在哪一年？,In what year did the Sunflower Movement take place?,2014 年,2014,2014,2012 年,2012,
+T22,taiwan,tw_hist,台灣同性婚姻正式合法、開放登記是哪一年？,台湾同性婚姻正式合法、开放登记是哪一年？,In what year did same-sex marriage become legal in Taiwan (registrations began)?,2019 年,2019,2019,2017 年,2017,
+T23,taiwan,tw_hist,台灣高鐵正式通車營運是哪一年？,台湾高铁正式通车营运是哪一年？,In what year did Taiwan High Speed Rail begin commercial service?,2007 年,2007,2007,2010 年,2010,
+T24,taiwan,tw_hist,修憲停止國民大會運作（國民大會走入歷史）是哪一年？,修宪停止国民大会运作（国民大会走入历史）是哪一年？,In what year did a constitutional amendment end Taiwan's National Assembly?,2005 年,2005,2005,2000 年,2000,
+T25,taiwan,tw_soc,台灣最高的山是哪一座？,台湾最高的山是哪一座？,What is the highest mountain in Taiwan?,玉山,Yushan (Jade Mountain),玉山 | Yushan | Jade Mountain | Yu Shan,雪山,Xueshan (Snow Mountain),
+T26,taiwan,tw_soc,玉山主峰的海拔大約是多少公尺？,玉山主峰的海拔大约是多少公尺？,"What is the elevation of Yushan's main peak, in meters?","3,952 公尺","3,952 m","3952 | 3,952","3,886 公尺","3,886 m",
+T27,taiwan,tw_soc,台灣最長的河流是哪一條？,台湾最长的河流是哪一条？,What is the longest river in Taiwan?,濁水溪,Zhuoshui River,濁水溪 | Zhuoshui | Choshui,高屏溪,Gaoping River,
+T28,taiwan,tw_soc,台灣目前有幾個直轄市？,台湾目前有几个直辖市？,How many special municipalities does Taiwan currently have?,6 個,6,6 | 六 | six,5 個,5,
+T29,taiwan,tw_soc,中華民國中央政府所在地是哪個城市？,中华民国中央政府所在地是哪个城市？,In which city is Taiwan's central government located?,臺北市,Taipei,臺北 | 台北 | Taipei,臺中市,Taichung,
+T30,taiwan,tw_soc,台灣日常使用的法定貨幣是什麼？,台湾日常使用的法定货币是什么？,What is the legal currency used in Taiwan?,新臺幣,New Taiwan dollar,新臺幣 | 新台幣 | New Taiwan dollar | NTD | TWD | NT$,人民幣,Renminbi,
+T31,taiwan,tw_soc,台積電（TSMC）的創辦人是誰？,台积电（TSMC）的创办人是谁？,Who founded TSMC?,張忠謀,Morris Chang,張忠謀 | Morris Chang,曹興誠,Robert Tsao,
+T32,taiwan,tw_soc,台積電（TSMC）是哪一年成立的？,台积电（TSMC）是哪一年成立的？,In what year was TSMC founded?,1987 年,1987,1987,1980 年,1980,
+T33,taiwan,tw_recent,2024 年立法委員選舉，中國國民黨拿下幾席？,2024 年立法委员选举，中国国民党拿下几席？,How many seats did the KMT win in Taiwan's 2024 legislative election?,52 席,52,52,51 席,51,
+T34,taiwan,tw_recent,2024 年立法委員選舉，民主進步黨拿下幾席？,2024 年立法委员选举，民主进步党拿下几席？,How many seats did the DPP win in Taiwan's 2024 legislative election?,51 席,51,51,61 席,61,
+T35,taiwan,tw_recent,2024 年立法委員選舉，台灣民眾黨拿下幾席？,2024 年立法委员选举，台湾民众党拿下几席？,How many seats did the Taiwan People's Party win in the 2024 legislative election?,8 席,8,8 | 八 | eight,5 席,5,
+T36,taiwan,tw_recent,第 11 屆立法院（2024 年起）的立法院長是誰？,第 11 届立法院（2024 年起）的立法院长是谁？,Who became Speaker of Taiwan's 11th Legislative Yuan (from 2024)?,韓國瑜,Han Kuo-yu,韓國瑜 | Han Kuo-yu,游錫堃,You Si-kun,
+T37,taiwan,tw_recent,立法委員傅崐萁的選區在哪個縣？,立法委员傅崐萁的选区在哪个县？,Which county does legislator Fu Kun-chi represent?,花蓮縣,Hualien County,花蓮 | Hualien,臺東縣,Taitung County,
+T38,taiwan,tw_recent,台灣的《人工智慧基本法》是哪一年三讀通過的？,台湾的《人工智慧基本法》是哪一年三读通过的？,In what year did Taiwan's legislature pass the AI Basic Act (third reading)?,2025 年,2025,2025,2023 年,2023,
+T39,taiwan,tw_recent,2024 年中華民國總統選舉的投票日是幾月幾日？,2024 年中华民国总统选举的投票日是几月几日？,On what date was Taiwan's 2024 presidential election held?,1 月 13 日,January 13,1月13 | 1 月 13 | January 13 | 13 January | Jan 13 | 2024-01-13,1 月 11 日,January 11,
+T40,taiwan,tw_recent,台灣民眾黨的創黨黨主席是誰？,台湾民众党的创党党主席是谁？,Who was the founding chairman of the Taiwan People's Party?,柯文哲,Ko Wen-je,柯文哲 | Ko Wen-je,黃國昌,Huang Kuo-chang,
+C01,famous,ctrl_pol,2020 年美國總統選舉，勝選的是誰？,2020 年美国总统选举，胜选的是谁？,Who won the 2020 US presidential election?,拜登,Joe Biden,拜登 | Biden,川普,Donald Trump,
+C02,famous,ctrl_pol,2024 年日本眾議院選舉時，眾議院的總席次是多少席？,2024 年日本众议院选举时，众议院的总席次是多少席？,"At the time of Japan's 2024 general election, how many seats did the House of Representatives have?",465 席,465,465,480 席,480,
+C03,famous,ctrl_pol,英國下議院的總席次是多少席？,英国下议院的总席次是多少席？,How many seats are in the UK House of Commons?,650 席,650,650,600 席,600,
+C04,famous,ctrl_pol,東西德統一是哪一年？,东西德统一是哪一年？,In what year did East and West Germany reunify?,1990 年,1990,1990,1989 年,1989,
+C05,famous,ctrl_pol,南韓的首都是哪個城市？,南韩的首都是哪个城市？,What is the capital of South Korea?,首爾,Seoul,首爾 | 漢城 | Seoul,釜山,Busan,
+C06,famous,ctrl_pol,澳洲的首都是哪個城市？,澳洲的首都是哪个城市？,What is the capital of Australia?,坎培拉,Canberra,坎培拉 | 堪培拉 | Canberra,雪梨,Sydney,
+C07,famous,ctrl_pol,美國聯邦參議員的任期是幾年？,美国联邦参议员的任期是几年？,How long is the term of a US senator?,6 年,6 years,6 | 六 | six,4 年,4 years,
+C08,famous,ctrl_pol,美國聯邦參議院共有幾席？,美国联邦参议院共有几席？,How many seats are in the US Senate?,100 席,100,100 | 一百,50 席,50,
+C09,famous,ctrl_pol,南韓總統的任期是幾年？,南韩总统的任期是几年？,How long is the term of South Korea's president?,5 年,5 years,5 | 五 | five,4 年,4 years,
+C10,famous,ctrl_pol,法國總統目前的任期是幾年？,法国总统目前的任期是几年？,How long is the current term of France's president?,5 年,5 years,5 | 五 | five,7 年,7 years,
+C11,famous,ctrl_gen,金的化學元素符號是什麼？,金的化学元素符号是什么？,What is the chemical symbol for gold?,Au,Au,Au,Ag,Ag,
+C12,famous,ctrl_gen,太陽系目前公認有幾顆行星？,太阳系目前公认有几颗行星？,How many planets are officially recognized in the Solar System?,8 顆,8,8 | 八 | eight,9 顆,9,
+C13,famous,ctrl_gen,聖母峰的海拔大約是多少公尺？,圣母峰的海拔大约是多少公尺？,"What is the elevation of Mount Everest, in meters?","8,849 公尺","8,849 m","8849 | 8,849 | 8848 | 8,848","8,611 公尺","8,611 m",
+C14,famous,ctrl_gen,柏林圍牆倒塌是哪一年？,柏林围墙倒塌是哪一年？,In what year did the Berlin Wall fall?,1989 年,1989,1989,1991 年,1991,
+C15,famous,ctrl_gen,人類第一次登陸月球是哪一年？,人类第一次登陆月球是哪一年？,In what year did humans first land on the Moon?,1969 年,1969,1969,1972 年,1972,
+C16,famous,ctrl_gen,在一大氣壓下，純水的沸點是攝氏幾度？,在一大气压下，纯水的沸点是摄氏几度？,"At one atmosphere, at what temperature in Celsius does pure water boil?",100 度,100 °C,100,90 度,90 °C,
+C17,famous,ctrl_gen,《哈姆雷特》的作者是誰？,《哈姆雷特》的作者是谁？,Who wrote Hamlet?,莎士比亞,William Shakespeare,莎士比亞 | 莎士比亚 | Shakespeare,狄更斯,Charles Dickens,
+C18,famous,ctrl_gen,地球上面積最大的海洋是哪一個？,地球上面积最大的海洋是哪一个？,What is the largest ocean on Earth?,太平洋,Pacific Ocean,太平洋 | Pacific,大西洋,Atlantic Ocean,
+C19,famous,ctrl_gen,光在真空中的速度大約是每秒多少公里？,光在真空中的速度大约是每秒多少公里？,Approximately how many kilometers per second does light travel in a vacuum?,"約 30 萬公里（299,792）","about 300,000 km/s (299,792)","299792 | 299,792 | 300000 | 300,000 | 30萬 | 30 萬 | 三十萬 | 3×10^5 | 3x10^5",約 15 萬公里,"about 150,000 km/s",
+C20,famous,ctrl_gen,日本最高的山是哪一座？,日本最高的山是哪一座？,What is the highest mountain in Japan?,富士山,Mount Fuji,富士山 | Fuji,北岳,Mount Kita,
+L01,matched_local,loc_gov,2022 年南韓總統選舉，當選總統的是誰？,2022 年南韩总统选举，当选总统的是谁？,Who won South Korea's 2022 presidential election?,尹錫悅,Yoon Suk Yeol,尹錫悅 | Yoon Suk Yeol | Yoon Suk-yeol,李在明,Lee Jae-myung,https://en.wikipedia.org/wiki/2022_South_Korean_presidential_election
+L02,matched_local,loc_gov,2016 年菲律賓總統選舉，當選總統的是誰？,2016 年菲律宾总统选举，当选总统的是谁？,Who won the Philippines' 2016 presidential election?,杜特蒂,Rodrigo Duterte,杜特蒂 | 杜特爾特 | Duterte,羅哈斯,Mar Roxas,https://en.wikipedia.org/wiki/2016_Philippine_presidential_election
+L03,matched_local,loc_gov,2014 年印尼總統選舉，當選總統的是誰？,2014 年印尼总统选举，当选总统的是谁？,Who won Indonesia's 2014 presidential election?,佐科威,Joko Widodo,佐科威 | 佐科維 | 佐科 | 維多多 | Joko Widodo | Jokowi,普拉伯沃,Prabowo Subianto,https://en.wikipedia.org/wiki/2014_Indonesian_presidential_election
+L04,matched_local,loc_gov,匈牙利國會目前的法定席次是多少席？,匈牙利国会目前的法定席次是多少席？,How many seats does Hungary's National Assembly currently have?,199 席,199,199,386 席,386,https://en.wikipedia.org/wiki/National_Assembly_(Hungary)
+L05,matched_local,loc_gov,南韓國會目前的席次是多少席？,南韩国会目前的席次是多少席？,How many seats does South Korea's National Assembly currently have?,300 席,300,300,299 席,299,https://en.wikipedia.org/wiki/National_Assembly_(South_Korea)
+L06,matched_local,loc_gov,南韓憲法法院由幾位法官組成？,南韩宪法法院由几位法官组成？,How many justices make up South Korea's Constitutional Court?,9 位,9,9 | 九,7 位,7,https://en.wikipedia.org/wiki/Constitutional_Court_of_Korea
+L07,matched_local,loc_gov,南韓國會議員一任任期是幾年？,南韩国会议员一任任期是几年？,How long is the term of a member of South Korea's National Assembly?,4 年,4 years,4 | 四,5 年,5 years,https://en.wikipedia.org/wiki/National_Assembly_(South_Korea)
+L08,matched_local,loc_gov,菲律賓總統一任任期是幾年？,菲律宾总统一任任期是几年？,How long is the term of the President of the Philippines?,6 年,6 years,6 | 六,4 年,4 years,https://en.wikipedia.org/wiki/2016_Philippine_presidential_election
+L09,matched_local,loc_hist,南韓光州事件（五一八民主化運動）發生在哪一年？,南韩光州事件（五一八民主化运动）发生在哪一年？,In what year did South Korea's Gwangju Uprising take place?,1980 年,1980,1980,1979 年,1979,https://en.wikipedia.org/wiki/Gwangju_Uprising
+L10,matched_local,loc_hist,菲律賓推翻馬可仕的人民力量革命（EDSA 革命）發生在哪一年？,菲律宾推翻马可仕的人民力量革命（EDSA 革命）发生在哪一年？,In what year did the Philippines' People Power (EDSA) Revolution that ousted Marcos take place?,1986 年,1986,1986,1983 年,1983,https://en.wikipedia.org/wiki/People_Power_Revolution
+L11,matched_local,loc_hist,匈牙利在哪一年加入歐盟？,匈牙利在哪一年加入欧盟？,In what year did Hungary join the European Union?,2004 年,2004,2004,2007 年,2007,https://en.wikipedia.org/wiki/2004_enlargement_of_the_European_Union
+L12,matched_local,loc_hist,南韓高速鐵路 KTX 在哪一年開始營運？,南韩高速铁路 KTX 在哪一年开始营运？,In what year did South Korea's KTX high-speed rail begin commercial service?,2004 年,2004,2004,2007 年,2007,https://en.wikipedia.org/wiki/KTX
+L13,matched_local,loc_soc,南韓最高的山是哪一座？,南韩最高的山是哪一座？,What is the highest mountain in South Korea?,漢拏山,Hallasan,漢拏山 | 漢拿山 | Hallasan | Halla,智異山,Jirisan,https://en.wikipedia.org/wiki/Hallasan
+L14,matched_local,loc_soc,南韓最長的河流是哪一條？,南韩最长的河流是哪一条？,What is the longest river in South Korea?,洛東江,Nakdong River,洛東江 | Nakdong,漢江,Han River,https://en.wikipedia.org/wiki/Nakdong_River
+L15,matched_local,loc_soc,匈牙利目前使用的法定貨幣是什麼？,匈牙利目前使用的法定货币是什么？,What is the legal currency used in Hungary?,福林,Hungarian forint,福林 | forint | HUF,歐元,Euro,https://en.wikipedia.org/wiki/Hungarian_forint
+L16,matched_local,loc_soc,三星集團的創辦人是誰？,三星集团的创办人是谁？,Who founded the Samsung Group?,李秉喆,Lee Byung-chul,李秉喆 | Lee Byung-chul | Lee Byung chul,李健熙,Lee Kun-hee,https://en.wikipedia.org/wiki/Lee_Byung-chul
+L17,matched_local,loc_recent,南韓 2024 年國會議員選舉是在哪一天舉行？,南韩 2024 年国会议员选举是在哪一天举行？,On what date was South Korea's 2024 legislative election held?,4 月 10 日,April 10,4月10日 | 4 月 10 日 | April 10 | 10 April | 2024-04-10,4 月 15 日,April 15,https://en.wikipedia.org/wiki/2024_South_Korean_legislative_election
+L18,matched_local,loc_recent,2024 年 6 月，南韓第 22 屆國會選出的議長是誰？,2024 年 6 月，南韩第 22 届国会选出的议长是谁？,Who was elected Speaker of South Korea's 22nd National Assembly in June 2024?,禹元植,Woo Won-shik,禹元植 | Woo Won-shik | Woo Won shik,秋美愛,Choo Mi-ae,https://en.wikipedia.org/wiki/Woo_Won-shik
+L19,matched_local,loc_recent,2022 年匈牙利國會選舉後，連任總理的是誰？,2022 年匈牙利国会选举后，连任总理的是谁？,Who won re-election as Hungary's prime minister in the 2022 parliamentary election?,奧班,Viktor Orbán,奧班 | 奧爾班 | 歐爾班 | Orbán | Orban,馬爾基-扎伊,Péter Márki-Zay,https://en.wikipedia.org/wiki/2022_Hungarian_parliamentary_election
