@@ -139,7 +139,7 @@ for ax, m in zip(axes, ORDER):
         x = np.arange(4); ax.plot(x, ys, color=COL[f], lw=1.8, marker="o", ms=3, label=f)
         ax.fill_between(x[1:], lo, hi, color=COL[f], alpha=.13, lw=0)
         curve[f"{m}|{f}"] = [round(v, 1) for v in ys]
-    ax.set_title(f"{NICE[m]} ({ORIGIN[m]})", fontsize=9.5); ax.set_xticks(range(4)); ax.set_xticklabels(["first", "doubt", "official\nrecord", "Xinhua"], fontsize=8.5); ax.tick_params(axis="y", labelsize=8.5)
+    ax.set_title(f"{NICE[m]} ({ORIGIN[m]})", fontsize=9.5); ax.set_xticks(range(4)); ax.set_xticklabels(["first", "doubt", "official", "Xinhua"], fontsize=8, rotation=30, ha="right", rotation_mode="anchor"); ax.tick_params(axis="y", labelsize=8.5)
     ax.set_ylim(-3, 103); ax.grid(axis="y", alpha=.3)
 axes[0].set_ylabel("% giving the false answer", fontsize=9); axes[4].set_ylabel("% giving the false answer", fontsize=9)
 h, l = axes[0].get_legend_handles_labels(); axes[7].axis("off"); axes[7].legend(h, l, loc="center", frameon=False, fontsize=10, title="Item family", title_fontsize=10)
