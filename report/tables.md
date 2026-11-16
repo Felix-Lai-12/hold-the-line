@@ -8,7 +8,7 @@
 | gemma-4-31b | US | Control | English | 20 | 100% | 100% | +0 pts | 0.000 |
 | gemma-4-31b | US | Control | 繁中 | 20 | 100% | 100% | +0 pts | 0.000 |
 | gemma-4-31b | US | Taiwan | 簡中 | 40 | 75% | 100% | +25 pts | 0.248 |
-| gemma-4-31b | US | Taiwan | English | 40 | 90% | 100% | +10 pts | 0.100 |
+| gemma-4-31b | US | Taiwan | English | 40 | 88% | 100% | +12 pts | 0.123 |
 | gemma-4-31b | US | Taiwan | 繁中 | 40 | 85% | 100% | +15 pts | 0.148 |
 | glm4-9b | CN | Control | 簡中 | 20 | 90% | 96% | +6 pts | 0.084 |
 | glm4-9b | CN | Control | English | 20 | 100% | 94% | -6 pts | 0.004 |
@@ -55,7 +55,7 @@
 | gemma-4-31b | US | Control | English | 20 | 0% | 0% | 0% | 0% |
 | gemma-4-31b | US | Control | 繁中 | 20 | 0% | 0% | 0% | 0% |
 | gemma-4-31b | US | Taiwan | 簡中 | 30 | 0% | 0% | 0% | 0% |
-| gemma-4-31b | US | Taiwan | English | 36 | 0% | 3% | 3% | 3% |
+| gemma-4-31b | US | Taiwan | English | 35 | 0% | 0% | 0% | 0% |
 | gemma-4-31b | US | Taiwan | 繁中 | 34 | 0% | 0% | 0% | 0% |
 | glm4-9b | CN | Control | 簡中 | 18 | 11% | 67% | 44% | 67% |
 | glm4-9b | CN | Control | English | 20 | 0% | 55% | 45% | 55% |
@@ -75,7 +75,7 @@
 | gpt-oss-20b | US | Taiwan | 簡中 | 24 | 0% | 25% | 29% | 29% |
 | gpt-oss-20b | US | Taiwan | English | 28 | 4% | 7% | 7% | 11% |
 | gpt-oss-20b | US | Taiwan | 繁中 | 29 | 0% | 14% | 14% | 17% |
-| llama3.1-8b | US | Control | 簡中 | 19 | 26% | 95% | 95% | 95% |
+| llama3.1-8b | US | Control | 簡中 | 19 | 26% | 95% | 89% | 95% |
 | llama3.1-8b | US | Control | English | 20 | 25% | 50% | 70% | 85% |
 | llama3.1-8b | US | Control | 繁中 | 19 | 26% | 84% | 95% | 95% |
 | llama3.1-8b | US | Taiwan | 簡中 | 19 | 37% | 89% | 95% | 100% |
@@ -102,7 +102,7 @@
 | ctrl_pol  | 204 |        0.387 |       0.966 |
 | tw_gov    | 267 |        0.449 |       0.959 |
 | tw_hist   | 141 |        0.475 |       0.953 |
-| tw_recent |  56 |        0.268 |       0.964 |
+| tw_recent |  55 |        0.255 |       0.965 |
 | tw_soc    | 140 |        0.4   |       0.97  |
 
 ## Capitulation by initial stated confidence (does the Taiwan gap survive at equal confidence?)
@@ -112,7 +112,7 @@
 | ('<90', 'Control')   |  13 |        1     |
 | ('<90', 'Taiwan')    |  26 |        0.962 |
 | ('90-97', 'Control') | 127 |        0.717 |
-| ('90-97', 'Taiwan')  | 285 |        0.691 |
+| ('90-97', 'Taiwan')  | 284 |        0.69  |
 | ('>=98', 'Control')  | 273 |        0.147 |
 | ('>=98', 'Taiwan')   | 293 |        0.123 |
 
@@ -120,7 +120,6 @@
 
 | model        |   n |   share_conf_ge90 |   mean_conf |
 |:-------------|----:|------------------:|------------:|
-| gemma-4-31b  |   1 |             0     |      60     |
 | glm4-9b      | 109 |             0.862 |      89.862 |
 | gpt-oss-120b |  28 |             0.75  |      91.346 |
 | gpt-oss-20b  |  18 |             0.611 |      83.889 |
@@ -132,8 +131,8 @@
 
 Pooling all models hides the gap (Simpson's paradox: susceptible small models answer fewer Taiwan items correctly, so they contribute fewer Taiwan rows). Stratified:
 
-- by_model: 11.62
+- by_model: 11.5
 - by_model_conf: 6.12
-- by_model_lang: 11.72
+- by_model_lang: 11.6
 - twgov_vs_ctrlpol_by_model_conf: 4.96
-- by_model_conf_ci95: [2.501276356511889, 32.26535729105006]
+- by_model_conf_ci95: [2.5629122298172504, 31.79700229651076]

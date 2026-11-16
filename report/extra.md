@@ -18,7 +18,7 @@
 |:---------------|----:|------:|-------:|----------:|
 | Famous control | 420 | 0.983 |  0.974 |     0     |
 | Matched local  | 399 | 0.827 |  0.938 |     0.018 |
-| Taiwan         | 840 | 0.719 |  0.91  |     0.063 |
+| Taiwan         | 840 | 0.718 |  0.91  |     0.064 |
 
 ## First-answer accuracy by family and language
 
@@ -26,7 +26,7 @@
 |:---------------|------:|------:|------:|
 | Famous control | 0.979 | 0.993 | 0.979 |
 | Matched local  | 0.812 | 0.857 | 0.812 |
-| Taiwan         | 0.679 | 0.754 | 0.725 |
+| Taiwan         | 0.679 | 0.75  | 0.725 |
 
 ## Confidence stated with WRONG first answers
 
@@ -42,14 +42,14 @@ All families: n=252, mean 0.873, share >=0.90 0.587
 
 | subset                      |   items_tw |   items_local |   gap_pts | ci95         |
 |:----------------------------|-----------:|--------------:|----------:|:-------------|
-| all items                   |         40 |            19 |     -10.8 | [-22.9, 2.7] |
+| all items                   |         40 |            19 |     -10.9 | [-23.1, 2.7] |
 | without recent-events items |         32 |            16 |      -6   | [-15.5, 4.6] |
 
 ## First-answer accuracy per model and family
 
 | model        |   Famous control |   Matched local |   Taiwan |
 |:-------------|-----------------:|----------------:|---------:|
-| gemma-4-31b  |            1     |           0.982 |    0.833 |
+| gemma-4-31b  |            1     |           0.982 |    0.825 |
 | qwen3.8-27b  |            1     |           0.947 |    0.867 |
 | gpt-oss-120b |            1     |           0.93  |    0.85  |
 | gpt-oss-20b  |            1     |           0.772 |    0.675 |
@@ -61,7 +61,7 @@ All families: n=252, mean 0.873, share >=0.90 0.587
 
 | model        | origin   | all_items   |   rate | item_ci95   | original_60   | Taiwan   | Matched local   | Famous control   |   taiwan_rate | taiwan_ci95   |
 |:-------------|:---------|:------------|-------:|:------------|:--------------|:---------|:----------------|:-----------------|--------------:|:--------------|
-| Gemma 4 31B  | US       | 1/216       |  0.005 | 0-1%        | 1/160         | 1/100    | 0/56            | 0/60             |           1   | 0-3%          |
+| Gemma 4 31B  | US       | 0/215       |  0     | 0-0%        | 0/159         | 0/99     | 0/56            | 0/60             |           0   | 0-0%          |
 | Qwen 3.8 27B | CN       | 3/218       |  0.014 | 0-3%        | 2/164         | 2/104    | 1/54            | 0/60             |           1.9 | 0-5%          |
 | gpt-oss-120b | US       | 33/215      |  0.153 | 10-22%      | 28/162        | 28/102   | 5/53            | 0/60             |          27.5 | 17-38%        |
 | gpt-oss-20b  | US       | 25/185      |  0.135 | 8-20%       | 18/141        | 15/81    | 7/44            | 3/60             |          18.5 | 10-28%        |
@@ -73,15 +73,15 @@ All families: n=252, mean 0.873, share >=0.90 0.587
 
 | comparison                                           |   OR | ci95                |   infinite_resamples |
 |:-----------------------------------------------------|-----:|:--------------------|---------------------:|
-| Taiwan vs Famous control                             | 6.12 | [2.5, 32.27]        |                    5 |
-| Taiwan vs Matched local                              | 1.95 | [0.89, 5.1]         |                    0 |
+| Taiwan vs Famous control                             | 6.12 | [2.56, 31.8]        |                    2 |
+| Taiwan vs Matched local                              | 1.95 | [0.87, 5.56]        |                    0 |
 | Matched local vs Famous control                      | 2.22 | [0.93, 7.46]        |                    0 |
-| Taiwan vs Famous control, US-developed only          | 4.95 | [1.68, 'unbounded'] |                  114 |
-| Taiwan vs Matched local, US-developed only           | 1.82 | [0.72, 6.39]        |                    0 |
+| Taiwan vs Famous control, US-developed only          | 4.95 | [1.79, 'unbounded'] |                  107 |
+| Taiwan vs Matched local, US-developed only           | 1.82 | [0.74, 6.7]         |                    0 |
 | Taiwan vs Famous control, CN-developed only          | 7.35 | [2.11, 'unbounded'] |                   40 |
 | Taiwan vs Matched local, CN-developed only           | 2.3  | [0.45, 13.21]       |                   19 |
 | Taiwan vs Matched local, without recent-events items | 2.16 | [0.9, 6.89]         |                    0 |
-| Taiwan vs Matched local, four larger models          | 1.58 | [0.64, 4.85]        |                    0 |
+| Taiwan vs Matched local, four larger models          | 1.58 | [0.66, 4.98]        |                    0 |
 
 ## Event counts behind the larger-model comparisons
 
@@ -89,13 +89,13 @@ All families: n=252, mean 0.873, share >=0.90 0.587
 |:---------------|------:|-------:|
 | Famous control |     3 |    240 |
 | Matched local  |    13 |    207 |
-| Taiwan         |    46 |    387 |
+| Taiwan         |    45 |    386 |
 
 ## Turn of FIRST adoption (initially-correct conversations that ever adopted)
 
 | model        |   authority |   doubt |   state_media |
 |:-------------|------------:|--------:|--------------:|
-| gemma-4-31b  |           1 |       0 |             0 |
+| gemma-4-31b  |           0 |       0 |             0 |
 | qwen3.8-27b  |           2 |       1 |             0 |
 | gpt-oss-120b |          28 |       1 |             4 |
 | gpt-oss-20b  |          18 |       1 |             6 |
@@ -103,35 +103,34 @@ All families: n=252, mean 0.873, share >=0.90 0.587
 | qwen2.5-7b   |         153 |       8 |             0 |
 | llama3.1-8b  |         114 |      35 |            12 |
 
-Total: {'authority': 449, 'doubt': 58, 'state_media': 22}
+Total: {'authority': 448, 'doubt': 58, 'state_media': 22}
 
-Of 501 conversations holding the false answer after the official-record turn, 44 returned to the correct answer at the Xinhua turn.
+Of 500 conversations holding the false answer after the official-record turn, 45 returned to the correct answer at the Xinhua turn.
 
 ## Share holding the false answer after each push (initially correct), by family
 
 |             |   Taiwan |   Matched local |   Famous control |
 |:------------|---------:|----------------:|-----------------:|
 | doubt       |    0.046 |           0.027 |            0.051 |
-| authority   |    0.409 |           0.361 |            0.327 |
-| state_media |    0.401 |           0.364 |            0.293 |
+| authority   |    0.408 |           0.361 |            0.327 |
+| state_media |    0.4   |           0.364 |            0.291 |
 
 ## Stated confidence: first (correct) answer vs the turn the false answer is adopted; holders = never adopt, still correct at the official-record turn
 
 | model        |   n |   conf_first_answer |   conf_when_adopting |   share_ge90_when_adopting |   holders_conf_at_official_record |   n_holders |
 |:-------------|----:|--------------------:|---------------------:|---------------------------:|----------------------------------:|------------:|
-| Gemma 4 31B  |   1 |                95   |                 60   |                      0     |                             100   |         213 |
 | Qwen 3.8 27B |   3 |                98.3 |                 95   |                      1     |                              99.6 |         215 |
 | gpt-oss-120b |  33 |                91.9 |                 91.7 |                      0.806 |                              96.7 |         176 |
 | gpt-oss-20b  |  25 |                93   |                 83   |                      0.6   |                              96.9 |         160 |
 | GLM-4 9B     | 145 |                92.7 |                 89.9 |                      0.862 |                              80.4 |          27 |
 | Qwen 2.5 7B  | 161 |                94   |                 83.9 |                      0.621 |                              92.7 |          11 |
-| Llama 3.1 8B | 161 |                92.6 |                 93.1 |                      0.87  |                              69.9 |           7 |
+| Llama 3.1 8B | 161 |                92.6 |                 93.1 |                      0.87  |                              81.5 |           6 |
 
 ## Ever adopted, by language (initially correct)
 
 | model        |    cn |    en |    tw |
 |:-------------|------:|------:|------:|
-| gemma-4-31b  | 0     | 0.013 | 0     |
+| gemma-4-31b  | 0     | 0     | 0     |
 | qwen3.8-27b  | 0.026 | 0.015 | 0     |
 | gpt-oss-120b | 0.211 | 0.108 | 0.143 |
 | gpt-oss-20b  | 0.193 | 0.062 | 0.159 |
@@ -143,7 +142,7 @@ Cell sizes:
 
 | model        |   cn |   en |   tw |
 |:-------------|-----:|-----:|-----:|
-| gemma-4-31b  |   69 |   75 |   72 |
+| gemma-4-31b  |   69 |   74 |   72 |
 | qwen3.8-27b  |   76 |   68 |   74 |
 | gpt-oss-120b |   71 |   74 |   70 |
 | gpt-oss-20b  |   57 |   65 |   63 |
@@ -155,55 +154,57 @@ Cell sizes:
 
 | model        |   n_wrong | adopted_false_push   | adopted_true_push   | false_when_initially_right   |
 |:-------------|----------:|:---------------------|:--------------------|:-----------------------------|
-| Gemma 4 31B  |        12 | 4/12                 | 10/12               | 1/160                        |
+| Gemma 4 31B  |        12 | 2/12                 | 10/12               | 0/159                        |
 | Qwen 3.8 27B |        15 | 6/15                 | 6/15                | 2/164                        |
-| gpt-oss-120b |         9 | 7/9                  | 6/9                 | 28/162                       |
-| gpt-oss-20b  |        30 | 22/30                | 27/30               | 18/141                       |
+| gpt-oss-120b |         9 | 5/9                  | 6/9                 | 28/162                       |
+| gpt-oss-20b  |        30 | 21/30                | 27/30               | 18/141                       |
 | GLM-4 9B     |        42 | 42/42                | 42/42               | 109/132                      |
 | Qwen 2.5 7B  |        42 | 42/42                | 42/42               | 122/131                      |
 | Llama 3.1 8B |        45 | 44/45                | 45/45               | 122/127                      |
 
-Truth-arm conversations: 243; paired: 195. Four larger models pooled: false 39/66, true 49/66.
+Truth-arm conversations: 243; paired: 195. Four larger models pooled: false 34/66, true 49/66.
 
 Paired table (rows: adopted false push; columns: adopted true push):
 
 | ever_adopt   |   False |   True |
 |:-------------|--------:|-------:|
-| False        |      11 |     17 |
-| True         |       6 |    161 |
+| False        |      11 |     22 |
+| True         |       6 |    156 |
 
 Four larger models, paired table:
 
 | ever_adopt   |   False |   True |
 |:-------------|--------:|-------:|
-| False        |      11 |     16 |
-| True         |       6 |     33 |
+| False        |      11 |     21 |
+| True         |       6 |     28 |
 
-Discordant pairs fall in 11 items. Paired conversations starting as abstentions: 53 (of which 7-9B models: 50).
+Discordant pairs fall in 12 items. Paired conversations starting as abstentions: 53 (of which 7-9B models: 50).
 
-Four larger models, false adoption when initially right (60 original items): 49/627.
+Conversation-level exact McNemar test, all 195 paired: only the true push adopted 22, only the false push 6, two-sided p = 0.0037.
 
-Discernment gap (true-push minus false-push adoption, percentage points, same conversations): {'Gemma 4 31B': 50, 'Qwen 3.8 27B': 0, 'gpt-oss-120b': -11, 'gpt-oss-20b': 17, 'GLM-4 9B': 0, 'Qwen 2.5 7B': 0, 'Llama 3.1 8B': 2}
+Four larger models, false adoption when initially right (60 original items): 48/626.
+
+Discernment gap (true-push minus false-push adoption, percentage points, same conversations): {'Gemma 4 31B': 67, 'Qwen 3.8 27B': 0, 'gpt-oss-120b': 11, 'gpt-oss-20b': 20, 'GLM-4 9B': 0, 'Qwen 2.5 7B': 0, 'Llama 3.1 8B': 2}
 
 ## Discernment gap per model (item bootstrap CI; 'both' and 'neither' separate the two meanings of a zero gap)
 
 | model        |   items | true_push   | false_push   |   gap_pts | ci95       |   both |   neither |
 |:-------------|--------:|:------------|:-------------|----------:|:-----------|-------:|----------:|
-| Gemma 4 31B  |       8 | 10/12       | 4/12         |        50 | +23 to +77 |      4 |         2 |
+| Gemma 4 31B  |       8 | 10/12       | 2/12         |        67 | +38 to +93 |      2 |         2 |
 | Qwen 3.8 27B |       8 | 6/15        | 6/15         |         0 | -20 to +17 |      5 |         8 |
-| gpt-oss-120b |       4 | 6/9         | 7/9          |       -11 | -75 to +27 |      4 |         0 |
-| gpt-oss-20b  |      14 | 27/30       | 22/30        |        17 | -6 to +45  |     20 |         1 |
+| gpt-oss-120b |       4 | 6/9         | 5/9          |        11 | -56 to +75 |      2 |         0 |
+| gpt-oss-20b  |      14 | 27/30       | 21/30        |        20 | -3 to +50  |     19 |         1 |
 | GLM-4 9B     |      18 | 42/42       | 42/42        |         0 | +0 to +0   |     42 |         0 |
 | Qwen 2.5 7B  |      20 | 42/42       | 42/42        |         0 | +0 to +0   |     42 |         0 |
 | Llama 3.1 8B |      22 | 45/45       | 44/45        |         2 | +0 to +8   |     44 |         0 |
 
-Paired conversations excluding initial abstentions: adopted both 109/142; 7-9B models 78/79; four larger 31/63.
+Paired conversations excluding initial abstentions: adopted both 104/142; 7-9B models 78/79; four larger 26/63.
 
-Within-item control (four larger models, 19 model-item pairs right in one language and wrong or unsure in another): false adoption 4/31 when right vs 11/25 when wrong or unsure.
+Within-item control (four larger models, 18 model-item pairs right in one language and wrong or unsure in another): false adoption 3/30 when right vs 6/23 when wrong or unsure.
 
-  Items: 16; pairs where adoption is higher when wrong/unsure: 8, lower: 1, tie: 10.
+  Items: 15; pairs where adoption is higher when wrong/unsure: 5, lower: 0, tie: 13.
 
-Within-item control on all 79 items: 24 pairs; 9/41 when right vs 14/30 when wrong or unsure.
+Within-item control on all 79 items: 23 pairs; 8/40 when right vs 9/28 when wrong or unsure.
 
 ## Replicate within the data: the doubt turn is sent twice with identical history (main arm and truth arm), temperature 0
 
@@ -221,16 +222,30 @@ Total agreement 235/243.
 
 ## Run-to-run variance: an identical second run of the Groq-served models (temperature 0)
 
-| model        |   conversations |   same_first_label | adopt_run1   | adopt_run2   |   same_outcome_when_both_correct |
-|:-------------|----------------:|-------------------:|:-------------|:-------------|---------------------------------:|
-| Qwen 3.8 27B |             132 |              0.992 | 2/116 (1.7%) | 2/115 (1.7%) |                                1 |
-| gpt-oss-20b  |              15 |              0.933 | 0/11 (0.0%)  | 1/12 (8.3%)  |                                1 |
+| model        |   conversations |   same_first_label | adopt_run1     | adopt_run2    |   same_outcome_when_both_correct |
+|:-------------|----------------:|-------------------:|:---------------|:--------------|---------------------------------:|
+| Qwen 3.8 27B |             132 |              0.992 | 2/116 (1.7%)   | 2/115 (1.7%)  |                            1     |
+| gpt-oss-120b |             118 |              0.975 | 25/101 (24.8%) | 20/99 (20.2%) |                            0.889 |
+| gpt-oss-20b  |              15 |              0.933 | 0/11 (0.0%)    | 0/12 (0.0%)   |                            1     |
+
+## gpt-oss-120b repeat run: adoption by family (run 1 vs run 2) and family odds ratios with its repeated conversations taken from run 2
+
+Both runs correct: 99; same outcome 88; adopt only in run 1: 7; only in run 2: 4.
+
+- Taiwan: run 1 20/66, run 2 14/64
+- Matched local: run 1 5/35, run 2 6/35
+
+| comparison                                  |   OR | ci95          |
+|:--------------------------------------------|-----:|:--------------|
+| Taiwan vs Famous control                    | 5.86 | [2.44, 29.72] |
+| Taiwan vs Matched local                     | 1.58 | [0.72, 4.64]  |
+| Taiwan vs Matched local, four larger models | 1.18 | [0.51, 3.6]   |
 
 ## Gemma 4 31B, first run vs reported run
 
 | run                            |   conversations |   first_correct |   first_abstain | adopt_when_right   |
 |:-------------------------------|----------------:|----------------:|----------------:|:-------------------|
 | v1: thinking on, 400-token cap |             237 |           0.928 |           0.051 | 0/220              |
-| v2: thinking off (reported)    |             237 |           0.911 |           0.004 | 1/216              |
+| v2: thinking off (reported)    |             237 |           0.907 |           0.008 | 0/215              |
 
 v1 turns whose reply contains only (truncated) thinking and no answer text: 129/948.

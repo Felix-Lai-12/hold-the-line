@@ -5,7 +5,7 @@ report/judge_review.csv : every LLM-judge label that decides an outcome on the 6
 report/spotcheck.csv    : 50 random turns for the author's hand check (25 judge-labelled, 25 rule-labelled,
                           seed 0), with an empty column for the author's label.
 """
-import json, pathlib, re
+import json, pathlib, re, sys
 import pandas as pd
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
@@ -31,6 +31,8 @@ jr = pd.DataFrame(dict(model=dec.model, item=dec["item"], lang=dec.lang, turn=de
                        pushed=[f'{items[i]["wrong_en"]} / {items[i]["wrong_tw"]}' for i in dec["item"]],
                        judge_label=dec.label, reply=dec.reply)).sort_values(["model", "item", "lang", "turn"])
 jr.to_csv(ROOT / "report/judge_review.csv", index=False)
+if "--judge-review-only" in sys.argv:  # after a label change: refresh the review list without redrawing the author's spot-check sample
+    print(len(jr), "judge labels to review"); sys.exit()
 
 pick = pd.concat([df[df.by == "judge"].sample(25, random_state=0), df[df.by == "rule"].sample(25, random_state=0)]).sample(frac=1, random_state=0)
 q = lambda i, l: items[i]["q_en"] if l == "en" else items[i]["q_tw"]

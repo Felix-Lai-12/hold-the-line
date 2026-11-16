@@ -194,6 +194,10 @@ if tp.exists():
     js["paired"] = rows; js["n_truth"] = int(len(tr)); js["paired_big"] = dict(false=kn(big.ever_adopt), true=kn(big.adopt_true))
     disc = pair[pair.ever_adopt != pair.adopt_true]
     out.append(f"Four larger models, paired table:\n\n{pd.crosstab(big.ever_adopt, big.adopt_true).to_markdown()}\n\nDiscordant pairs fall in {disc['item'].nunique()} items. Paired conversations starting as abstentions: {int((pair['init'] == 'abstain').sum())} (of which 7-9B models: {int((pair[pair.model.isin(SMALL)]['init'] == 'abstain').sum())}).\n")
+    from math import comb
+    n_t, n_f = int((~pair.ever_adopt & pair.adopt_true).sum()), int((pair.ever_adopt & ~pair.adopt_true).sum())
+    p_mc = min(1.0, 2 * sum(comb(n_t + n_f, i) for i in range(min(n_t, n_f) + 1)) / 2 ** (n_t + n_f))
+    out.append(f"Conversation-level exact McNemar test, all 195 paired: only the true push adopted {n_t}, only the false push {n_f}, two-sided p = {p_mc:.4f}.\n")
     rb = right[~right.model.isin(SMALL) & (right.family != "Matched local")]; js["big_right_60"] = kn(rb.ever_adopt)
     out.append(f"Four larger models, false adoption when initially right (60 original items): {kn(rb.ever_adopt)}.\n")
     # discernment gap: true-push minus false-push adoption on the same conversations
@@ -259,9 +263,26 @@ if rp.exists():
     for m in [x for x in ORDER if x in set(j.model)]:
         s = j[j.model == m]; r1 = s[s["init"] == "correct"]; r2 = s[s["init_2"] == "correct"]; both = s[(s["init"] == "correct") & (s["init_2"] == "correct")]
         rows.append(dict(model=NICE[m], conversations=len(s), same_first_label=round((s["init"] == s["init_2"]).mean(), 3),
-                         adopt_run1=f"{kn(r1.ever_adopt)} ({r1.ever_adopt.mean()*100:.1f}%)", adopt_run2=f"{kn(r2.ever_adopt)} ({r2.ever_adopt.mean()*100:.1f}%)",
+                         adopt_run1=f"{kn(r1.ever_adopt)} ({r1.ever_adopt.mean()*100:.1f}%)", adopt_run2=f"{kn(r2.ever_adopt_2)} ({r2.ever_adopt_2.mean()*100:.1f}%)",
                          same_outcome_when_both_correct=round((both.ever_adopt == both.ever_adopt_2).mean(), 3)))
     section("Run-to-run variance: an identical second run of the Groq-served models (temperature 0)", pd.DataFrame(rows).to_markdown(index=False)); js["variance"] = rows
+    # gpt-oss-120b carries the Taiwan-vs-matched comparison: per-family adoption in both runs, and the family odds ratios
+    # with its repeated (Chinese-language) conversations taken from run 2 instead of run 1
+    r120 = rep[rep.model == "gpt-oss-120b"].copy()
+    if len(r120):
+        s = j[j.model == "gpt-oss-120b"]; both = s[(s["init"] == "correct") & (s["init_2"] == "correct")]
+        fam = {f: (kn(s[(s.family == f) & (s["init"] == "correct")].ever_adopt), kn(s[(s.family == f) & (s["init_2"] == "correct")].ever_adopt_2)) for f in ["Taiwan", "Matched local"]}
+        r120["ok"] = r120["init"] == "correct"
+        key = lambda d: d.model + "|" + d["item"] + "|" + d.lang
+        sub = pd.concat([conv[~key(conv).isin(set(key(r120)))], r120], ignore_index=True); sr = sub[sub.ok]
+        rows2 = []
+        for label, d, a, b in [("Taiwan vs Famous control", sr, "Taiwan", "Famous control"), ("Taiwan vs Matched local", sr, "Taiwan", "Matched local"),
+                               ("Taiwan vs Matched local, four larger models", sr[~sr.model.isin(SMALL)], "Taiwan", "Matched local")]:
+            ci, _ = boot_or(d, a, b); rows2.append(dict(comparison=label, OR=round(mh_or(d, a, b), 2), ci95=ci))
+        section("gpt-oss-120b repeat run: adoption by family (run 1 vs run 2) and family odds ratios with its repeated conversations taken from run 2",
+                f"Both runs correct: {len(both)}; same outcome {int((both.ever_adopt == both.ever_adopt_2).sum())}; adopt only in run 1: {int((both.ever_adopt & ~both.ever_adopt_2).sum())}; only in run 2: {int((~both.ever_adopt & both.ever_adopt_2).sum())}.\n\n"
+                + "\n".join(f"- {f}: run 1 {a1}, run 2 {a2}" for f, (a1, a2) in fam.items()) + "\n\n" + pd.DataFrame(rows2).to_markdown(index=False))
+        js["variance_120b"] = dict(by_family=fam, odds_ratios_run2=rows2)
 
 # ---------- Gemma v1 (thinking on, truncated) vs v2 ----------
 vp = ROOT / "runs/_v1_gemma_thinking_labeled.jsonl"
