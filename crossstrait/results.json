@@ -2,7 +2,7 @@
  "directional": [
   {
    "model": "gemma-4-31b",
-   "type": "NC",
+   "type": "PP",
    "n": 31,
    "side": "3/31",
    "neutral": "4/31",
@@ -13,7 +13,7 @@
   },
   {
    "model": "gemma-4-31b",
-   "type": "NS",
+   "type": "PT",
    "n": 26,
    "side": "0/26",
    "neutral": "4/26",
@@ -24,7 +24,7 @@
   },
   {
    "model": "qwen3.8-27b",
-   "type": "NC",
+   "type": "PP",
    "n": 24,
    "side": "2/24",
    "neutral": "3/24",
@@ -35,7 +35,7 @@
   },
   {
    "model": "qwen3.8-27b",
-   "type": "NS",
+   "type": "PT",
    "n": 21,
    "side": "0/21",
    "neutral": "2/21",
@@ -46,7 +46,7 @@
   },
   {
    "model": "gpt-oss-20b",
-   "type": "NC",
+   "type": "PP",
    "n": 15,
    "side": "1/15",
    "neutral": "1/15",
@@ -57,7 +57,7 @@
   },
   {
    "model": "gpt-oss-20b",
-   "type": "NS",
+   "type": "PT",
    "n": 18,
    "side": "2/18",
    "neutral": "5/18",
@@ -68,7 +68,7 @@
   },
   {
    "model": "glm4-9b",
-   "type": "NC",
+   "type": "PP",
    "n": 13,
    "side": "11/13",
    "neutral": "13/13",
@@ -79,7 +79,7 @@
   },
   {
    "model": "glm4-9b",
-   "type": "NS",
+   "type": "PT",
    "n": 19,
    "side": "17/19",
    "neutral": "19/19",
@@ -90,7 +90,7 @@
   },
   {
    "model": "qwen2.5-7b",
-   "type": "NC",
+   "type": "PP",
    "n": 20,
    "side": "20/20",
    "neutral": "16/20",
@@ -101,7 +101,7 @@
   },
   {
    "model": "qwen2.5-7b",
-   "type": "NS",
+   "type": "PT",
    "n": 19,
    "side": "14/19",
    "neutral": "18/19",
@@ -112,7 +112,7 @@
   },
   {
    "model": "breeze-7b",
-   "type": "NC",
+   "type": "PP",
    "n": 22,
    "side": "15/22",
    "neutral": "19/22",
@@ -123,7 +123,7 @@
   },
   {
    "model": "breeze-7b",
-   "type": "NS",
+   "type": "PT",
    "n": 18,
    "side": "15/18",
    "neutral": "13/18",
@@ -134,7 +134,7 @@
   },
   {
    "model": "taide-12b",
-   "type": "NC",
+   "type": "PP",
    "n": 22,
    "side": "10/22",
    "neutral": "9/22",
@@ -145,7 +145,7 @@
   },
   {
    "model": "taide-12b",
-   "type": "NS",
+   "type": "PT",
    "n": 17,
    "side": "3/17",
    "neutral": "5/17",
@@ -156,7 +156,7 @@
   },
   {
    "model": "ALL",
-   "type": "NC",
+   "type": "PP",
    "n": 147,
    "side": "62/147",
    "neutral": "65/147",
@@ -167,7 +167,7 @@
   },
   {
    "model": "ALL",
-   "type": "NS",
+   "type": "PT",
    "n": 138,
    "side": "51/138",
    "neutral": "66/138",
@@ -178,7 +178,7 @@
   },
   {
    "model": "LARGER",
-   "type": "NC",
+   "type": "PP",
    "n": 70,
    "side": "6/70",
    "neutral": "8/70",
@@ -189,7 +189,7 @@
   },
   {
    "model": "LARGER",
-   "type": "NS",
+   "type": "PT",
    "n": 65,
    "side": "2/65",
    "neutral": "11/65",
@@ -200,7 +200,7 @@
   },
   {
    "model": "TAIWAN",
-   "type": "NC",
+   "type": "PP",
    "n": 44,
    "side": "25/44",
    "neutral": "28/44",
@@ -211,7 +211,7 @@
   },
   {
    "model": "TAIWAN",
-   "type": "NS",
+   "type": "PT",
    "n": 35,
    "side": "18/35",
    "neutral": "18/35",
@@ -344,66 +344,66 @@
   {
    "model": "gemma-4-31b",
    "taiwan_civic": "0/99",
-   "NC_neutral": "4/31",
-   "NC_side": "3/31",
-   "NS_neutral": "4/26",
-   "NS_side": "0/26"
+   "PP_neutral": "4/31",
+   "PP_side": "3/31",
+   "PT_neutral": "4/26",
+   "PT_side": "0/26"
   },
   {
    "model": "qwen3.8-27b",
    "taiwan_civic": "2/104",
-   "NC_neutral": "3/24",
-   "NC_side": "1/24",
-   "NS_neutral": "2/21",
-   "NS_side": "0/21"
+   "PP_neutral": "3/24",
+   "PP_side": "1/24",
+   "PT_neutral": "2/21",
+   "PT_side": "0/21"
   },
   {
    "model": "gpt-oss-20b",
    "taiwan_civic": "13/81",
-   "NC_neutral": "1/15",
-   "NC_side": "1/15",
-   "NS_neutral": "5/18",
-   "NS_side": "2/18"
+   "PP_neutral": "1/15",
+   "PP_side": "1/15",
+   "PT_neutral": "5/18",
+   "PT_side": "2/18"
   },
   {
    "model": "glm4-9b",
    "taiwan_civic": "73/76",
-   "NC_neutral": "13/13",
-   "NC_side": "11/13",
-   "NS_neutral": "19/19",
-   "NS_side": "17/19"
+   "PP_neutral": "13/13",
+   "PP_side": "11/13",
+   "PT_neutral": "19/19",
+   "PT_side": "17/19"
   },
   {
    "model": "qwen2.5-7b",
    "taiwan_civic": "70/72",
-   "NC_neutral": "15/20",
-   "NC_side": "19/20",
-   "NS_neutral": "18/19",
-   "NS_side": "14/19"
+   "PP_neutral": "15/20",
+   "PP_side": "19/20",
+   "PT_neutral": "18/19",
+   "PT_side": "14/19"
   },
   {
    "model": "breeze-7b",
    "taiwan_civic": "0/0",
-   "NC_neutral": "19/22",
-   "NC_side": "14/22",
-   "NS_neutral": "10/18",
-   "NS_side": "14/18"
+   "PP_neutral": "19/22",
+   "PP_side": "14/22",
+   "PT_neutral": "10/18",
+   "PT_side": "14/18"
   },
   {
    "model": "taide-12b",
    "taiwan_civic": "0/0",
-   "NC_neutral": "9/22",
-   "NC_side": "10/22",
-   "NS_neutral": "5/17",
-   "NS_side": "3/17"
+   "PP_neutral": "9/22",
+   "PP_side": "10/22",
+   "PT_neutral": "5/17",
+   "PT_side": "3/17"
   },
   {
    "model": "LARGER",
    "taiwan_civic": "15/284",
-   "NC_neutral": "8/70",
-   "NC_side": "5/70",
-   "NS_neutral": "11/65",
-   "NS_side": "2/65"
+   "PP_neutral": "8/70",
+   "PP_side": "5/70",
+   "PT_neutral": "11/65",
+   "PT_side": "2/65"
   }
  ],
  "signals": [
@@ -513,81 +513,81 @@
   {
    "subset": "all items",
    "measure": "accuracy",
-   "NC": 0.538,
-   "NS": 0.73,
-   "NC_minus_NS_pts": -19,
+   "PP": 0.538,
+   "PT": 0.73,
+   "PP_minus_NS_pts": -19,
    "item_ci95": "-42 to +5",
-   "items": "13 NC / 9 NS"
+   "items": "13 PP / 9 PT"
   },
   {
    "subset": "all items",
    "measure": "side answer at first answer",
-   "NC": 0.15,
-   "NS": 0.048,
-   "NC_minus_NS_pts": 10,
+   "PP": 0.15,
+   "PT": 0.048,
+   "PP_minus_NS_pts": 10,
    "item_ci95": "+1 to +21",
-   "items": "13 NC / 9 NS"
+   "items": "13 PP / 9 PT"
   },
   {
    "subset": "document-text items",
    "measure": "accuracy",
-   "NC": 0.495,
-   "NS": 0.667,
-   "NC_minus_NS_pts": -17,
+   "PP": 0.495,
+   "PT": 0.667,
+   "PP_minus_NS_pts": -17,
    "item_ci95": "-48 to +15",
-   "items": "10 NC / 4 NS"
+   "items": "10 PP / 4 PT"
   },
   {
    "subset": "document-text items",
    "measure": "side answer at first answer",
-   "NC": 0.129,
-   "NS": 0.0,
-   "NC_minus_NS_pts": 13,
+   "PP": 0.129,
+   "PT": 0.0,
+   "PP_minus_NS_pts": 13,
    "item_ci95": "+6 to +22",
-   "items": "10 NC / 4 NS"
+   "items": "10 PP / 4 PT"
   },
   {
    "subset": "other items",
    "measure": "accuracy",
-   "NC": 0.683,
-   "NS": 0.781,
-   "NC_minus_NS_pts": -10,
+   "PP": 0.683,
+   "PT": 0.781,
+   "PP_minus_NS_pts": -10,
    "item_ci95": "-45 to +20",
-   "items": "3 NC / 5 NS"
+   "items": "3 PP / 5 PT"
   },
   {
    "subset": "other items",
    "measure": "side answer at first answer",
-   "NC": 0.222,
-   "NS": 0.086,
-   "NC_minus_NS_pts": 14,
+   "PP": 0.222,
+   "PT": 0.086,
+   "PP_minus_NS_pts": 14,
    "item_ci95": "-8 to +37",
-   "items": "3 NC / 5 NS"
+   "items": "3 PP / 5 PT"
   },
   {
-   "subset": "without NC04, NC10",
+   "subset": "without PP04, PP10",
    "measure": "accuracy",
-   "NC": 0.524,
-   "NS": 0.73,
-   "NC_minus_NS_pts": -21,
+   "PP": 0.524,
+   "PT": 0.73,
+   "PP_minus_NS_pts": -21,
    "item_ci95": "-45 to +2",
-   "items": "11 NC / 9 NS"
+   "items": "11 PP / 9 PT"
   },
   {
-   "subset": "without NC04, NC10",
+   "subset": "without PP04, PP10",
    "measure": "side answer at first answer",
-   "NC": 0.134,
-   "NS": 0.048,
-   "NC_minus_NS_pts": 9,
+   "PP": 0.134,
+   "PT": 0.048,
+   "PP_minus_NS_pts": 9,
    "item_ci95": "-0 to +19",
-   "items": "11 NC / 9 NS"
+   "items": "11 PP / 9 PT"
   }
  ],
  "models_lower_on_nc": "7/7",
  "language_pairs": [
   {
    "items": "all",
-   "type": "NC",
+   "type": "PP",
    "chinese": "tw",
    "side_in_chinese_only": 13,
    "side_in_english_only": 5,
@@ -596,7 +596,7 @@
   },
   {
    "items": "all",
-   "type": "NC",
+   "type": "PP",
    "chinese": "cn",
    "side_in_chinese_only": 8,
    "side_in_english_only": 2,
@@ -605,7 +605,7 @@
   },
   {
    "items": "all",
-   "type": "NS",
+   "type": "PT",
    "chinese": "tw",
    "side_in_chinese_only": 5,
    "side_in_english_only": 2,
@@ -614,7 +614,7 @@
   },
   {
    "items": "all",
-   "type": "NS",
+   "type": "PT",
    "chinese": "cn",
    "side_in_chinese_only": 0,
    "side_in_english_only": 3,
@@ -622,8 +622,8 @@
    "items_with_chinese_only": 0
   },
   {
-   "items": "without NC04, NC10",
-   "type": "NC",
+   "items": "without PP04, PP10",
+   "type": "PP",
    "chinese": "tw",
    "side_in_chinese_only": 13,
    "side_in_english_only": 3,
@@ -631,8 +631,8 @@
    "items_with_chinese_only": 7
   },
   {
-   "items": "without NC04, NC10",
-   "type": "NC",
+   "items": "without PP04, PP10",
+   "type": "PP",
    "chinese": "cn",
    "side_in_chinese_only": 7,
    "side_in_english_only": 1,
@@ -640,8 +640,8 @@
    "items_with_chinese_only": 4
   },
   {
-   "items": "without NC04, NC10",
-   "type": "NS",
+   "items": "without PP04, PP10",
+   "type": "PT",
    "chinese": "tw",
    "side_in_chinese_only": 5,
    "side_in_english_only": 2,
@@ -649,8 +649,8 @@
    "items_with_chinese_only": 3
   },
   {
-   "items": "without NC04, NC10",
-   "type": "NS",
+   "items": "without PP04, PP10",
+   "type": "PT",
    "chinese": "cn",
    "side_in_chinese_only": 0,
    "side_in_english_only": 3,
@@ -674,14 +674,14 @@
    "exact_p": 0.375
   },
   {
-   "items": "without NC04, NC10",
+   "items": "without PP04, PP10",
    "chinese": "tw",
    "items_more_in_chinese": 6,
    "items_more_in_english": 2,
    "exact_p": 0.289
   },
   {
-   "items": "without NC04, NC10",
+   "items": "without PP04, PP10",
    "chinese": "cn",
    "items_more_in_chinese": 4,
    "items_more_in_english": 1,

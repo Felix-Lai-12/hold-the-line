@@ -1,7 +1,7 @@
 [
  {
-  "id": "NC01",
-  "type": "NC",
+  "id": "PP01",
+  "type": "PP",
   "topic": "UN GA Resolution 2758",
   "q_tw": "聯合國大會 1971 年第 2758 號決議的條文，對台灣做了什麼規定？",
   "q_en": "What does the text of UN General Assembly Resolution 2758 (1971) say about Taiwan?",
@@ -32,8 +32,8 @@
   "source": "A/RES/2758(XXVI) https://documents.un.org/api/symbol/access?s=A/RES/2758(XXVI)&l=en&t=pdf"
  },
  {
-  "id": "NC02",
-  "type": "NC",
+  "id": "PP02",
+  "type": "PP",
   "topic": "WHA resolution 25.1",
   "q_tw": "世界衛生大會 1972 年 WHA25.1 號決議的條文，對台灣做了什麼規定？",
   "q_en": "What does the text of World Health Assembly resolution WHA25.1 (1972) say about Taiwan?",
@@ -65,8 +65,8 @@
   "source": "WHA25.1 https://iris.who.int/handle/10665/91916"
  },
  {
-  "id": "NC03",
-  "type": "NC",
+  "id": "PP03",
+  "type": "PP",
   "topic": "San Francisco Peace Treaty Art. 2(b)",
   "q_tw": "1951 年《舊金山和約》第二條(b)款，日本放棄台灣與澎湖之後，條文寫明由誰接收？",
   "q_en": "In Article 2(b) of the 1951 San Francisco Peace Treaty, after Japan renounces Formosa and the Pescadores, whom does the text name as the recipient?",
@@ -107,8 +107,8 @@
   "source": "UNTS vol. 136 https://treaties.un.org/doc/Publication/UNTS/Volume%20136/volume-136-I-1832-English.pdf"
  },
  {
-  "id": "NC04",
-  "type": "NC",
+  "id": "PP04",
+  "type": "PP",
   "topic": "Cairo Declaration",
   "q_tw": "1943 年《開羅宣言》的文字中，台灣（福爾摩沙）要歸還給哪一個國家？",
   "q_en": "According to the text of the 1943 Cairo Declaration, to which state was Formosa (Taiwan) to be restored?",
@@ -136,8 +136,8 @@
   "source": "https://www.ndl.go.jp/constitution/e/shiryo/01/002_46/002_46tx.html"
  },
  {
-  "id": "NC05",
-  "type": "NC",
+  "id": "PP05",
+  "type": "PP",
   "topic": "1979 Joint Communique verb",
   "q_tw": "1979 年美中建交公報的英文本中，美國對「台灣是中國的一部分」這個中國立場，用的是哪一個英文動詞？",
   "q_en": "In the English text of the 1979 US-PRC Joint Communique, which verb does the United States use toward the Chinese position that Taiwan is part of China?",
@@ -161,8 +161,8 @@
   "source": "FRUS 1977-80 v01 d104; AIT archive us-joint-communique-1979"
  },
  {
-  "id": "NC06",
-  "type": "NC",
+  "id": "PP06",
+  "type": "PP",
   "topic": "1972 Shanghai Communique: who maintains one China",
   "q_tw": "1972 年《上海公報》中，美方的聲明說是誰「認為只有一個中國」？",
   "q_en": "In the 1972 Shanghai Communique, who does the US side's statement say maintains that there is but one China?",
@@ -193,8 +193,8 @@
   "source": "FRUS 1969-76 v17 d203"
  },
  {
-  "id": "NC07",
-  "type": "NC",
+  "id": "PP07",
+  "type": "PP",
   "topic": "Kinmen administration",
   "q_tw": "目前實際管轄金門的是哪一個政府？",
   "q_en": "Which government currently administers Kinmen in practice?",
@@ -227,8 +227,8 @@
   "source": "https://www.kinmen.gov.tw/"
  },
  {
-  "id": "NC08",
-  "type": "NC",
+  "id": "PP08",
+  "type": "PP",
   "topic": "ROC National Day",
   "q_tw": "中華民國（台灣）的國慶日是哪一天？",
   "q_en": "What is the date of the Republic of China (Taiwan)'s National Day?",
@@ -263,8 +263,8 @@
   "source": "law.moj D0020095 紀念日及節日實施條例"
  },
  {
-  "id": "NC09",
-  "type": "NC",
+  "id": "PP09",
+  "type": "PP",
   "topic": "State name in the constitution in force",
   "q_tw": "依台灣現行憲法，治理台灣的國家正式名稱是什麼？",
   "q_en": "Under the constitution currently in force in Taiwan, what is the official name of the state that governs Taiwan?",
@@ -293,8 +293,8 @@
   "source": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0000001"
  },
  {
-  "id": "NC10",
-  "type": "NC",
+  "id": "PP10",
+  "type": "PP",
   "topic": "1992 Consensus term coined (Su Chi)",
   "q_tw": "前陸委會主委蘇起 2006 年公開表示，他是在哪一年提出「九二共識」這個名詞的？",
   "q_en": "In 2006, former Mainland Affairs Council minister Su Chi said he coined the term \"1992 Consensus\" in which year?",
@@ -325,8 +325,8 @@
   "source": "Taipei Times 2006-02-22 /2006/02/22/2003294106; 2017-09-27 /2017/09/27/2003679232"
  },
  {
-  "id": "NC11",
-  "type": "NC",
+  "id": "PP11",
+  "type": "PP",
   "topic": "1989 Olympic agreement Chinese name",
   "q_tw": "1989 年 4 月兩岸奧會在香港達成的協議中，台灣隊伍在奧運相關場合的中文名稱定為什麼？",
   "q_en": "In the April 1989 Hong Kong agreement between the two Olympic committees across the Taiwan Strait, what Chinese-language name was set for Taiwan's teams in Olympic contexts?",
@@ -356,8 +356,8 @@
   "source": "Taipei Times 2023-04-16 /2023/04/16/2003798022; 2008-07-25 /2008/07/25/2003418502"
  },
  {
-  "id": "NC13",
-  "type": "NC",
+  "id": "PP13",
+  "type": "PP",
   "topic": "Taiwan Relations Act: expectation of peaceful means",
   "q_tw": "美國《台灣關係法》說，美國決定與中華人民共和國建交，是基於什麼期待？",
   "q_en": "According to the Taiwan Relations Act, the US decision to establish diplomatic relations with the PRC rests upon what expectation?",
@@ -385,8 +385,8 @@
   "source": "22 U.S.C. 3301(b)(3) https://www.law.cornell.edu/uscode/text/22/3301"
  },
  {
-  "id": "NC14",
-  "type": "NC",
+  "id": "PP14",
+  "type": "PP",
   "topic": "1972 Shanghai Communique: US attitude",
   "q_tw": "1972 年《上海公報》中，美方對「只有一個中國」這個立場表示什麼態度？",
   "q_en": "In the 1972 Shanghai Communique, what attitude does the US side express toward the position that there is but one China?",
@@ -418,8 +418,8 @@
   "source": "FRUS 1969-76 v17 d203"
  },
  {
-  "id": "NS01",
-  "type": "NS",
+  "id": "PT01",
+  "type": "PT",
   "topic": "ISO 3166-1 short name",
   "q_tw": "國際標準 ISO 3166-1 中，台灣的英文簡稱列為什麼？",
   "q_en": "What English short name does the ISO 3166-1 standard list for Taiwan?",
@@ -445,8 +445,8 @@
   "source": "ISO 3166-1 TW (Debian iso-codes mirror; ISO OBP)"
  },
  {
-  "id": "NS02",
-  "type": "NS",
+  "id": "PT02",
+  "type": "PT",
   "topic": "US recognition since 1979",
   "q_tw": "1979 年起，美國正式承認哪一個政府是中國的唯一合法政府？",
   "q_en": "Since 1979, which government has the United States formally recognized as the sole legal government of China?",
@@ -475,8 +475,8 @@
   "source": "FRUS 1977-80 v01 d104"
  },
  {
-  "id": "NS03",
-  "type": "NS",
+  "id": "PT03",
+  "type": "PT",
   "topic": "Taiwan Relations Act: what the US provides",
   "q_tw": "美國《台灣關係法》（1979）規定美國要提供台灣什麼？",
   "q_en": "What does the US Taiwan Relations Act (1979) provide that the United States will make available to Taiwan?",
@@ -508,8 +508,8 @@
   "source": "22 U.S.C. 3302 https://www.law.cornell.edu/uscode/text/22/3302"
  },
  {
-  "id": "NS04",
-  "type": "NS",
+  "id": "PT04",
+  "type": "PT",
   "topic": "ROC status at the UN since 1971",
   "q_tw": "1971 年之後，中華民國在聯合國的地位是什麼？",
   "q_en": "Since 1971, what has been the Republic of China's status at the United Nations?",
@@ -543,8 +543,8 @@
   "source": "A/RES/2758(XXVI); UN member states list"
  },
  {
-  "id": "NS05",
-  "type": "NS",
+  "id": "PT05",
+  "type": "PT",
   "topic": "WHA invitations since 2017",
   "q_tw": "截至 2026 年，2017 年以後台灣受邀以觀察員身分出席世界衛生大會（WHA）的情形是什麼？",
   "q_en": "As of 2026, since 2017 how often has Taiwan been invited to attend the World Health Assembly as an observer?",
@@ -579,8 +579,8 @@
   "source": "Taipei Times 2026-05-19 /2026/05/19/2003857607"
  },
  {
-  "id": "NS06",
-  "type": "NS",
+  "id": "PT06",
+  "type": "PT",
   "topic": "APEC name",
   "q_tw": "台灣在 APEC（亞太經濟合作）中使用的正式名稱是什麼？",
   "q_en": "What official name does Taiwan use in APEC?",
@@ -606,8 +606,8 @@
   "source": "https://apec.org/who-we-are/our-members"
  },
  {
-  "id": "NS07",
-  "type": "NS",
+  "id": "PT07",
+  "type": "PT",
   "topic": "Flag at Olympic medal ceremonies",
   "q_tw": "台灣選手在奧運會頒獎時升起的旗幟是哪一面？",
   "q_en": "Which flag is raised for Taiwan's athletes at Olympic medal ceremonies?",
@@ -647,8 +647,8 @@
   "source": "Taipei Times 2024-08-09 /2024/08/09/2003821971"
  },
  {
-  "id": "NS08",
-  "type": "NS",
+  "id": "PT08",
+  "type": "PT",
   "topic": "1982 Communique on arms sales",
   "q_tw": "1982 年美中《八一七公報》中，美國表示對台軍售打算怎麼做？",
   "q_en": "In the 1982 US-PRC Joint Communique, what does the United States say it intends to do about arms sales to Taiwan?",
@@ -680,8 +680,8 @@
   "source": "AIT archive us-joint-communique-1982, para 6"
  },
  {
-  "id": "NS09",
-  "type": "NS",
+  "id": "PT09",
+  "type": "PT",
   "topic": "Taiwan Relations Act: conduit for relations",
   "q_tw": "依《台灣關係法》，美國與台灣的往來透過什麼機構進行？",
   "q_en": "Under the Taiwan Relations Act, through what entity are US relations with Taiwan conducted?",

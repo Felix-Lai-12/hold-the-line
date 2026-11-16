@@ -1,9 +1,9 @@
 """Analysis of the cross-strait pilot. Output: crossstrait/results.md (+ results.json).
 
-1. First answers: accuracy and spontaneous side answers, by item type (NC = fact contradicts a PRC narrative,
-   NS = fact contradicts a pro-Taiwan overclaim), model and language.
+1. First answers: accuracy and spontaneous side answers, by item type (PP = fact contradicts a pro-PRC claim,
+   PT = fact contradicts a pro-Taiwan claim), model and language.
 2. Directional push: among correct first answers, adoption of the pushed answer in the side branch vs the
-   neutral branch (paired, same trunk). lift = side - neutral. Directional bias = lift(NC) - lift(NS).
+   neutral branch (paired, same trunk). lift = side - neutral. Directional bias = lift(PP) - lift(PT).
 3. Comparison with ordinary Taiwan civic facts from the main study (same models, same first three turns).
 4. Warning signals at the first answer (stated confidence, cross-script and cross-model disagreement).
 """
@@ -56,7 +56,7 @@ def boot_lift(d, seed=0):
     return np.percentile(bs, [2.5, 97.5])
 rows = []
 for m in ORDER + list(GROUPS):
-    for t in ("NC", "NS"):
+    for t in ("PP", "PT"):
         d = pick(right[right.type == t], m)
         if not len(d): continue
         lo, hi = boot_lift(d)
@@ -67,40 +67,40 @@ dp = pd.DataFrame(rows); js["directional"] = rows
 sec("Directional push among correct first answers: adoption of the pushed answer in the side vs neutral branch (paired; lift = side - neutral, item-bootstrap CI)", dp.to_markdown(index=False))
 bias = []
 for m in ORDER + list(GROUPS):
-    r = {t: dp[(dp.model == m) & (dp.type == t)] for t in ("NC", "NS")}
+    r = {t: dp[(dp.model == m) & (dp.type == t)] for t in ("PP", "PT")}
     if all(len(v) for v in r.values()):
-        d_ = pick(right, m); raw = {t: (d_[d_.type == t].adopt_side.mean() - d_[d_.type == t].adopt_neu.mean()) * 100 for t in ("NC", "NS")}
-        bias.append(dict(model=m, lift_NC_toward_PRC=int(r["NC"].lift_pts.iloc[0]), lift_NS_toward_TW=int(r["NS"].lift_pts.iloc[0]),
-                         directional_bias=int(round(raw["NC"] - raw["NS"]))))  # from unrounded lifts
+        d_ = pick(right, m); raw = {t: (d_[d_.type == t].adopt_side.mean() - d_[d_.type == t].adopt_neu.mean()) * 100 for t in ("PP", "PT")}
+        bias.append(dict(model=m, lift_NC_toward_PRC=int(r["PP"].lift_pts.iloc[0]), lift_NS_toward_TW=int(r["PT"].lift_pts.iloc[0]),
+                         directional_bias=int(round(raw["PP"] - raw["PT"]))))  # from unrounded lifts
 def boot_bias(d, seed=0):
-    """CI for lift(NC) - lift(NS); NC and NS items resampled independently."""
+    """CI for lift(PP) - lift(PT); PP and PT items resampled independently."""
     rng = np.random.default_rng(seed); out_ = []
-    g = {t: d[d.type == t].groupby("item")[["adopt_side", "adopt_neu"]].agg(["sum", "size"]) for t in ("NC", "NS")}
+    g = {t: d[d.type == t].groupby("item")[["adopt_side", "adopt_neu"]].agg(["sum", "size"]) for t in ("PP", "PT")}
     for _ in range(B):
         l = []
-        for t in ("NC", "NS"):
+        for t in ("PP", "PT"):
             gg = g[t].iloc[rng.choice(len(g[t]), len(g[t]))]
             l.append((gg[("adopt_side", "sum")].sum() - gg[("adopt_neu", "sum")].sum()) / gg[("adopt_side", "size")].sum() * 100)
         out_.append(l[0] - l[1])
     return np.percentile(out_, [2.5, 97.5])
 for b_ in bias:
     lo, hi = boot_bias(pick(right, b_["model"])); b_["ci95"] = f"{lo:+.0f} to {hi:+.0f}"
-sec("Directional bias = lift toward PRC-narrative falsehoods (NC) minus lift toward pro-Taiwan overclaims (NS); positive = yields more to PRC-side falsehoods (CI: NC and NS items resampled independently)", pd.DataFrame(bias).to_markdown(index=False))
+sec("Directional bias = lift toward pro-PRC falsehoods (PP) minus lift toward pro-Taiwan falsehoods (PT); positive = yields more to PRC-side falsehoods (CI: PP and PT items resampled independently)", pd.DataFrame(bias).to_markdown(index=False))
 js["bias"] = bias
-# sensitivity: NC10's side answer (1992) is the year in the term's own name; NC04's text says "the Republic of China",
+# sensitivity: PP10's side answer (1992) is the year in the term's own name; PP04's text says "the Republic of China",
 # and a bare "China" was judged correct by the second judge. Drop both.
-rs = right[~right["item"].isin(["NC04", "NC10"])]; rows_s = []
+rs = right[~right["item"].isin(["PP04", "PP10"])]; rows_s = []
 for m in ["ALL", "LARGER", "TAIWAN", "qwen2.5-7b", "breeze-7b"]:
     d = pick(rs, m)
     if not len(d): continue
-    lift = {t: (d[d.type == t].adopt_side.mean() - d[d.type == t].adopt_neu.mean()) * 100 for t in ("NC", "NS")}
+    lift = {t: (d[d.type == t].adopt_side.mean() - d[d.type == t].adopt_neu.mean()) * 100 for t in ("PP", "PT")}
     lo, hi = boot_bias(d)
-    rows_s.append(dict(model=m, n_NC=int((d.type == "NC").sum()), n_NS=int((d.type == "NS").sum()), lift_NC=round(lift["NC"]), lift_NS=round(lift["NS"]),
-                       bias=round(lift["NC"] - lift["NS"]), ci95=f"{lo:+.0f} to {hi:+.0f}"))
-sec("Sensitivity: directional push without NC04 and NC10", pd.DataFrame(rows_s).to_markdown(index=False))
+    rows_s.append(dict(model=m, n_NC=int((d.type == "PP").sum()), n_NS=int((d.type == "PT").sum()), lift_NC=round(lift["PP"]), lift_NS=round(lift["PT"]),
+                       bias=round(lift["PP"] - lift["PT"]), ci95=f"{lo:+.0f} to {hi:+.0f}"))
+sec("Sensitivity: directional push without PP04 and PP10", pd.DataFrame(rows_s).to_markdown(index=False))
 js["bias_sensitivity"] = rows_s
-fs = conv[~conv["item"].isin(["NC04", "NC10"])]
-sec("Sensitivity: first answers by type and language without NC04 and NC10",
+fs = conv[~conv["item"].isin(["PP04", "PP10"])]
+sec("Sensitivity: first answers by type and language without PP04 and PP10",
     fs.groupby(["type", "lang"]).agg(n=("init", "size"), correct=("init", lambda s: (s == "correct").mean()), side_first=("init", lambda s: (s == "side").mean())).round(3).to_markdown())
 bl = right.groupby(["type", "lang"]).agg(n=("adopt_side", "size"), side=("adopt_side", "mean"), neutral=("adopt_neu", "mean")).round(3)
 bl["lift_pts"] = ((bl.side - bl.neutral) * 100).round()
@@ -119,7 +119,7 @@ if MAIN.exists():
     for m in ORDER + ["LARGER"]:
         c = pick(pv, m)
         r = dict(model=m, taiwan_civic=kn(c.adopt_auth))
-        for t in ("NC", "NS"):
+        for t in ("PP", "PT"):
             d = pick(right[right.type == t], m)
             dd = d["doubt"] == "side"
             r[f"{t}_neutral"] = kn(d.adopt_neu_auth | (d["doubt"] == "neu")); r[f"{t}_side"] = kn(d.adopt_side_auth | (d["doubt"] == "side"))
@@ -182,24 +182,24 @@ DOC = re.compile(r"text|Article|Communiqu|Act\b|Declaration|constitution|agreeme
 conv["doc"] = conv["item"].map(lambda i: bool(DOC.search(items_js[i]["q_en"])))
 conv["ok"] = conv.init == "correct"; conv["side1"] = conv.init == "side"
 def item_gap(d, y, seed=0):
-    g = d.groupby(["item", "type"])[y].mean().reset_index(); a = g[g.type == "NC"][y].values; b = g[g.type == "NS"][y].values
+    g = d.groupby(["item", "type"])[y].mean().reset_index(); a = g[g.type == "PP"][y].values; b = g[g.type == "PT"][y].values
     rng = np.random.default_rng(seed); bs = [rng.choice(a, len(a)).mean() - rng.choice(b, len(b)).mean() for _ in range(B)]
-    return (d[d.type == "NC"][y].mean() - d[d.type == "NS"][y].mean()) * 100, np.percentile(bs, [2.5, 97.5]) * 100, len(a), len(b)
+    return (d[d.type == "PP"][y].mean() - d[d.type == "PT"][y].mean()) * 100, np.percentile(bs, [2.5, 97.5]) * 100, len(a), len(b)
 rows = []
-for name, d in [("all items", conv), ("document-text items", conv[conv.doc]), ("other items", conv[~conv.doc]), ("without NC04, NC10", conv[~conv["item"].isin(["NC04", "NC10"])])]:
+for name, d in [("all items", conv), ("document-text items", conv[conv.doc]), ("other items", conv[~conv.doc]), ("without PP04, PP10", conv[~conv["item"].isin(["PP04", "PP10"])])]:
     for y, lab_ in (("ok", "accuracy"), ("side1", "side answer at first answer")):
         g, (lo, hi), na, nb = item_gap(d, y)
-        rows.append(dict(subset=name, measure=lab_, NC=round(d[d.type == "NC"][y].mean(), 3), NS=round(d[d.type == "NS"][y].mean(), 3),
-                         NC_minus_NS_pts=round(g), item_ci95=f"{lo:+.0f} to {hi:+.0f}", items=f"{na} NC / {nb} NS"))
-models_lower = sum(conv[(conv.model == m) & (conv.type == "NC")].ok.mean() < conv[(conv.model == m) & (conv.type == "NS")].ok.mean() for m in ORDER)
-sec("First answers, NC minus NS, with item-bootstrap intervals (NC and NS items resampled separately)",
-    pd.DataFrame(rows).to_markdown(index=False) + f"\n\nModels with lower accuracy on NC than NS: {models_lower} of {len(ORDER)}.\n\nDocument-text items (the question asks what a named text says): {sorted(conv[conv.doc]['item'].unique())}.")
+        rows.append(dict(subset=name, measure=lab_, PP=round(d[d.type == "PP"][y].mean(), 3), PT=round(d[d.type == "PT"][y].mean(), 3),
+                         PP_minus_NS_pts=round(g), item_ci95=f"{lo:+.0f} to {hi:+.0f}", items=f"{na} PP / {nb} PT"))
+models_lower = sum(conv[(conv.model == m) & (conv.type == "PP")].ok.mean() < conv[(conv.model == m) & (conv.type == "PT")].ok.mean() for m in ORDER)
+sec("First answers, PP minus PT, with item-bootstrap intervals (PP and PT items resampled separately)",
+    pd.DataFrame(rows).to_markdown(index=False) + f"\n\nModels with lower accuracy on PP than PT: {models_lower} of {len(ORDER)}.\n\nDocument-text items (the question asks what a named text says): {sorted(conv[conv.doc]['item'].unique())}.")
 js["nc_ns_gap"] = rows; js["models_lower_on_nc"] = f"{models_lower}/{len(ORDER)}"
 # language: same model and item, Chinese vs English, does exactly one of the two give the side answer?
 side = dict(zip(zip(conv.model, conv["item"], conv.lang), conv.side1))
 rows = []
-for excl in ([], ["NC04", "NC10"]):
-    for t in ("NC", "NS"):
+for excl in ([], ["PP04", "PP10"]):
+    for t in ("PP", "PT"):
         for zh in ("tw", "cn"):
             a = b = 0; its = set()
             for (m, i, l), v in side.items():
@@ -207,32 +207,32 @@ for excl in ([], ["NC04", "NC10"]):
                 e = side[(m, i, "en")]
                 if v and not e: a += 1; its.add(i)
                 if e and not v: b += 1
-            rows.append(dict(items="all" if not excl else "without NC04, NC10", type=t, chinese=zh, side_in_chinese_only=a, side_in_english_only=b,
+            rows.append(dict(items="all" if not excl else "without PP04, PP10", type=t, chinese=zh, side_in_chinese_only=a, side_in_english_only=b,
                              exact_p=round(binom_p(a, b), 3), items_with_chinese_only=len(its)))
 sec("Language: same model and item, side answer at the first answer in one language but not the other (exact two-sided sign test)", pd.DataFrame(rows).to_markdown(index=False))
 js["language_pairs"] = rows
 # the same comparison with the item as the unit (an item counts for Chinese if more models give the side answer only in Chinese than only in English),
 # and the model-by-model split of the pair counts
 rows = []
-for excl in ([], ["NC04", "NC10"]):
+for excl in ([], ["PP04", "PP10"]):
     for zh in ("tw", "cn"):
         per = {}
         for (m, i, l), v in side.items():
-            if l != zh or i in excl or items_js[i]["type"] != "NC": continue
+            if l != zh or i in excl or items_js[i]["type"] != "PP": continue
             e = side[(m, i, "en")]; per.setdefault(i, [0, 0]); per[i][0] += int(v and not e); per[i][1] += int(e and not v)
         a = sum(x > y for x, y in per.values()); b = sum(y > x for x, y in per.values())
-        rows.append(dict(items="all" if not excl else "without NC04, NC10", chinese=zh, items_more_in_chinese=a, items_more_in_english=b, exact_p=round(binom_p(a, b), 3)))
-sec("Language, item as the unit (NC items): items where the side answer appears in Chinese only for more models than in English only, and the reverse", pd.DataFrame(rows).to_markdown(index=False))
+        rows.append(dict(items="all" if not excl else "without PP04, PP10", chinese=zh, items_more_in_chinese=a, items_more_in_english=b, exact_p=round(binom_p(a, b), 3)))
+sec("Language, item as the unit (PP items): items where the side answer appears in Chinese only for more models than in English only, and the reverse", pd.DataFrame(rows).to_markdown(index=False))
 js["language_items"] = rows
 rows = []
 for m in ORDER:
-    a = sum(v and not side[(m, i, "en")] for (mm, i, l), v in side.items() if mm == m and l == "tw" and items_js[i]["type"] == "NC")
-    b = sum(side[(m, i, "en")] and not v for (mm, i, l), v in side.items() if mm == m and l == "tw" and items_js[i]["type"] == "NC")
+    a = sum(v and not side[(m, i, "en")] for (mm, i, l), v in side.items() if mm == m and l == "tw" and items_js[i]["type"] == "PP")
+    b = sum(side[(m, i, "en")] and not v for (mm, i, l), v in side.items() if mm == m and l == "tw" and items_js[i]["type"] == "PP")
     rows.append(dict(model=m, tc_only=int(a), en_only=int(b)))
-sec("Language pairs by model (NC items, Traditional Chinese vs English)", pd.DataFrame(rows).to_markdown(index=False))
+sec("Language pairs by model (PP items, Traditional Chinese vs English)", pd.DataFrame(rows).to_markdown(index=False))
 js["language_by_model"] = rows
-og = conv[conv.type == "NC"].assign(origin_=conv.origin).groupby("origin_").side1.agg(["sum", "size"])
-sec("Side answer at the first answer on NC items, by developer origin", og.to_markdown())
+og = conv[conv.type == "PP"].assign(origin_=conv.origin).groupby("origin_").side1.agg(["sum", "size"])
+sec("Side answer at the first answer on PP items, by developer origin", og.to_markdown())
 js["side_by_origin"] = og.reset_index().to_dict("records")
 
 # 6. figures
@@ -244,15 +244,15 @@ C_NC, C_NS, C_EN = "#c0392b", "#2471a3", "#7f8c8d"
 fig, (a1, a2) = plt.subplots(1, 2, figsize=(7.4, 2.9), gridspec_kw=dict(width_ratios=[1.25, 1]))
 y = np.arange(len(ORDER))[::-1]
 for yi, m in zip(y, ORDER):
-    nc = conv[(conv.model == m) & (conv.type == "NC")].ok.mean() * 100; ns = conv[(conv.model == m) & (conv.type == "NS")].ok.mean() * 100
+    nc = conv[(conv.model == m) & (conv.type == "PP")].ok.mean() * 100; ns = conv[(conv.model == m) & (conv.type == "PT")].ok.mean() * 100
     a1.plot([nc, ns], [yi, yi], color="#bbb", lw=2, zorder=1); a1.scatter([nc], [yi], color=C_NC, zorder=2); a1.scatter([ns], [yi], color=C_NS, marker="s", zorder=2)
-a1.scatter([], [], color=C_NC, label="record contradicts a PRC narrative (NC)"); a1.scatter([], [], color=C_NS, marker="s", label="record contradicts a pro-Taiwan claim (NS)")
+a1.scatter([], [], color=C_NC, label="record contradicts a pro-PRC claim (PP)"); a1.scatter([], [], color=C_NS, marker="s", label="record contradicts a pro-Taiwan claim (PT)")
 a1.set_yticks(y); a1.set_yticklabels([f"{NICE[m]} ({ORIG[m]})" for m in ORDER], fontsize=8.5); a1.set_xlim(20, 100); a1.set_xlabel("% correct at the first answer", fontsize=8.5)
 a1.tick_params(axis="x", labelsize=8); a1.grid(axis="x", alpha=.3); a1.legend(fontsize=7, frameon=False, loc="lower center", bbox_to_anchor=(0.45, 1.0), ncol=1)
 langs = ["tw", "cn", "en"]; LN = {"tw": "Traditional\nChinese", "cn": "Simplified\nChinese", "en": "English"}; w = 0.36; x_ = np.arange(3)
-for k, (t, c) in enumerate((("NC", C_NC), ("NS", C_NS))):
+for k, (t, c) in enumerate((("PP", C_NC), ("PT", C_NS))):
     v = [conv[(conv.type == t) & (conv.lang == l)].side1.mean() * 100 for l in langs]
-    a2.bar(x_ + (k - .5) * w, v, w, color=c, label="PRC narrative (NC)" if t == "NC" else "pro-Taiwan claim (NS)")
+    a2.bar(x_ + (k - .5) * w, v, w, color=c, label="pro-PRC (PP)" if t == "PP" else "pro-Taiwan (PT)")
     for xi, vi in zip(x_ + (k - .5) * w, v): a2.text(xi, vi + .4, f"{vi:.0f}", ha="center", fontsize=7)
 a2.set_xticks(x_); a2.set_xticklabels([LN[l] for l in langs], fontsize=8); a2.set_ylabel("% giving the side answer\nunprompted (all models)", fontsize=8)
 a2.tick_params(axis="y", labelsize=8); a2.legend(fontsize=7, frameon=False, loc="lower center", bbox_to_anchor=(0.5, 1.0), ncol=1); a2.grid(axis="y", alpha=.3)
@@ -266,8 +266,8 @@ for yi, (_, r) in zip(yy, bb.iterrows()):
     ax.plot([lo, hi], [yi, yi], color=col, lw=1.6); ax.scatter([r.directional_bias], [yi], color=col, zorder=3, marker="o" if r.model in ORIG else "D", s=28)
 ax.axvline(0, color="#444", lw=.8); ax.set_yticks(yy); ax.set_yticklabels([lab_y[m] if m in lab_y else f"{NICE[m]} ({ORIG[m]})" for m in bb.model], fontsize=8)
 ax.set_xlabel("directional bias, percentage points (95% item-bootstrap CI)", fontsize=8)
-ax.text(0.01, 1.02, "← yields more to pro-Taiwan overclaims", transform=ax.transAxes, ha="left", fontsize=7.5)
-ax.text(0.99, 1.02, "yields more to PRC-narrative falsehoods →", transform=ax.transAxes, ha="right", fontsize=7.5)
+ax.text(0.01, 1.02, "← yields more to pro-Taiwan falsehoods", transform=ax.transAxes, ha="left", fontsize=7.5)
+ax.text(0.99, 1.02, "yields more to pro-PRC falsehoods →", transform=ax.transAxes, ha="right", fontsize=7.5)
 ax.tick_params(axis="x", labelsize=8); ax.grid(axis="x", alpha=.3); fig.tight_layout(); fig.savefig(FIGS / "cs_fig2_direction.png", dpi=200); plt.close(fig)
 
 (HERE / "results.md").write_text("# Cross-strait pilot results\n\n" + "\n".join(out))

@@ -4,7 +4,7 @@ Do open-weight language models lean toward one side's narrative on documented cr
 
 The repo holds two studies:
 
-- **Main study, cross-strait bias (`crossstrait/`)**: 22 documented facts, 13 whose record contradicts a PRC narrative (NC) and 9 whose record contradicts a pro-Taiwan overclaim (NS); seven models including Taiwan's Breeze and TAIDE; first answers, then paired pushes toward a narrative-favoured and a neutral false answer. Design, labels and verification: `crossstrait/README.md`.
+- **Main study, cross-strait bias (`crossstrait/`)**: 22 documented facts, 13 whose record contradicts a pro-PRC claim (PP) and 9 whose record contradicts a pro-Taiwan claim (PT); seven models including Taiwan's Breeze and TAIDE; first answers, then paired pushes toward a narrative-favoured and a neutral false answer. Design, labels and verification: `crossstrait/README.md`.
 - **Reference study, pushback on uncontested civic facts (`data/`, `src/`)**: 79 Taiwan, famous and matched-local facts pushed toward one false answer. It is the baseline the cross-strait results are compared with (report Section 4.4 and Appendix F).
 
 **All code and data in this repo were written during the sprint (from 2026-11-14 23:56 Taipei time). Nothing is pre-existing.**

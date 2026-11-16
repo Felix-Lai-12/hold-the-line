@@ -5,7 +5,7 @@ trunk twice and push in two branches with the same two turns ("our official reco
 also says X"): X = the side answer (favoured by one side's narrative) or X = a neutral false answer.
 Both branches start from the identical first two exchanges, so they are paired.
 
-Usage: python crossstrait/run_cs.py --models gemma-4-31b glm4-9b --langs tw cn en [--ids NC01 NS01] [--limit N]
+Usage: python crossstrait/run_cs.py --models gemma-4-31b glm4-9b --langs tw cn en [--ids PP01 PT01] [--limit N]
 Output: crossstrait/runs/<model>.jsonl (resumable). Keys come from ~/.config/felix-agent/.env.local via src/run.py.
 """
 import argparse, json, pathlib, sys, threading, time

@@ -4,77 +4,77 @@
 
 |                       |   n |   correct |   side_first |   conf |
 |:----------------------|----:|----------:|-------------:|-------:|
-| ('NC', 'breeze-7b')   |  39 |      0.56 |         0.15 |  86.69 |
-| ('NC', 'gemma-4-31b') |  39 |      0.79 |         0.03 |  99.62 |
-| ('NC', 'glm4-9b')     |  39 |      0.33 |         0.23 |  92.31 |
-| ('NC', 'gpt-oss-20b') |  39 |      0.38 |         0.21 |  93.37 |
-| ('NC', 'qwen2.5-7b')  |  39 |      0.51 |         0.18 |  91.54 |
-| ('NC', 'qwen3.8-27b') |  39 |      0.62 |         0.15 |  97.41 |
-| ('NC', 'taide-12b')   |  39 |      0.56 |         0.1  |  98.33 |
-| ('NS', 'breeze-7b')   |  27 |      0.67 |         0.04 |  90.16 |
-| ('NS', 'gemma-4-31b') |  27 |      0.96 |         0    |  99.44 |
-| ('NS', 'glm4-9b')     |  27 |      0.7  |         0.07 |  93.33 |
-| ('NS', 'gpt-oss-20b') |  27 |      0.67 |         0.07 |  92.31 |
-| ('NS', 'qwen2.5-7b')  |  27 |      0.7  |         0.11 |  93.89 |
-| ('NS', 'qwen3.8-27b') |  27 |      0.78 |         0    |  97.93 |
-| ('NS', 'taide-12b')   |  27 |      0.63 |         0.04 |  98.75 |
+| ('PP', 'breeze-7b')   |  39 |      0.56 |         0.15 |  86.69 |
+| ('PP', 'gemma-4-31b') |  39 |      0.79 |         0.03 |  99.62 |
+| ('PP', 'glm4-9b')     |  39 |      0.33 |         0.23 |  92.31 |
+| ('PP', 'gpt-oss-20b') |  39 |      0.38 |         0.21 |  93.37 |
+| ('PP', 'qwen2.5-7b')  |  39 |      0.51 |         0.18 |  91.54 |
+| ('PP', 'qwen3.8-27b') |  39 |      0.62 |         0.15 |  97.41 |
+| ('PP', 'taide-12b')   |  39 |      0.56 |         0.1  |  98.33 |
+| ('PT', 'breeze-7b')   |  27 |      0.67 |         0.04 |  90.16 |
+| ('PT', 'gemma-4-31b') |  27 |      0.96 |         0    |  99.44 |
+| ('PT', 'glm4-9b')     |  27 |      0.7  |         0.07 |  93.33 |
+| ('PT', 'gpt-oss-20b') |  27 |      0.67 |         0.07 |  92.31 |
+| ('PT', 'qwen2.5-7b')  |  27 |      0.7  |         0.11 |  93.89 |
+| ('PT', 'qwen3.8-27b') |  27 |      0.78 |         0    |  97.93 |
+| ('PT', 'taide-12b')   |  27 |      0.63 |         0.04 |  98.75 |
 
 ## First answers by item type and language
 
 |              |   correct |   side_first |
 |:-------------|----------:|-------------:|
-| ('NC', 'cn') |     0.484 |        0.165 |
-| ('NC', 'en') |     0.626 |        0.099 |
-| ('NC', 'tw') |     0.505 |        0.187 |
-| ('NS', 'cn') |     0.746 |        0     |
-| ('NS', 'en') |     0.762 |        0.048 |
-| ('NS', 'tw') |     0.683 |        0.095 |
+| ('PP', 'cn') |     0.484 |        0.165 |
+| ('PP', 'en') |     0.626 |        0.099 |
+| ('PP', 'tw') |     0.505 |        0.187 |
+| ('PT', 'cn') |     0.746 |        0     |
+| ('PT', 'en') |     0.762 |        0.048 |
+| ('PT', 'tw') |     0.683 |        0.095 |
 
 ## Side answers given spontaneously at the first answer (count / conversations), by type x language x model
 
 |                       | cn   | en   | tw   |
 |:----------------------|:-----|:-----|:-----|
-| ('NC', 'breeze-7b')   | 1/13 | 1/13 | 4/13 |
-| ('NC', 'gemma-4-31b') | 1/13 | 0/13 | 0/13 |
-| ('NC', 'glm4-9b')     | 4/13 | 3/13 | 2/13 |
-| ('NC', 'gpt-oss-20b') | 2/13 | 3/13 | 3/13 |
-| ('NC', 'qwen2.5-7b')  | 2/13 | 0/13 | 5/13 |
-| ('NC', 'qwen3.8-27b') | 3/13 | 1/13 | 2/13 |
-| ('NC', 'taide-12b')   | 2/13 | 1/13 | 1/13 |
-| ('NS', 'breeze-7b')   | 0/9  | 0/9  | 1/9  |
-| ('NS', 'gemma-4-31b') | 0/9  | 0/9  | 0/9  |
-| ('NS', 'glm4-9b')     | 0/9  | 1/9  | 1/9  |
-| ('NS', 'gpt-oss-20b') | 0/9  | 1/9  | 1/9  |
-| ('NS', 'qwen2.5-7b')  | 0/9  | 1/9  | 2/9  |
-| ('NS', 'qwen3.8-27b') | 0/9  | 0/9  | 0/9  |
-| ('NS', 'taide-12b')   | 0/9  | 0/9  | 1/9  |
+| ('PP', 'breeze-7b')   | 1/13 | 1/13 | 4/13 |
+| ('PP', 'gemma-4-31b') | 1/13 | 0/13 | 0/13 |
+| ('PP', 'glm4-9b')     | 4/13 | 3/13 | 2/13 |
+| ('PP', 'gpt-oss-20b') | 2/13 | 3/13 | 3/13 |
+| ('PP', 'qwen2.5-7b')  | 2/13 | 0/13 | 5/13 |
+| ('PP', 'qwen3.8-27b') | 3/13 | 1/13 | 2/13 |
+| ('PP', 'taide-12b')   | 2/13 | 1/13 | 1/13 |
+| ('PT', 'breeze-7b')   | 0/9  | 0/9  | 1/9  |
+| ('PT', 'gemma-4-31b') | 0/9  | 0/9  | 0/9  |
+| ('PT', 'glm4-9b')     | 0/9  | 1/9  | 1/9  |
+| ('PT', 'gpt-oss-20b') | 0/9  | 1/9  | 1/9  |
+| ('PT', 'qwen2.5-7b')  | 0/9  | 1/9  | 2/9  |
+| ('PT', 'qwen3.8-27b') | 0/9  | 0/9  | 0/9  |
+| ('PT', 'taide-12b')   | 0/9  | 0/9  | 1/9  |
 
 ## Directional push among correct first answers: adoption of the pushed answer in the side vs neutral branch (paired; lift = side - neutral, item-bootstrap CI)
 
 | model       | type   |   n | side   | neutral   |   lift_pts | ci95       |   side_only |   neu_only |
 |:------------|:-------|----:|:-------|:----------|-----------:|:-----------|------------:|-----------:|
-| gemma-4-31b | NC     |  31 | 3/31   | 4/31      |         -3 | -10 to +0  |           1 |          2 |
-| gemma-4-31b | NS     |  26 | 0/26   | 4/26      |        -15 | -32 to +0  |           0 |          4 |
-| qwen3.8-27b | NC     |  24 | 2/24   | 3/24      |         -4 | -24 to +12 |           1 |          2 |
-| qwen3.8-27b | NS     |  21 | 0/21   | 2/21      |        -10 | -22 to +0  |           0 |          2 |
-| gpt-oss-20b | NC     |  15 | 1/15   | 1/15      |          0 | -20 to +17 |           1 |          1 |
-| gpt-oss-20b | NS     |  18 | 2/18   | 5/18      |        -17 | -38 to +0  |           0 |          3 |
-| glm4-9b     | NC     |  13 | 11/13  | 13/13     |        -15 | -43 to +0  |           0 |          2 |
-| glm4-9b     | NS     |  19 | 17/19  | 19/19     |        -11 | -29 to +0  |           0 |          2 |
-| qwen2.5-7b  | NC     |  20 | 20/20  | 16/20     |         20 | +4 to +42  |           4 |          0 |
-| qwen2.5-7b  | NS     |  19 | 14/19  | 18/19     |        -21 | -56 to +12 |           1 |          5 |
-| breeze-7b   | NC     |  22 | 15/22  | 19/22     |        -18 | -36 to -4  |           0 |          4 |
-| breeze-7b   | NS     |  18 | 15/18  | 13/18     |         11 | +0 to +22  |           2 |          0 |
-| taide-12b   | NC     |  22 | 10/22  | 9/22      |          5 | -24 to +26 |           3 |          2 |
-| taide-12b   | NS     |  17 | 3/17   | 5/17      |        -12 | -35 to +17 |           1 |          3 |
-| ALL         | NC     | 147 | 62/147 | 65/147    |         -2 | -9 to +5   |          10 |         13 |
-| ALL         | NS     | 138 | 51/138 | 66/138    |        -11 | -23 to +2  |           4 |         19 |
-| LARGER      | NC     |  70 | 6/70   | 8/70      |         -3 | -12 to +4  |           3 |          5 |
-| LARGER      | NS     |  65 | 2/65   | 11/65     |        -14 | -25 to -3  |           0 |          9 |
-| TAIWAN      | NC     |  44 | 25/44  | 28/44     |         -7 | -18 to +4  |           3 |          6 |
-| TAIWAN      | NS     |  35 | 18/35  | 18/35     |          0 | -17 to +19 |           3 |          3 |
+| gemma-4-31b | PP     |  31 | 3/31   | 4/31      |         -3 | -10 to +0  |           1 |          2 |
+| gemma-4-31b | PT     |  26 | 0/26   | 4/26      |        -15 | -32 to +0  |           0 |          4 |
+| qwen3.8-27b | PP     |  24 | 2/24   | 3/24      |         -4 | -24 to +12 |           1 |          2 |
+| qwen3.8-27b | PT     |  21 | 0/21   | 2/21      |        -10 | -22 to +0  |           0 |          2 |
+| gpt-oss-20b | PP     |  15 | 1/15   | 1/15      |          0 | -20 to +17 |           1 |          1 |
+| gpt-oss-20b | PT     |  18 | 2/18   | 5/18      |        -17 | -38 to +0  |           0 |          3 |
+| glm4-9b     | PP     |  13 | 11/13  | 13/13     |        -15 | -43 to +0  |           0 |          2 |
+| glm4-9b     | PT     |  19 | 17/19  | 19/19     |        -11 | -29 to +0  |           0 |          2 |
+| qwen2.5-7b  | PP     |  20 | 20/20  | 16/20     |         20 | +4 to +42  |           4 |          0 |
+| qwen2.5-7b  | PT     |  19 | 14/19  | 18/19     |        -21 | -56 to +12 |           1 |          5 |
+| breeze-7b   | PP     |  22 | 15/22  | 19/22     |        -18 | -36 to -4  |           0 |          4 |
+| breeze-7b   | PT     |  18 | 15/18  | 13/18     |         11 | +0 to +22  |           2 |          0 |
+| taide-12b   | PP     |  22 | 10/22  | 9/22      |          5 | -24 to +26 |           3 |          2 |
+| taide-12b   | PT     |  17 | 3/17   | 5/17      |        -12 | -35 to +17 |           1 |          3 |
+| ALL         | PP     | 147 | 62/147 | 65/147    |         -2 | -9 to +5   |          10 |         13 |
+| ALL         | PT     | 138 | 51/138 | 66/138    |        -11 | -23 to +2  |           4 |         19 |
+| LARGER      | PP     |  70 | 6/70   | 8/70      |         -3 | -12 to +4  |           3 |          5 |
+| LARGER      | PT     |  65 | 2/65   | 11/65     |        -14 | -25 to -3  |           0 |          9 |
+| TAIWAN      | PP     |  44 | 25/44  | 28/44     |         -7 | -18 to +4  |           3 |          6 |
+| TAIWAN      | PT     |  35 | 18/35  | 18/35     |          0 | -17 to +19 |           3 |          3 |
 
-## Directional bias = lift toward PRC-narrative falsehoods (NC) minus lift toward pro-Taiwan overclaims (NS); positive = yields more to PRC-side falsehoods (CI: NC and NS items resampled independently)
+## Directional bias = lift toward pro-PRC falsehoods (PP) minus lift toward pro-Taiwan falsehoods (PT); positive = yields more to PRC-side falsehoods (CI: PP and PT items resampled independently)
 
 | model       |   lift_NC_toward_PRC |   lift_NS_toward_TW |   directional_bias | ci95       |
 |:------------|---------------------:|--------------------:|-------------------:|:-----------|
@@ -89,7 +89,7 @@
 | LARGER      |                   -3 |                 -14 |                 11 | -4 to +24  |
 | TAIWAN      |                   -7 |                   0 |                 -7 | -28 to +13 |
 
-## Sensitivity: directional push without NC04 and NC10
+## Sensitivity: directional push without PP04 and PP10
 
 | model      |   n_NC |   n_NS |   lift_NC |   lift_NS |   bias | ci95       |
 |:-----------|-------:|-------:|----------:|----------:|-------:|:-----------|
@@ -99,42 +99,42 @@
 | qwen2.5-7b |     17 |     19 |        24 |       -21 |     45 | +5 to +88  |
 | breeze-7b  |     19 |     18 |       -16 |        11 |    -27 | -50 to -6  |
 
-## Sensitivity: first answers by type and language without NC04 and NC10
+## Sensitivity: first answers by type and language without PP04 and PP10
 
 |              |   n |   correct |   side_first |
 |:-------------|----:|----------:|-------------:|
-| ('NC', 'cn') |  77 |     0.481 |        0.143 |
-| ('NC', 'en') |  77 |     0.623 |        0.065 |
-| ('NC', 'tw') |  77 |     0.468 |        0.195 |
-| ('NS', 'cn') |  63 |     0.746 |        0     |
-| ('NS', 'en') |  63 |     0.762 |        0.048 |
-| ('NS', 'tw') |  63 |     0.683 |        0.095 |
+| ('PP', 'cn') |  77 |     0.481 |        0.143 |
+| ('PP', 'en') |  77 |     0.623 |        0.065 |
+| ('PP', 'tw') |  77 |     0.468 |        0.195 |
+| ('PT', 'cn') |  63 |     0.746 |        0     |
+| ('PT', 'en') |  63 |     0.762 |        0.048 |
+| ('PT', 'tw') |  63 |     0.683 |        0.095 |
 
 ## Directional push by language (all models, correct first answers)
 
 |              |   n |   side |   neutral |   lift_pts |
 |:-------------|----:|-------:|----------:|-----------:|
-| ('NC', 'cn') |  44 |  0.409 |     0.432 |         -2 |
-| ('NC', 'en') |  57 |  0.368 |     0.404 |         -4 |
-| ('NC', 'tw') |  46 |  0.5   |     0.5   |          0 |
-| ('NS', 'cn') |  47 |  0.426 |     0.511 |         -9 |
-| ('NS', 'en') |  48 |  0.292 |     0.417 |        -12 |
-| ('NS', 'tw') |  43 |  0.395 |     0.512 |        -12 |
+| ('PP', 'cn') |  44 |  0.409 |     0.432 |         -2 |
+| ('PP', 'en') |  57 |  0.368 |     0.404 |         -4 |
+| ('PP', 'tw') |  46 |  0.5   |     0.5   |          0 |
+| ('PT', 'cn') |  47 |  0.426 |     0.511 |         -9 |
+| ('PT', 'en') |  48 |  0.292 |     0.417 |        -12 |
+| ('PT', 'tw') |  43 |  0.395 |     0.512 |        -12 |
 
 ## Directional push by language (larger models only)
 
 |              |   n |   side |   neutral |
 |:-------------|----:|-------:|----------:|
-| ('NC', 'cn') |  22 |  0.136 |     0.136 |
-| ('NC', 'en') |  27 |  0     |     0.037 |
-| ('NC', 'tw') |  21 |  0.143 |     0.19  |
-| ('NS', 'cn') |  21 |  0.048 |     0.143 |
-| ('NS', 'en') |  23 |  0     |     0.13  |
-| ('NS', 'tw') |  21 |  0.048 |     0.238 |
+| ('PP', 'cn') |  22 |  0.136 |     0.136 |
+| ('PP', 'en') |  27 |  0     |     0.037 |
+| ('PP', 'tw') |  21 |  0.143 |     0.19  |
+| ('PT', 'cn') |  21 |  0.048 |     0.143 |
+| ('PT', 'en') |  23 |  0     |     0.13  |
+| ('PT', 'tw') |  21 |  0.048 |     0.238 |
 
 ## Adoption by the official-record turn, correct first answers: ordinary Taiwan civic facts (main study) vs cross-strait items (neutral and side branch)
 
-| model       | taiwan_civic   | NC_neutral   | NC_side   | NS_neutral   | NS_side   |
+| model       | taiwan_civic   | PP_neutral   | PP_side   | PT_neutral   | PT_side   |
 |:------------|:---------------|:-------------|:----------|:-------------|:----------|
 | gemma-4-31b | 0/99           | 4/31         | 3/31      | 4/26         | 0/26      |
 | qwen3.8-27b | 2/104          | 3/24         | 1/24      | 2/21         | 0/21      |
@@ -174,46 +174,46 @@ Answers are compared by label class: every answer labelled correct counts as the
 |----------------------:|-----------------------:|-----------------:|--------------------:|------------------:|---------------------:|:-----------------------|
 |                   171 |                    135 |             92.2 |                  96 |              0.82 |                 0.94 | 88.1 to 99.5           |
 
-## First answers, NC minus NS, with item-bootstrap intervals (NC and NS items resampled separately)
+## First answers, PP minus PT, with item-bootstrap intervals (PP and PT items resampled separately)
 
-| subset              | measure                     |    NC |    NS |   NC_minus_NS_pts | item_ci95   | items        |
+| subset              | measure                     |    PP |    PT |   PP_minus_NS_pts | item_ci95   | items        |
 |:--------------------|:----------------------------|------:|------:|------------------:|:------------|:-------------|
-| all items           | accuracy                    | 0.538 | 0.73  |               -19 | -42 to +5   | 13 NC / 9 NS |
-| all items           | side answer at first answer | 0.15  | 0.048 |                10 | +1 to +21   | 13 NC / 9 NS |
-| document-text items | accuracy                    | 0.495 | 0.667 |               -17 | -48 to +15  | 10 NC / 4 NS |
-| document-text items | side answer at first answer | 0.129 | 0     |                13 | +6 to +22   | 10 NC / 4 NS |
-| other items         | accuracy                    | 0.683 | 0.781 |               -10 | -45 to +20  | 3 NC / 5 NS  |
-| other items         | side answer at first answer | 0.222 | 0.086 |                14 | -8 to +37   | 3 NC / 5 NS  |
-| without NC04, NC10  | accuracy                    | 0.524 | 0.73  |               -21 | -45 to +2   | 11 NC / 9 NS |
-| without NC04, NC10  | side answer at first answer | 0.134 | 0.048 |                 9 | -0 to +19   | 11 NC / 9 NS |
+| all items           | accuracy                    | 0.538 | 0.73  |               -19 | -42 to +5   | 13 PP / 9 PT |
+| all items           | side answer at first answer | 0.15  | 0.048 |                10 | +1 to +21   | 13 PP / 9 PT |
+| document-text items | accuracy                    | 0.495 | 0.667 |               -17 | -48 to +15  | 10 PP / 4 PT |
+| document-text items | side answer at first answer | 0.129 | 0     |                13 | +6 to +22   | 10 PP / 4 PT |
+| other items         | accuracy                    | 0.683 | 0.781 |               -10 | -45 to +20  | 3 PP / 5 PT  |
+| other items         | side answer at first answer | 0.222 | 0.086 |                14 | -8 to +37   | 3 PP / 5 PT  |
+| without PP04, PP10  | accuracy                    | 0.524 | 0.73  |               -21 | -45 to +2   | 11 PP / 9 PT |
+| without PP04, PP10  | side answer at first answer | 0.134 | 0.048 |                 9 | -0 to +19   | 11 PP / 9 PT |
 
-Models with lower accuracy on NC than NS: 7 of 7.
+Models with lower accuracy on PP than PT: 7 of 7.
 
-Document-text items (the question asks what a named text says): ['NC01', 'NC02', 'NC03', 'NC04', 'NC05', 'NC06', 'NC09', 'NC11', 'NC13', 'NC14', 'NS01', 'NS03', 'NS08', 'NS09'].
+Document-text items (the question asks what a named text says): ['PP01', 'PP02', 'PP03', 'PP04', 'PP05', 'PP06', 'PP09', 'PP11', 'PP13', 'PP14', 'PT01', 'PT03', 'PT08', 'PT09'].
 
 ## Language: same model and item, side answer at the first answer in one language but not the other (exact two-sided sign test)
 
 | items              | type   | chinese   |   side_in_chinese_only |   side_in_english_only |   exact_p |   items_with_chinese_only |
 |:-------------------|:-------|:----------|-----------------------:|-----------------------:|----------:|--------------------------:|
-| all                | NC     | tw        |                     13 |                      5 |     0.096 |                         7 |
-| all                | NC     | cn        |                      8 |                      2 |     0.109 |                         5 |
-| all                | NS     | tw        |                      5 |                      2 |     0.453 |                         3 |
-| all                | NS     | cn        |                      0 |                      3 |     0.25  |                         0 |
-| without NC04, NC10 | NC     | tw        |                     13 |                      3 |     0.021 |                         7 |
-| without NC04, NC10 | NC     | cn        |                      7 |                      1 |     0.07  |                         4 |
-| without NC04, NC10 | NS     | tw        |                      5 |                      2 |     0.453 |                         3 |
-| without NC04, NC10 | NS     | cn        |                      0 |                      3 |     0.25  |                         0 |
+| all                | PP     | tw        |                     13 |                      5 |     0.096 |                         7 |
+| all                | PP     | cn        |                      8 |                      2 |     0.109 |                         5 |
+| all                | PT     | tw        |                      5 |                      2 |     0.453 |                         3 |
+| all                | PT     | cn        |                      0 |                      3 |     0.25  |                         0 |
+| without PP04, PP10 | PP     | tw        |                     13 |                      3 |     0.021 |                         7 |
+| without PP04, PP10 | PP     | cn        |                      7 |                      1 |     0.07  |                         4 |
+| without PP04, PP10 | PT     | tw        |                      5 |                      2 |     0.453 |                         3 |
+| without PP04, PP10 | PT     | cn        |                      0 |                      3 |     0.25  |                         0 |
 
-## Language, item as the unit (NC items): items where the side answer appears in Chinese only for more models than in English only, and the reverse
+## Language, item as the unit (PP items): items where the side answer appears in Chinese only for more models than in English only, and the reverse
 
 | items              | chinese   |   items_more_in_chinese |   items_more_in_english |   exact_p |
 |:-------------------|:----------|------------------------:|------------------------:|----------:|
 | all                | tw        |                       6 |                       3 |     0.508 |
 | all                | cn        |                       4 |                       1 |     0.375 |
-| without NC04, NC10 | tw        |                       6 |                       2 |     0.289 |
-| without NC04, NC10 | cn        |                       4 |                       1 |     0.375 |
+| without PP04, PP10 | tw        |                       6 |                       2 |     0.289 |
+| without PP04, PP10 | cn        |                       4 |                       1 |     0.375 |
 
-## Language pairs by model (NC items, Traditional Chinese vs English)
+## Language pairs by model (PP items, Traditional Chinese vs English)
 
 | model       |   tc_only |   en_only |
 |:------------|----------:|----------:|
@@ -225,7 +225,7 @@ Document-text items (the question asks what a named text says): ['NC01', 'NC02',
 | breeze-7b   |         3 |         0 |
 | taide-12b   |         0 |         0 |
 
-## Side answer at the first answer on NC items, by developer origin
+## Side answer at the first answer on PP items, by developer origin
 
 | origin_   |   sum |   size |
 |:----------|------:|-------:|
