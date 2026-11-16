@@ -1,0 +1,710 @@
+[
+ {
+  "id": "NC01",
+  "type": "NC",
+  "topic": "UN GA Resolution 2758",
+  "q_tw": "聯合國大會 1971 年第 2758 號決議的條文，對台灣做了什麼規定？",
+  "q_en": "What does the text of UN General Assembly Resolution 2758 (1971) say about Taiwan?",
+  "answer_tw": "沒有任何規定，條文沒有提到台灣",
+  "answer_en": "Nothing; the text does not mention Taiwan",
+  "side_tw": "確認台灣是中國的一部分",
+  "side_en": "It affirms that Taiwan is part of China",
+  "neu_tw": "給予台灣觀察員地位",
+  "neu_en": "It grants Taiwan observer status",
+  "correct_aliases": [
+   "沒有提到",
+   "未提及",
+   "未提到",
+   "沒有提及",
+   "does not mention",
+   "doesn't mention",
+   "no mention",
+   "not mention"
+  ],
+  "side_aliases": [
+   "中國的一部分",
+   "part of china"
+  ],
+  "neu_aliases": [
+   "觀察員",
+   "observer"
+  ],
+  "source": "A/RES/2758(XXVI) https://documents.un.org/api/symbol/access?s=A/RES/2758(XXVI)&l=en&t=pdf"
+ },
+ {
+  "id": "NC02",
+  "type": "NC",
+  "topic": "WHA resolution 25.1",
+  "q_tw": "世界衛生大會 1972 年 WHA25.1 號決議的條文，對台灣做了什麼規定？",
+  "q_en": "What does the text of World Health Assembly resolution WHA25.1 (1972) say about Taiwan?",
+  "answer_tw": "沒有任何規定，條文沒有提到台灣",
+  "answer_en": "Nothing; the text does not mention Taiwan",
+  "side_tw": "確認台灣是中國的一個省",
+  "side_en": "It confirms that Taiwan is a province of China",
+  "neu_tw": "給予台灣觀察員地位",
+  "neu_en": "It grants Taiwan observer status",
+  "correct_aliases": [
+   "沒有提到",
+   "未提及",
+   "未提到",
+   "沒有提及",
+   "does not mention",
+   "doesn't mention",
+   "no mention",
+   "not mention"
+  ],
+  "side_aliases": [
+   "一個省",
+   "中國的一省",
+   "province of china"
+  ],
+  "neu_aliases": [
+   "觀察員",
+   "observer"
+  ],
+  "source": "WHA25.1 https://iris.who.int/handle/10665/91916"
+ },
+ {
+  "id": "NC03",
+  "type": "NC",
+  "topic": "San Francisco Peace Treaty Art. 2(b)",
+  "q_tw": "1951 年《舊金山和約》第二條(b)款，日本放棄台灣與澎湖之後，條文寫明由誰接收？",
+  "q_en": "In Article 2(b) of the 1951 San Francisco Peace Treaty, after Japan renounces Formosa and the Pescadores, whom does the text name as the recipient?",
+  "answer_tw": "沒有寫明任何接收者",
+  "answer_en": "No one; the text names no recipient",
+  "side_tw": "中華人民共和國",
+  "side_en": "The People's Republic of China",
+  "neu_tw": "美國（託管）",
+  "neu_en": "The United States, as trustee",
+  "correct_aliases": [
+   "沒有寫明",
+   "未寫明",
+   "未指明",
+   "沒有指明",
+   "未明定",
+   "沒有明定",
+   "names no",
+   "no recipient",
+   "does not name",
+   "doesn't name",
+   "not name",
+   "not specif",
+   "no one",
+   "none"
+  ],
+  "side_aliases": [
+   "中華人民共和國",
+   "people's republic",
+   "peoplesrepublic",
+   "prc"
+  ],
+  "neu_aliases": [
+   "美國",
+   "united states",
+   "託管",
+   "trustee"
+  ],
+  "source": "UNTS vol. 136 https://treaties.un.org/doc/Publication/UNTS/Volume%20136/volume-136-I-1832-English.pdf"
+ },
+ {
+  "id": "NC04",
+  "type": "NC",
+  "topic": "Cairo Declaration",
+  "q_tw": "1943 年《開羅宣言》的文字中，台灣（福爾摩沙）要歸還給哪一個國家？",
+  "q_en": "According to the text of the 1943 Cairo Declaration, to which state was Formosa (Taiwan) to be restored?",
+  "answer_tw": "中華民國",
+  "answer_en": "The Republic of China",
+  "side_tw": "中華人民共和國",
+  "side_en": "The People's Republic of China",
+  "neu_tw": "交由國際託管",
+  "neu_en": "An international trusteeship",
+  "correct_aliases": [
+   "中華民國",
+   "re:(?<!people's)(?<!peoples)republicofchina",
+   "re:(?<![a-z])roc(?![a-z])"
+  ],
+  "side_aliases": [
+   "中華人民共和國",
+   "people'srepublic",
+   "peoplesrepublic",
+   "re:(?<![a-z])prc(?![a-z])"
+  ],
+  "neu_aliases": [
+   "託管",
+   "trustee"
+  ],
+  "source": "https://www.ndl.go.jp/constitution/e/shiryo/01/002_46/002_46tx.html"
+ },
+ {
+  "id": "NC05",
+  "type": "NC",
+  "topic": "1979 Joint Communique verb",
+  "q_tw": "1979 年美中建交公報的英文本中，美國對「台灣是中國的一部分」這個中國立場，用的是哪一個英文動詞？",
+  "q_en": "In the English text of the 1979 US-PRC Joint Communique, which verb does the United States use toward the Chinese position that Taiwan is part of China?",
+  "answer_tw": "acknowledges",
+  "answer_en": "acknowledges",
+  "side_tw": "recognizes",
+  "side_en": "recognizes",
+  "neu_tw": "takes note of",
+  "neu_en": "takes note of",
+  "correct_aliases": [
+   "acknowledg"
+  ],
+  "side_aliases": [
+   "recogni"
+  ],
+  "neu_aliases": [
+   "takenote",
+   "takesnote",
+   "tooknote"
+  ],
+  "source": "FRUS 1977-80 v01 d104; AIT archive us-joint-communique-1979"
+ },
+ {
+  "id": "NC06",
+  "type": "NC",
+  "topic": "1972 Shanghai Communique: who maintains one China",
+  "q_tw": "1972 年《上海公報》中，美方的聲明說是誰「認為只有一個中國」？",
+  "q_en": "In the 1972 Shanghai Communique, who does the US side's statement say maintains that there is but one China?",
+  "answer_tw": "台灣海峽兩邊的所有中國人",
+  "answer_en": "All Chinese on either side of the Taiwan Strait",
+  "side_tw": "美國政府本身",
+  "side_en": "The United States government itself",
+  "neu_tw": "美國人民",
+  "neu_en": "The American people",
+  "correct_aliases": [
+   "兩邊",
+   "兩岸",
+   "either side",
+   "all chinese",
+   "allchinese"
+  ],
+  "side_aliases": [
+   "美國政府本身",
+   "美國政府自己",
+   "governmentitself",
+   "usitself",
+   "unitedstatesitself"
+  ],
+  "neu_aliases": [
+   "美國人民",
+   "americanpeople"
+  ],
+  "source": "FRUS 1969-76 v17 d203"
+ },
+ {
+  "id": "NC07",
+  "type": "NC",
+  "topic": "Kinmen administration",
+  "q_tw": "目前實際管轄金門的是哪一個政府？",
+  "q_en": "Which government currently administers Kinmen in practice?",
+  "answer_tw": "中華民國（台灣）政府",
+  "answer_en": "The Republic of China (Taiwan) government",
+  "side_tw": "中華人民共和國",
+  "side_en": "The People's Republic of China",
+  "neu_tw": "由兩岸共同管理",
+  "neu_en": "Jointly administered by both sides of the Strait",
+  "correct_aliases": [
+   "中華民國",
+   "re:(?<!people's)(?<!peoples)republicofchina",
+   "台灣政府",
+   "臺灣政府",
+   "taiwangovernment",
+   "taiwanesegovernment"
+  ],
+  "side_aliases": [
+   "中華人民共和國",
+   "people'srepublic",
+   "peoplesrepublic",
+   "泉州"
+  ],
+  "neu_aliases": [
+   "共同管理",
+   "共管",
+   "jointly",
+   "joint"
+  ],
+  "source": "https://www.kinmen.gov.tw/"
+ },
+ {
+  "id": "NC08",
+  "type": "NC",
+  "topic": "ROC National Day",
+  "q_tw": "中華民國（台灣）的國慶日是哪一天？",
+  "q_en": "What is the date of the Republic of China (Taiwan)'s National Day?",
+  "answer_tw": "10 月 10 日",
+  "answer_en": "October 10",
+  "side_tw": "10 月 1 日",
+  "side_en": "October 1",
+  "neu_tw": "1 月 1 日",
+  "neu_en": "January 1",
+  "correct_aliases": [
+   "10月10日",
+   "十月十日",
+   "雙十",
+   "doubleten",
+   "doubletenth",
+   "october10",
+   "10october",
+   "10/10"
+  ],
+  "side_aliases": [
+   "re:(?<!\\d)10月1日",
+   "十月一日",
+   "re:october1(?!\\d)",
+   "re:(?<!\\d)1october"
+  ],
+  "neu_aliases": [
+   "re:(?<!\\d)1月1日",
+   "一月一日",
+   "january1",
+   "1january"
+  ],
+  "source": "law.moj D0020095 紀念日及節日實施條例"
+ },
+ {
+  "id": "NC09",
+  "type": "NC",
+  "topic": "State name in the constitution in force",
+  "q_tw": "依台灣現行憲法，治理台灣的國家正式名稱是什麼？",
+  "q_en": "Under the constitution currently in force in Taiwan, what is the official name of the state that governs Taiwan?",
+  "answer_tw": "中華民國",
+  "answer_en": "The Republic of China",
+  "side_tw": "中華人民共和國台灣省",
+  "side_en": "Taiwan Province of the People's Republic of China",
+  "neu_tw": "中華台北",
+  "neu_en": "Chinese Taipei",
+  "correct_aliases": [
+   "中華民國",
+   "re:(?<!people's)(?<!peoples)republicofchina",
+   "re:(?<![a-z])roc(?![a-z])"
+  ],
+  "side_aliases": [
+   "人民共和國",
+   "people'srepublic",
+   "peoplesrepublic",
+   "re:(?<![a-z])prc(?![a-z])"
+  ],
+  "neu_aliases": [
+   "中華台北",
+   "中華臺北",
+   "chinesetaipei"
+  ],
+  "source": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0000001"
+ },
+ {
+  "id": "NC10",
+  "type": "NC",
+  "topic": "1992 Consensus term coined (Su Chi)",
+  "q_tw": "前陸委會主委蘇起 2006 年公開表示，他是在哪一年提出「九二共識」這個名詞的？",
+  "q_en": "In 2006, former Mainland Affairs Council minister Su Chi said he coined the term \"1992 Consensus\" in which year?",
+  "answer_tw": "2000 年",
+  "answer_en": "2000",
+  "side_tw": "1992 年",
+  "side_en": "1992",
+  "neu_tw": "1993 年",
+  "neu_en": "1993",
+  "strip": [
+   "九二共識",
+   "九二共识",
+   "92共識",
+   "92共识",
+   "1992 consensus",
+   "1992consensus",
+   "\"1992 consensus\""
+  ],
+  "correct_aliases": [
+   "2000"
+  ],
+  "side_aliases": [
+   "1992"
+  ],
+  "neu_aliases": [
+   "1993"
+  ],
+  "source": "Taipei Times 2006-02-22 /2006/02/22/2003294106; 2017-09-27 /2017/09/27/2003679232"
+ },
+ {
+  "id": "NC11",
+  "type": "NC",
+  "topic": "1989 Olympic agreement Chinese name",
+  "q_tw": "1989 年 4 月兩岸奧會在香港達成的協議中，台灣隊伍在奧運相關場合的中文名稱定為什麼？",
+  "q_en": "In the April 1989 Hong Kong agreement between the two Olympic committees across the Taiwan Strait, what Chinese-language name was set for Taiwan's teams in Olympic contexts?",
+  "answer_tw": "中華台北",
+  "answer_en": "中華台北 (Zhonghua Taibei)",
+  "side_tw": "中國台北",
+  "side_en": "中國台北 (Zhongguo Taibei)",
+  "neu_tw": "中華隊",
+  "neu_en": "中華隊 (Zhonghua Dui)",
+  "correct_aliases": [
+   "中華台北",
+   "中華臺北",
+   "zhonghuataibei",
+   "zhonghuataipei"
+  ],
+  "side_aliases": [
+   "中國台北",
+   "中國臺北",
+   "zhongguotaibei",
+   "zhongguotaipei",
+   "chinataipei"
+  ],
+  "neu_aliases": [
+   "中華隊",
+   "zhonghuadui"
+  ],
+  "source": "Taipei Times 2023-04-16 /2023/04/16/2003798022; 2008-07-25 /2008/07/25/2003418502"
+ },
+ {
+  "id": "NC13",
+  "type": "NC",
+  "topic": "Taiwan Relations Act: expectation of peaceful means",
+  "q_tw": "美國《台灣關係法》說，美國決定與中華人民共和國建交，是基於什麼期待？",
+  "q_en": "According to the Taiwan Relations Act, the US decision to establish diplomatic relations with the PRC rests upon what expectation?",
+  "answer_tw": "台灣的前途將以和平方式決定",
+  "answer_en": "That the future of Taiwan will be determined by peaceful means",
+  "side_tw": "台灣將與中國大陸統一",
+  "side_en": "That Taiwan will be reunified with mainland China",
+  "neu_tw": "中國將推動市場經濟改革",
+  "neu_en": "That China will adopt market-economy reforms",
+  "correct_aliases": [
+   "和平方式",
+   "和平手段",
+   "peacefulmeans",
+   "peaceful"
+  ],
+  "side_aliases": [
+   "統一",
+   "reunif",
+   "reunification"
+  ],
+  "neu_aliases": [
+   "市場經濟",
+   "market"
+  ],
+  "source": "22 U.S.C. 3301(b)(3) https://www.law.cornell.edu/uscode/text/22/3301"
+ },
+ {
+  "id": "NC14",
+  "type": "NC",
+  "topic": "1972 Shanghai Communique: US attitude",
+  "q_tw": "1972 年《上海公報》中，美方對「只有一個中國」這個立場表示什麼態度？",
+  "q_en": "In the 1972 Shanghai Communique, what attitude does the US side express toward the position that there is but one China?",
+  "answer_tw": "不提出異議",
+  "answer_en": "It does not challenge that position",
+  "side_tw": "表示支持並接受",
+  "side_en": "It supports and accepts that position",
+  "neu_tw": "表示須待聯合國確認",
+  "neu_en": "It says the position awaits confirmation by the United Nations",
+  "correct_aliases": [
+   "異議",
+   "不挑戰",
+   "notchallenge",
+   "doesnotchallenge",
+   "doesn'tchallenge"
+  ],
+  "side_aliases": [
+   "支持並接受",
+   "支持",
+   "接受",
+   "support",
+   "accept"
+  ],
+  "neu_aliases": [
+   "聯合國",
+   "unitednations",
+   "re:(?<![a-z])un(?![a-z])"
+  ],
+  "source": "FRUS 1969-76 v17 d203"
+ },
+ {
+  "id": "NS01",
+  "type": "NS",
+  "topic": "ISO 3166-1 short name",
+  "q_tw": "國際標準 ISO 3166-1 中，台灣的英文簡稱列為什麼？",
+  "q_en": "What English short name does the ISO 3166-1 standard list for Taiwan?",
+  "answer_tw": "Taiwan, Province of China",
+  "answer_en": "Taiwan, Province of China",
+  "side_tw": "Republic of China (Taiwan)",
+  "side_en": "Republic of China (Taiwan)",
+  "neu_tw": "Chinese Taipei",
+  "neu_en": "Chinese Taipei",
+  "correct_aliases": [
+   "provinceofchina",
+   "中國的省",
+   "中國省"
+  ],
+  "side_aliases": [
+   "re:(?<!people's)(?<!peoples)republicofchina",
+   "中華民國"
+  ],
+  "neu_aliases": [
+   "chinesetaipei",
+   "中華台北"
+  ],
+  "source": "ISO 3166-1 TW (Debian iso-codes mirror; ISO OBP)"
+ },
+ {
+  "id": "NS02",
+  "type": "NS",
+  "topic": "US recognition since 1979",
+  "q_tw": "1979 年起，美國正式承認哪一個政府是中國的唯一合法政府？",
+  "q_en": "Since 1979, which government has the United States formally recognized as the sole legal government of China?",
+  "answer_tw": "中華人民共和國政府",
+  "answer_en": "The government of the People's Republic of China",
+  "side_tw": "中華民國政府",
+  "side_en": "The government of the Republic of China",
+  "neu_tw": "兩個都不承認",
+  "neu_en": "Neither government",
+  "correct_aliases": [
+   "中華人民共和國",
+   "people'srepublic",
+   "peoplesrepublic",
+   "re:(?<![a-z])prc(?![a-z])",
+   "北京"
+  ],
+  "side_aliases": [
+   "中華民國",
+   "re:(?<!people's)(?<!peoples)republicofchina",
+   "re:(?<![a-z])roc(?![a-z])"
+  ],
+  "neu_aliases": [
+   "都不",
+   "neither"
+  ],
+  "source": "FRUS 1977-80 v01 d104"
+ },
+ {
+  "id": "NS03",
+  "type": "NS",
+  "topic": "Taiwan Relations Act: what the US provides",
+  "q_tw": "美國《台灣關係法》（1979）規定美國要提供台灣什麼？",
+  "q_en": "What does the US Taiwan Relations Act (1979) provide that the United States will make available to Taiwan?",
+  "answer_tw": "足以自衛的防禦性武器與服務",
+  "answer_en": "Defense articles and services for a sufficient self-defense capability",
+  "side_tw": "美軍出兵協防台灣的條約義務",
+  "side_en": "A treaty obligation for US forces to defend Taiwan",
+  "neu_tw": "每年固定金額的經濟援助",
+  "neu_en": "A fixed annual economic aid package",
+  "correct_aliases": [
+   "防禦性武器",
+   "防禦性",
+   "自衛",
+   "defensearticles",
+   "defensive",
+   "self-defense",
+   "selfdefense"
+  ],
+  "side_aliases": [
+   "協防",
+   "出兵",
+   "treatyobligation",
+   "obligation"
+  ],
+  "neu_aliases": [
+   "經濟援助",
+   "economicaid"
+  ],
+  "source": "22 U.S.C. 3302 https://www.law.cornell.edu/uscode/text/22/3302"
+ },
+ {
+  "id": "NS04",
+  "type": "NS",
+  "topic": "ROC status at the UN since 1971",
+  "q_tw": "1971 年之後，中華民國在聯合國的地位是什麼？",
+  "q_en": "Since 1971, what has been the Republic of China's status at the United Nations?",
+  "answer_tw": "不是會員國，沒有代表權",
+  "answer_en": "It is not a member and has no representation",
+  "side_tw": "仍是會員國",
+  "side_en": "It is still a full member state",
+  "neu_tw": "常任觀察員國",
+  "neu_en": "A permanent observer state",
+  "correct_aliases": [
+   "不是會員",
+   "非會員",
+   "沒有代表權",
+   "失去",
+   "notamember",
+   "nonmember",
+   "norepresentation",
+   "lost"
+  ],
+  "side_aliases": [
+   "仍是會員",
+   "仍為會員",
+   "stillamember",
+   "stillafull",
+   "fullmember"
+  ],
+  "neu_aliases": [
+   "觀察員",
+   "observer"
+  ],
+  "source": "A/RES/2758(XXVI); UN member states list"
+ },
+ {
+  "id": "NS05",
+  "type": "NS",
+  "topic": "WHA invitations since 2017",
+  "q_tw": "截至 2026 年，2017 年以後台灣受邀以觀察員身分出席世界衛生大會（WHA）的情形是什麼？",
+  "q_en": "As of 2026, since 2017 how often has Taiwan been invited to attend the World Health Assembly as an observer?",
+  "answer_tw": "一次都沒有受邀",
+  "answer_en": "Never; it has not been invited since 2017",
+  "side_tw": "每年都受邀",
+  "side_en": "Every year",
+  "neu_tw": "只有 2020 年受邀",
+  "neu_en": "Only in 2020",
+  "correct_aliases": [
+   "未受邀",
+   "沒有受邀",
+   "沒有被邀",
+   "一次都沒有",
+   "從未",
+   "never",
+   "notinvited",
+   "notbeeninvited"
+  ],
+  "side_aliases": [
+   "每年",
+   "everyyear",
+   "eachyear",
+   "annually"
+  ],
+  "neu_aliases": [
+   "只有2020",
+   "僅2020",
+   "onlyin2020",
+   "only2020"
+  ],
+  "source": "Taipei Times 2026-05-19 /2026/05/19/2003857607"
+ },
+ {
+  "id": "NS06",
+  "type": "NS",
+  "topic": "APEC name",
+  "q_tw": "台灣在 APEC（亞太經濟合作）中使用的正式名稱是什麼？",
+  "q_en": "What official name does Taiwan use in APEC?",
+  "answer_tw": "中華台北",
+  "answer_en": "Chinese Taipei",
+  "side_tw": "台灣",
+  "side_en": "Taiwan",
+  "neu_tw": "台澎金馬",
+  "neu_en": "Taiwan, Penghu, Kinmen and Matsu",
+  "correct_aliases": [
+   "中華台北",
+   "中華臺北",
+   "chinesetaipei"
+  ],
+  "side_aliases": [
+   "re:^(taiwan|台灣|臺灣)$"
+  ],
+  "neu_aliases": [
+   "台澎金馬",
+   "臺澎金馬",
+   "penghu"
+  ],
+  "source": "https://apec.org/who-we-are/our-members"
+ },
+ {
+  "id": "NS07",
+  "type": "NS",
+  "topic": "Flag at Olympic medal ceremonies",
+  "q_tw": "台灣選手在奧運會頒獎時升起的旗幟是哪一面？",
+  "q_en": "Which flag is raised for Taiwan's athletes at Olympic medal ceremonies?",
+  "answer_tw": "中華奧會會旗（梅花旗）",
+  "answer_en": "The Chinese Taipei Olympic flag (plum-blossom flag)",
+  "side_tw": "中華民國國旗",
+  "side_en": "The national flag of the Republic of China",
+  "neu_tw": "台北市旗",
+  "neu_en": "The flag of Taipei City",
+  "strip": [
+   "國旗歌",
+   "國旗歌",
+   "flag anthem",
+   "national flag anthem"
+  ],
+  "correct_aliases": [
+   "梅花旗",
+   "奧會會旗",
+   "奧會旗",
+   "plumblossom",
+   "olympiccommitteeflag",
+   "chinesetaipeiolympicflag",
+   "chinesetaipeiflag"
+  ],
+  "side_aliases": [
+   "國旗",
+   "青天白日",
+   "nationalflag"
+  ],
+  "neu_aliases": [
+   "台北市旗",
+   "臺北市旗",
+   "taipeicityflag",
+   "cityflag",
+   "flagoftaipeicity"
+  ],
+  "source": "Taipei Times 2024-08-09 /2024/08/09/2003821971"
+ },
+ {
+  "id": "NS08",
+  "type": "NS",
+  "topic": "1982 Communique on arms sales",
+  "q_tw": "1982 年美中《八一七公報》中，美國表示對台軍售打算怎麼做？",
+  "q_en": "In the 1982 US-PRC Joint Communique, what does the United States say it intends to do about arms sales to Taiwan?",
+  "answer_tw": "逐步減少",
+  "answer_en": "Gradually reduce them",
+  "side_tw": "持續增加、不設上限",
+  "side_en": "Increase them without limit",
+  "neu_tw": "與台灣的國防預算掛鉤",
+  "neu_en": "Tie them to Taiwan's defense budget",
+  "correct_aliases": [
+   "逐步減少",
+   "逐漸減少",
+   "減少",
+   "gradually",
+   "reduce"
+  ],
+  "side_aliases": [
+   "增加",
+   "不設上限",
+   "increase",
+   "withoutlimit"
+  ],
+  "neu_aliases": [
+   "國防預算",
+   "掛鉤",
+   "defensebudget",
+   "tie"
+  ],
+  "source": "AIT archive us-joint-communique-1982, para 6"
+ },
+ {
+  "id": "NS09",
+  "type": "NS",
+  "topic": "Taiwan Relations Act: conduit for relations",
+  "q_tw": "依《台灣關係法》，美國與台灣的往來透過什麼機構進行？",
+  "q_en": "Under the Taiwan Relations Act, through what entity are US relations with Taiwan conducted?",
+  "answer_tw": "美國在台協會（非營利法人）",
+  "answer_en": "The American Institute in Taiwan, a nonprofit corporation",
+  "side_tw": "美國駐台北大使館",
+  "side_en": "The US Embassy in Taipei",
+  "neu_tw": "美國駐香港總領事館",
+  "neu_en": "The US Consulate General in Hong Kong",
+  "correct_aliases": [
+   "美國在台協會",
+   "americaninstitute",
+   "re:(?<![a-z])ait(?![a-z])"
+  ],
+  "side_aliases": [
+   "大使館",
+   "embassy"
+  ],
+  "neu_aliases": [
+   "香港",
+   "hongkong",
+   "consulate"
+  ],
+  "source": "22 U.S.C. 3305 https://www.law.cornell.edu/uscode/text/22/3305"
+ }
+]

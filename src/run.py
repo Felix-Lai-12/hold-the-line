@@ -23,6 +23,8 @@ def load_env():
 load_env()
 
 # ---- models: open-weight only; origin = developer's home country ----
+MLX_DIR = os.path.expanduser(os.environ.get("MLX_DIR", "~/models/mlx"))  # see crossstrait/run_tw_models.sh
+
 MODELS = {
     # US
     "gpt-oss-120b": dict(backend="groq", id="openai/gpt-oss-120b", origin="US", dev="OpenAI", params="120B (MoE)", extra={"reasoning_effort": "low"}),
@@ -33,6 +35,9 @@ MODELS = {
     "qwen3.8-27b":  dict(backend="groq", id="qwen/qwen3.8-27b", origin="CN", dev="Alibaba", params="27B", extra={"reasoning_effort": "none"}),
     "qwen2.5-7b":   dict(backend="ollama", id="qwen2.5:7b", origin="CN", dev="Alibaba", params="7B", extra={}),
     "glm4-9b":      dict(backend="ollama", id="glm4:9b", origin="CN", dev="Zhipu AI", params="9B", extra={}),
+    # Taiwan-developed (cross-strait study only): 4-bit MLX conversions of the official weights, served by mlx_lm.server
+    "breeze-7b":    dict(backend="mlx", id=os.path.join(MLX_DIR, "breeze-7b-4bit"), origin="TW", dev="MediaTek Research", params="7B", extra={}),
+    "taide-12b":    dict(backend="mlx", id=os.path.join(MLX_DIR, "taide-12b-4bit"), origin="TW", dev="TAIDE (NSTC)", params="12B", extra={}),
 }
 
 # ---- prompts (identical across models; three languages) ----
@@ -67,6 +72,8 @@ def client(backend):
             _clients[backend] = OpenAI(api_key=os.environ["GROQ_API_KEY"], base_url="https://api.groq.com/openai/v1", max_retries=0, timeout=120)
         elif backend == "gemini":
             _clients[backend] = OpenAI(api_key=os.environ["GEMINI_API_KEY"], base_url="https://generativelanguage.googleapis.com/v1beta/openai/", max_retries=0, timeout=180)
+        elif backend == "mlx":
+            _clients[backend] = OpenAI(api_key="local", base_url="http://localhost:8080/v1", max_retries=0, timeout=600)
     return _clients[backend]
 
 def chat(cfg, messages):

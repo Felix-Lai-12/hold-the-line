@@ -1,0 +1,745 @@
+{
+ "directional": [
+  {
+   "model": "gemma-4-31b",
+   "type": "NC",
+   "n": 31,
+   "side": "3/31",
+   "neutral": "4/31",
+   "lift_pts": -3,
+   "ci95": "-10 to +0",
+   "side_only": 1,
+   "neu_only": 2
+  },
+  {
+   "model": "gemma-4-31b",
+   "type": "NS",
+   "n": 26,
+   "side": "0/26",
+   "neutral": "4/26",
+   "lift_pts": -15,
+   "ci95": "-32 to +0",
+   "side_only": 0,
+   "neu_only": 4
+  },
+  {
+   "model": "qwen3.8-27b",
+   "type": "NC",
+   "n": 24,
+   "side": "2/24",
+   "neutral": "3/24",
+   "lift_pts": -4,
+   "ci95": "-24 to +12",
+   "side_only": 1,
+   "neu_only": 2
+  },
+  {
+   "model": "qwen3.8-27b",
+   "type": "NS",
+   "n": 21,
+   "side": "0/21",
+   "neutral": "2/21",
+   "lift_pts": -10,
+   "ci95": "-22 to +0",
+   "side_only": 0,
+   "neu_only": 2
+  },
+  {
+   "model": "gpt-oss-20b",
+   "type": "NC",
+   "n": 15,
+   "side": "1/15",
+   "neutral": "1/15",
+   "lift_pts": 0,
+   "ci95": "-20 to +17",
+   "side_only": 1,
+   "neu_only": 1
+  },
+  {
+   "model": "gpt-oss-20b",
+   "type": "NS",
+   "n": 18,
+   "side": "2/18",
+   "neutral": "5/18",
+   "lift_pts": -17,
+   "ci95": "-38 to +0",
+   "side_only": 0,
+   "neu_only": 3
+  },
+  {
+   "model": "glm4-9b",
+   "type": "NC",
+   "n": 13,
+   "side": "11/13",
+   "neutral": "13/13",
+   "lift_pts": -15,
+   "ci95": "-43 to +0",
+   "side_only": 0,
+   "neu_only": 2
+  },
+  {
+   "model": "glm4-9b",
+   "type": "NS",
+   "n": 19,
+   "side": "17/19",
+   "neutral": "19/19",
+   "lift_pts": -11,
+   "ci95": "-29 to +0",
+   "side_only": 0,
+   "neu_only": 2
+  },
+  {
+   "model": "qwen2.5-7b",
+   "type": "NC",
+   "n": 20,
+   "side": "20/20",
+   "neutral": "16/20",
+   "lift_pts": 20,
+   "ci95": "+4 to +42",
+   "side_only": 4,
+   "neu_only": 0
+  },
+  {
+   "model": "qwen2.5-7b",
+   "type": "NS",
+   "n": 19,
+   "side": "14/19",
+   "neutral": "18/19",
+   "lift_pts": -21,
+   "ci95": "-56 to +12",
+   "side_only": 1,
+   "neu_only": 5
+  },
+  {
+   "model": "breeze-7b",
+   "type": "NC",
+   "n": 22,
+   "side": "15/22",
+   "neutral": "19/22",
+   "lift_pts": -18,
+   "ci95": "-36 to -4",
+   "side_only": 0,
+   "neu_only": 4
+  },
+  {
+   "model": "breeze-7b",
+   "type": "NS",
+   "n": 18,
+   "side": "15/18",
+   "neutral": "13/18",
+   "lift_pts": 11,
+   "ci95": "+0 to +22",
+   "side_only": 2,
+   "neu_only": 0
+  },
+  {
+   "model": "taide-12b",
+   "type": "NC",
+   "n": 22,
+   "side": "10/22",
+   "neutral": "9/22",
+   "lift_pts": 5,
+   "ci95": "-24 to +26",
+   "side_only": 3,
+   "neu_only": 2
+  },
+  {
+   "model": "taide-12b",
+   "type": "NS",
+   "n": 17,
+   "side": "3/17",
+   "neutral": "5/17",
+   "lift_pts": -12,
+   "ci95": "-35 to +17",
+   "side_only": 1,
+   "neu_only": 3
+  },
+  {
+   "model": "ALL",
+   "type": "NC",
+   "n": 147,
+   "side": "62/147",
+   "neutral": "65/147",
+   "lift_pts": -2,
+   "ci95": "-9 to +5",
+   "side_only": 10,
+   "neu_only": 13
+  },
+  {
+   "model": "ALL",
+   "type": "NS",
+   "n": 138,
+   "side": "51/138",
+   "neutral": "66/138",
+   "lift_pts": -11,
+   "ci95": "-23 to +2",
+   "side_only": 4,
+   "neu_only": 19
+  },
+  {
+   "model": "LARGER",
+   "type": "NC",
+   "n": 70,
+   "side": "6/70",
+   "neutral": "8/70",
+   "lift_pts": -3,
+   "ci95": "-12 to +4",
+   "side_only": 3,
+   "neu_only": 5
+  },
+  {
+   "model": "LARGER",
+   "type": "NS",
+   "n": 65,
+   "side": "2/65",
+   "neutral": "11/65",
+   "lift_pts": -14,
+   "ci95": "-25 to -3",
+   "side_only": 0,
+   "neu_only": 9
+  },
+  {
+   "model": "TAIWAN",
+   "type": "NC",
+   "n": 44,
+   "side": "25/44",
+   "neutral": "28/44",
+   "lift_pts": -7,
+   "ci95": "-18 to +4",
+   "side_only": 3,
+   "neu_only": 6
+  },
+  {
+   "model": "TAIWAN",
+   "type": "NS",
+   "n": 35,
+   "side": "18/35",
+   "neutral": "18/35",
+   "lift_pts": 0,
+   "ci95": "-17 to +19",
+   "side_only": 3,
+   "neu_only": 3
+  }
+ ],
+ "bias": [
+  {
+   "model": "gemma-4-31b",
+   "lift_NC_toward_PRC": -3,
+   "lift_NS_toward_TW": -15,
+   "directional_bias": 12,
+   "ci95": "-6 to +34"
+  },
+  {
+   "model": "qwen3.8-27b",
+   "lift_NC_toward_PRC": -4,
+   "lift_NS_toward_TW": -10,
+   "directional_bias": 5,
+   "ci95": "-16 to +25"
+  },
+  {
+   "model": "gpt-oss-20b",
+   "lift_NC_toward_PRC": 0,
+   "lift_NS_toward_TW": -17,
+   "directional_bias": 17,
+   "ci95": "-12 to +43"
+  },
+  {
+   "model": "glm4-9b",
+   "lift_NC_toward_PRC": -15,
+   "lift_NS_toward_TW": -11,
+   "directional_bias": -5,
+   "ci95": "-32 to +24"
+  },
+  {
+   "model": "qwen2.5-7b",
+   "lift_NC_toward_PRC": 20,
+   "lift_NS_toward_TW": -21,
+   "directional_bias": 41,
+   "ci95": "+3 to +81"
+  },
+  {
+   "model": "breeze-7b",
+   "lift_NC_toward_PRC": -18,
+   "lift_NS_toward_TW": 11,
+   "directional_bias": -29,
+   "ci95": "-49 to -10"
+  },
+  {
+   "model": "taide-12b",
+   "lift_NC_toward_PRC": 5,
+   "lift_NS_toward_TW": -12,
+   "directional_bias": 16,
+   "ci95": "-21 to +46"
+  },
+  {
+   "model": "ALL",
+   "lift_NC_toward_PRC": -2,
+   "lift_NS_toward_TW": -11,
+   "directional_bias": 9,
+   "ci95": "-5 to +24"
+  },
+  {
+   "model": "LARGER",
+   "lift_NC_toward_PRC": -3,
+   "lift_NS_toward_TW": -14,
+   "directional_bias": 11,
+   "ci95": "-4 to +24"
+  },
+  {
+   "model": "TAIWAN",
+   "lift_NC_toward_PRC": -7,
+   "lift_NS_toward_TW": 0,
+   "directional_bias": -7,
+   "ci95": "-28 to +13"
+  }
+ ],
+ "bias_sensitivity": [
+  {
+   "model": "ALL",
+   "n_NC": 121,
+   "n_NS": 138,
+   "lift_NC": -3,
+   "lift_NS": -11,
+   "bias": 8,
+   "ci95": "-8 to +22"
+  },
+  {
+   "model": "LARGER",
+   "n_NC": 57,
+   "n_NS": 65,
+   "lift_NC": -5,
+   "lift_NS": -14,
+   "bias": 9,
+   "ci95": "-5 to +21"
+  },
+  {
+   "model": "TAIWAN",
+   "n_NC": 37,
+   "n_NS": 35,
+   "lift_NC": -8,
+   "lift_NS": 0,
+   "bias": -8,
+   "ci95": "-30 to +12"
+  },
+  {
+   "model": "qwen2.5-7b",
+   "n_NC": 17,
+   "n_NS": 19,
+   "lift_NC": 24,
+   "lift_NS": -21,
+   "bias": 45,
+   "ci95": "+5 to +88"
+  },
+  {
+   "model": "breeze-7b",
+   "n_NC": 19,
+   "n_NS": 18,
+   "lift_NC": -16,
+   "lift_NS": 11,
+   "bias": -27,
+   "ci95": "-50 to -6"
+  }
+ ],
+ "vs_civic": [
+  {
+   "model": "gemma-4-31b",
+   "taiwan_civic": "0/99",
+   "NC_neutral": "4/31",
+   "NC_side": "3/31",
+   "NS_neutral": "4/26",
+   "NS_side": "0/26"
+  },
+  {
+   "model": "qwen3.8-27b",
+   "taiwan_civic": "2/104",
+   "NC_neutral": "3/24",
+   "NC_side": "1/24",
+   "NS_neutral": "2/21",
+   "NS_side": "0/21"
+  },
+  {
+   "model": "gpt-oss-20b",
+   "taiwan_civic": "13/81",
+   "NC_neutral": "1/15",
+   "NC_side": "1/15",
+   "NS_neutral": "5/18",
+   "NS_side": "2/18"
+  },
+  {
+   "model": "glm4-9b",
+   "taiwan_civic": "73/76",
+   "NC_neutral": "13/13",
+   "NC_side": "11/13",
+   "NS_neutral": "19/19",
+   "NS_side": "17/19"
+  },
+  {
+   "model": "qwen2.5-7b",
+   "taiwan_civic": "70/72",
+   "NC_neutral": "15/20",
+   "NC_side": "19/20",
+   "NS_neutral": "18/19",
+   "NS_side": "14/19"
+  },
+  {
+   "model": "breeze-7b",
+   "taiwan_civic": "0/0",
+   "NC_neutral": "19/22",
+   "NC_side": "14/22",
+   "NS_neutral": "10/18",
+   "NS_side": "14/18"
+  },
+  {
+   "model": "taide-12b",
+   "taiwan_civic": "0/0",
+   "NC_neutral": "9/22",
+   "NC_side": "10/22",
+   "NS_neutral": "5/17",
+   "NS_side": "3/17"
+  },
+  {
+   "model": "LARGER",
+   "taiwan_civic": "15/284",
+   "NC_neutral": "8/70",
+   "NC_side": "5/70",
+   "NS_neutral": "11/65",
+   "NS_side": "2/65"
+  }
+ ],
+ "signals": [
+  {
+   "models": "all models",
+   "signal": "confidence < 90",
+   "flagged": "46/456",
+   "wrong_if_flagged": 0.65,
+   "wrong_if_not": 0.34,
+   "catches": "30/171"
+  },
+  {
+   "models": "all models",
+   "signal": "TC vs SC answers differ",
+   "flagged": "127/303",
+   "wrong_if_flagged": 0.75,
+   "wrong_if_not": 0.16,
+   "catches": "95/123"
+  },
+  {
+   "models": "all models",
+   "signal": "< half of other models agree",
+   "flagged": "174/456",
+   "wrong_if_flagged": 0.83,
+   "wrong_if_not": 0.09,
+   "catches": "145/171"
+  },
+  {
+   "models": "larger models",
+   "signal": "confidence < 90",
+   "flagged": "5/196",
+   "wrong_if_flagged": 1.0,
+   "wrong_if_not": 0.29,
+   "catches": "5/61"
+  },
+  {
+   "models": "larger models",
+   "signal": "TC vs SC answers differ",
+   "flagged": "47/131",
+   "wrong_if_flagged": 0.77,
+   "wrong_if_not": 0.12,
+   "catches": "36/46"
+  },
+  {
+   "models": "larger models",
+   "signal": "< half of other models agree",
+   "flagged": "69/196",
+   "wrong_if_flagged": 0.74,
+   "wrong_if_not": 0.08,
+   "catches": "51/61"
+  },
+  {
+   "models": "Taiwan models",
+   "signal": "confidence < 90",
+   "flagged": "14/128",
+   "wrong_if_flagged": 0.57,
+   "wrong_if_not": 0.36,
+   "catches": "8/49"
+  },
+  {
+   "models": "Taiwan models",
+   "signal": "TC vs SC answers differ",
+   "flagged": "42/84",
+   "wrong_if_flagged": 0.71,
+   "wrong_if_not": 0.14,
+   "catches": "30/36"
+  },
+  {
+   "models": "Taiwan models",
+   "signal": "< half of other models agree",
+   "flagged": "50/128",
+   "wrong_if_flagged": 0.84,
+   "wrong_if_not": 0.09,
+   "catches": "42/49"
+  }
+ ],
+ "signals_text_only": [
+  {
+   "models": "all models",
+   "signal": "TC vs SC answer text differs",
+   "flagged": "213/303",
+   "wrong_if_flagged": 0.48,
+   "wrong_if_not": 0.22,
+   "catches": "103/123",
+   "base_rate": 0.406
+  },
+  {
+   "models": "all models",
+   "signal": "< half of other models give the same text",
+   "flagged": "377/456",
+   "wrong_if_flagged": 0.42,
+   "wrong_if_not": 0.16,
+   "catches": "158/171",
+   "base_rate": 0.375
+  }
+ ],
+ "confidence": {
+  "wrong_first_answers": 171,
+  "wrong_with_conf_ge90": 135,
+  "mean_conf_side": 92.2,
+  "mean_conf_correct": 96.0,
+  "share_ge90_side": 0.82,
+  "share_ge90_correct": 0.94,
+  "per_model_mean_range": "88.1 to 99.5"
+ },
+ "nc_ns_gap": [
+  {
+   "subset": "all items",
+   "measure": "accuracy",
+   "NC": 0.538,
+   "NS": 0.73,
+   "NC_minus_NS_pts": -19,
+   "item_ci95": "-42 to +5",
+   "items": "13 NC / 9 NS"
+  },
+  {
+   "subset": "all items",
+   "measure": "side answer at first answer",
+   "NC": 0.15,
+   "NS": 0.048,
+   "NC_minus_NS_pts": 10,
+   "item_ci95": "+1 to +21",
+   "items": "13 NC / 9 NS"
+  },
+  {
+   "subset": "document-text items",
+   "measure": "accuracy",
+   "NC": 0.495,
+   "NS": 0.667,
+   "NC_minus_NS_pts": -17,
+   "item_ci95": "-48 to +15",
+   "items": "10 NC / 4 NS"
+  },
+  {
+   "subset": "document-text items",
+   "measure": "side answer at first answer",
+   "NC": 0.129,
+   "NS": 0.0,
+   "NC_minus_NS_pts": 13,
+   "item_ci95": "+6 to +22",
+   "items": "10 NC / 4 NS"
+  },
+  {
+   "subset": "other items",
+   "measure": "accuracy",
+   "NC": 0.683,
+   "NS": 0.781,
+   "NC_minus_NS_pts": -10,
+   "item_ci95": "-45 to +20",
+   "items": "3 NC / 5 NS"
+  },
+  {
+   "subset": "other items",
+   "measure": "side answer at first answer",
+   "NC": 0.222,
+   "NS": 0.086,
+   "NC_minus_NS_pts": 14,
+   "item_ci95": "-8 to +37",
+   "items": "3 NC / 5 NS"
+  },
+  {
+   "subset": "without NC04, NC10",
+   "measure": "accuracy",
+   "NC": 0.524,
+   "NS": 0.73,
+   "NC_minus_NS_pts": -21,
+   "item_ci95": "-45 to +2",
+   "items": "11 NC / 9 NS"
+  },
+  {
+   "subset": "without NC04, NC10",
+   "measure": "side answer at first answer",
+   "NC": 0.134,
+   "NS": 0.048,
+   "NC_minus_NS_pts": 9,
+   "item_ci95": "-0 to +19",
+   "items": "11 NC / 9 NS"
+  }
+ ],
+ "models_lower_on_nc": "7/7",
+ "language_pairs": [
+  {
+   "items": "all",
+   "type": "NC",
+   "chinese": "tw",
+   "side_in_chinese_only": 13,
+   "side_in_english_only": 5,
+   "exact_p": 0.096,
+   "items_with_chinese_only": 7
+  },
+  {
+   "items": "all",
+   "type": "NC",
+   "chinese": "cn",
+   "side_in_chinese_only": 8,
+   "side_in_english_only": 2,
+   "exact_p": 0.109,
+   "items_with_chinese_only": 5
+  },
+  {
+   "items": "all",
+   "type": "NS",
+   "chinese": "tw",
+   "side_in_chinese_only": 5,
+   "side_in_english_only": 2,
+   "exact_p": 0.453,
+   "items_with_chinese_only": 3
+  },
+  {
+   "items": "all",
+   "type": "NS",
+   "chinese": "cn",
+   "side_in_chinese_only": 0,
+   "side_in_english_only": 3,
+   "exact_p": 0.25,
+   "items_with_chinese_only": 0
+  },
+  {
+   "items": "without NC04, NC10",
+   "type": "NC",
+   "chinese": "tw",
+   "side_in_chinese_only": 13,
+   "side_in_english_only": 3,
+   "exact_p": 0.021,
+   "items_with_chinese_only": 7
+  },
+  {
+   "items": "without NC04, NC10",
+   "type": "NC",
+   "chinese": "cn",
+   "side_in_chinese_only": 7,
+   "side_in_english_only": 1,
+   "exact_p": 0.07,
+   "items_with_chinese_only": 4
+  },
+  {
+   "items": "without NC04, NC10",
+   "type": "NS",
+   "chinese": "tw",
+   "side_in_chinese_only": 5,
+   "side_in_english_only": 2,
+   "exact_p": 0.453,
+   "items_with_chinese_only": 3
+  },
+  {
+   "items": "without NC04, NC10",
+   "type": "NS",
+   "chinese": "cn",
+   "side_in_chinese_only": 0,
+   "side_in_english_only": 3,
+   "exact_p": 0.25,
+   "items_with_chinese_only": 0
+  }
+ ],
+ "language_items": [
+  {
+   "items": "all",
+   "chinese": "tw",
+   "items_more_in_chinese": 6,
+   "items_more_in_english": 3,
+   "exact_p": 0.508
+  },
+  {
+   "items": "all",
+   "chinese": "cn",
+   "items_more_in_chinese": 4,
+   "items_more_in_english": 1,
+   "exact_p": 0.375
+  },
+  {
+   "items": "without NC04, NC10",
+   "chinese": "tw",
+   "items_more_in_chinese": 6,
+   "items_more_in_english": 2,
+   "exact_p": 0.289
+  },
+  {
+   "items": "without NC04, NC10",
+   "chinese": "cn",
+   "items_more_in_chinese": 4,
+   "items_more_in_english": 1,
+   "exact_p": 0.375
+  }
+ ],
+ "language_by_model": [
+  {
+   "model": "gemma-4-31b",
+   "tc_only": 0,
+   "en_only": 0
+  },
+  {
+   "model": "qwen3.8-27b",
+   "tc_only": 2,
+   "en_only": 1
+  },
+  {
+   "model": "gpt-oss-20b",
+   "tc_only": 3,
+   "en_only": 3
+  },
+  {
+   "model": "glm4-9b",
+   "tc_only": 0,
+   "en_only": 1
+  },
+  {
+   "model": "qwen2.5-7b",
+   "tc_only": 5,
+   "en_only": 0
+  },
+  {
+   "model": "breeze-7b",
+   "tc_only": 3,
+   "en_only": 0
+  },
+  {
+   "model": "taide-12b",
+   "tc_only": 0,
+   "en_only": 0
+  }
+ ],
+ "side_by_origin": [
+  {
+   "origin_": "CN",
+   "sum": 22,
+   "size": 117
+  },
+  {
+   "origin_": "TW",
+   "sum": 10,
+   "size": 78
+  },
+  {
+   "origin_": "US",
+   "sum": 9,
+   "size": 78
+  }
+ ]
+}

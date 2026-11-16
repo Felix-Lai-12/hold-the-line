@@ -4,3 +4,5 @@ runs/*.jsonl.tmp
 __pycache__/
 runs/_*.log
 runs/_rep2_partial/
+crossstrait/runs/_*
+.DS_Store
