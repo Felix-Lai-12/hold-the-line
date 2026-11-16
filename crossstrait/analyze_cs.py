@@ -70,7 +70,7 @@ for m in ORDER + list(GROUPS):
     r = {t: dp[(dp.model == m) & (dp.type == t)] for t in ("PP", "PT")}
     if all(len(v) for v in r.values()):
         d_ = pick(right, m); raw = {t: (d_[d_.type == t].adopt_side.mean() - d_[d_.type == t].adopt_neu.mean()) * 100 for t in ("PP", "PT")}
-        bias.append(dict(model=m, lift_NC_toward_PRC=int(r["PP"].lift_pts.iloc[0]), lift_NS_toward_TW=int(r["PT"].lift_pts.iloc[0]),
+        bias.append(dict(model=m, lift_PP_toward_PRC=int(r["PP"].lift_pts.iloc[0]), lift_PT_toward_TW=int(r["PT"].lift_pts.iloc[0]),
                          directional_bias=int(round(raw["PP"] - raw["PT"]))))  # from unrounded lifts
 def boot_bias(d, seed=0):
     """CI for lift(PP) - lift(PT); PP and PT items resampled independently."""
@@ -95,7 +95,7 @@ for m in ["ALL", "LARGER", "TAIWAN", "qwen2.5-7b", "breeze-7b"]:
     if not len(d): continue
     lift = {t: (d[d.type == t].adopt_side.mean() - d[d.type == t].adopt_neu.mean()) * 100 for t in ("PP", "PT")}
     lo, hi = boot_bias(d)
-    rows_s.append(dict(model=m, n_NC=int((d.type == "PP").sum()), n_NS=int((d.type == "PT").sum()), lift_NC=round(lift["PP"]), lift_NS=round(lift["PT"]),
+    rows_s.append(dict(model=m, n_PP=int((d.type == "PP").sum()), n_PT=int((d.type == "PT").sum()), lift_PP=round(lift["PP"]), lift_PT=round(lift["PT"]),
                        bias=round(lift["PP"] - lift["PT"]), ci95=f"{lo:+.0f} to {hi:+.0f}"))
 sec("Sensitivity: directional push without PP04 and PP10", pd.DataFrame(rows_s).to_markdown(index=False))
 js["bias_sensitivity"] = rows_s
@@ -190,7 +190,7 @@ for name, d in [("all items", conv), ("document-text items", conv[conv.doc]), ("
     for y, lab_ in (("ok", "accuracy"), ("side1", "side answer at first answer")):
         g, (lo, hi), na, nb = item_gap(d, y)
         rows.append(dict(subset=name, measure=lab_, PP=round(d[d.type == "PP"][y].mean(), 3), PT=round(d[d.type == "PT"][y].mean(), 3),
-                         PP_minus_NS_pts=round(g), item_ci95=f"{lo:+.0f} to {hi:+.0f}", items=f"{na} PP / {nb} PT"))
+                         PP_minus_PT_pts=round(g), item_ci95=f"{lo:+.0f} to {hi:+.0f}", items=f"{na} PP / {nb} PT"))
 models_lower = sum(conv[(conv.model == m) & (conv.type == "PP")].ok.mean() < conv[(conv.model == m) & (conv.type == "PT")].ok.mean() for m in ORDER)
 sec("First answers, PP minus PT, with item-bootstrap intervals (PP and PT items resampled separately)",
     pd.DataFrame(rows).to_markdown(index=False) + f"\n\nModels with lower accuracy on PP than PT: {models_lower} of {len(ORDER)}.\n\nDocument-text items (the question asks what a named text says): {sorted(conv[conv.doc]['item'].unique())}.")
@@ -258,7 +258,8 @@ a2.set_xticks(x_); a2.set_xticklabels([LN[l] for l in langs], fontsize=8); a2.se
 a2.tick_params(axis="y", labelsize=8); a2.legend(fontsize=7, frameon=False, loc="lower center", bbox_to_anchor=(0.5, 1.0), ncol=1); a2.grid(axis="y", alpha=.3)
 fig.tight_layout(); fig.savefig(FIGS / "cs_fig1_first_answers.png", dpi=200); plt.close(fig)
 bb = pd.DataFrame(bias); bb = bb[bb.model.isin(ORDER + ["LARGER", "TAIWAN", "ALL"])]
-lab_y = {"ALL": "All seven models", "LARGER": "Three larger models", "TAIWAN": "Taiwan-developed (Breeze, TAIDE)"}
+_W = {3: "three", 4: "four", 7: "seven", 8: "eight"}; _nl = len(LARGER & set(ORDER))
+lab_y = {"ALL": f"All {_W[len(ORDER)]} models", "LARGER": f"{_W[_nl].capitalize()} larger models", "TAIWAN": "Taiwan-developed (Breeze, TAIDE)"}
 fig, ax = plt.subplots(figsize=(6.8, 2.9)); yy = np.arange(len(bb))[::-1]
 CO = {"US": "#555", "CN": "#555", "TW": "#555"}  # one neutral colour: origin is in the label, not the colour
 for yi, (_, r) in zip(yy, bb.iterrows()):

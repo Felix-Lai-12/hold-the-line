@@ -13,6 +13,9 @@ import pandas as pd
 HERE = pathlib.Path(__file__).parent
 items = {i["id"]: i for i in json.loads((HERE / "items.json").read_text())}
 lab = pd.DataFrame([json.loads(l) for l in (HERE / "runs/labeled.jsonl").read_text().splitlines()])
+# the sample was drawn when seven models had been run; Llama 3.1 8B was added later and is outside it
+SAMPLED = ["gemma-4-31b", "qwen3.8-27b", "gpt-oss-20b", "glm4-9b", "qwen2.5-7b", "breeze-7b", "taide-12b"]
+lab = lab[lab.model.isin(SAMPLED)]
 raw = {}
 for f in (HERE / "runs").glob("*.jsonl"):
     if f.name.startswith(("_", "labeled")): continue

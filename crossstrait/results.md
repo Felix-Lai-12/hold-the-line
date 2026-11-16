@@ -8,6 +8,7 @@
 | ('PP', 'gemma-4-31b') |  39 |      0.79 |         0.03 |  99.62 |
 | ('PP', 'glm4-9b')     |  39 |      0.33 |         0.23 |  92.31 |
 | ('PP', 'gpt-oss-20b') |  39 |      0.38 |         0.21 |  93.37 |
+| ('PP', 'llama3.1-8b') |  39 |      0.44 |         0.23 |  88.46 |
 | ('PP', 'qwen2.5-7b')  |  39 |      0.51 |         0.18 |  91.54 |
 | ('PP', 'qwen3.8-27b') |  39 |      0.62 |         0.15 |  97.41 |
 | ('PP', 'taide-12b')   |  39 |      0.56 |         0.1  |  98.33 |
@@ -15,6 +16,7 @@
 | ('PT', 'gemma-4-31b') |  27 |      0.96 |         0    |  99.44 |
 | ('PT', 'glm4-9b')     |  27 |      0.7  |         0.07 |  93.33 |
 | ('PT', 'gpt-oss-20b') |  27 |      0.67 |         0.07 |  92.31 |
+| ('PT', 'llama3.1-8b') |  27 |      0.41 |         0.3  |  89.44 |
 | ('PT', 'qwen2.5-7b')  |  27 |      0.7  |         0.11 |  93.89 |
 | ('PT', 'qwen3.8-27b') |  27 |      0.78 |         0    |  97.93 |
 | ('PT', 'taide-12b')   |  27 |      0.63 |         0.04 |  98.75 |
@@ -23,12 +25,12 @@
 
 |              |   correct |   side_first |
 |:-------------|----------:|-------------:|
-| ('PP', 'cn') |     0.484 |        0.165 |
-| ('PP', 'en') |     0.626 |        0.099 |
-| ('PP', 'tw') |     0.505 |        0.187 |
-| ('PT', 'cn') |     0.746 |        0     |
-| ('PT', 'en') |     0.762 |        0.048 |
-| ('PT', 'tw') |     0.683 |        0.095 |
+| ('PP', 'cn') |     0.462 |        0.202 |
+| ('PP', 'en') |     0.625 |        0.087 |
+| ('PP', 'tw') |     0.49  |        0.192 |
+| ('PT', 'cn') |     0.708 |        0.042 |
+| ('PT', 'en') |     0.736 |        0.069 |
+| ('PT', 'tw') |     0.625 |        0.125 |
 
 ## Side answers given spontaneously at the first answer (count / conversations), by type x language x model
 
@@ -38,6 +40,7 @@
 | ('PP', 'gemma-4-31b') | 1/13 | 0/13 | 0/13 |
 | ('PP', 'glm4-9b')     | 4/13 | 3/13 | 2/13 |
 | ('PP', 'gpt-oss-20b') | 2/13 | 3/13 | 3/13 |
+| ('PP', 'llama3.1-8b') | 6/13 | 0/13 | 3/13 |
 | ('PP', 'qwen2.5-7b')  | 2/13 | 0/13 | 5/13 |
 | ('PP', 'qwen3.8-27b') | 3/13 | 1/13 | 2/13 |
 | ('PP', 'taide-12b')   | 2/13 | 1/13 | 1/13 |
@@ -45,6 +48,7 @@
 | ('PT', 'gemma-4-31b') | 0/9  | 0/9  | 0/9  |
 | ('PT', 'glm4-9b')     | 0/9  | 1/9  | 1/9  |
 | ('PT', 'gpt-oss-20b') | 0/9  | 1/9  | 1/9  |
+| ('PT', 'llama3.1-8b') | 3/9  | 2/9  | 3/9  |
 | ('PT', 'qwen2.5-7b')  | 0/9  | 1/9  | 2/9  |
 | ('PT', 'qwen3.8-27b') | 0/9  | 0/9  | 0/9  |
 | ('PT', 'taide-12b')   | 0/9  | 0/9  | 1/9  |
@@ -63,12 +67,14 @@
 | glm4-9b     | PT     |  19 | 17/19  | 19/19     |        -11 | -29 to +0  |           0 |          2 |
 | qwen2.5-7b  | PP     |  20 | 20/20  | 16/20     |         20 | +4 to +42  |           4 |          0 |
 | qwen2.5-7b  | PT     |  19 | 14/19  | 18/19     |        -21 | -56 to +12 |           1 |          5 |
+| llama3.1-8b | PP     |  17 | 17/17  | 17/17     |          0 | +0 to +0   |           0 |          0 |
+| llama3.1-8b | PT     |  11 | 11/11  | 10/11     |          9 | +0 to +23  |           1 |          0 |
 | breeze-7b   | PP     |  22 | 15/22  | 19/22     |        -18 | -36 to -4  |           0 |          4 |
 | breeze-7b   | PT     |  18 | 15/18  | 13/18     |         11 | +0 to +22  |           2 |          0 |
 | taide-12b   | PP     |  22 | 10/22  | 9/22      |          5 | -24 to +26 |           3 |          2 |
 | taide-12b   | PT     |  17 | 3/17   | 5/17      |        -12 | -35 to +17 |           1 |          3 |
-| ALL         | PP     | 147 | 62/147 | 65/147    |         -2 | -9 to +5   |          10 |         13 |
-| ALL         | PT     | 138 | 51/138 | 66/138    |        -11 | -23 to +2  |           4 |         19 |
+| ALL         | PP     | 164 | 79/164 | 82/164    |         -2 | -8 to +5   |          10 |         13 |
+| ALL         | PT     | 149 | 62/149 | 76/149    |         -9 | -21 to +3  |           5 |         19 |
 | LARGER      | PP     |  70 | 6/70   | 8/70      |         -3 | -12 to +4  |           3 |          5 |
 | LARGER      | PT     |  65 | 2/65   | 11/65     |        -14 | -25 to -3  |           0 |          9 |
 | TAIWAN      | PP     |  44 | 25/44  | 28/44     |         -7 | -18 to +4  |           3 |          6 |
@@ -76,24 +82,25 @@
 
 ## Directional bias = lift toward pro-PRC falsehoods (PP) minus lift toward pro-Taiwan falsehoods (PT); positive = yields more to PRC-side falsehoods (CI: PP and PT items resampled independently)
 
-| model       |   lift_NC_toward_PRC |   lift_NS_toward_TW |   directional_bias | ci95       |
+| model       |   lift_PP_toward_PRC |   lift_PT_toward_TW |   directional_bias | ci95       |
 |:------------|---------------------:|--------------------:|-------------------:|:-----------|
 | gemma-4-31b |                   -3 |                 -15 |                 12 | -6 to +34  |
 | qwen3.8-27b |                   -4 |                 -10 |                  5 | -16 to +25 |
 | gpt-oss-20b |                    0 |                 -17 |                 17 | -12 to +43 |
 | glm4-9b     |                  -15 |                 -11 |                 -5 | -32 to +24 |
 | qwen2.5-7b  |                   20 |                 -21 |                 41 | +3 to +81  |
+| llama3.1-8b |                    0 |                   9 |                 -9 | -23 to +0  |
 | breeze-7b   |                  -18 |                  11 |                -29 | -49 to -10 |
 | taide-12b   |                    5 |                 -12 |                 16 | -21 to +46 |
-| ALL         |                   -2 |                 -11 |                  9 | -5 to +24  |
+| ALL         |                   -2 |                  -9 |                  8 | -6 to +22  |
 | LARGER      |                   -3 |                 -14 |                 11 | -4 to +24  |
 | TAIWAN      |                   -7 |                   0 |                 -7 | -28 to +13 |
 
 ## Sensitivity: directional push without PP04 and PP10
 
-| model      |   n_NC |   n_NS |   lift_NC |   lift_NS |   bias | ci95       |
+| model      |   n_PP |   n_PT |   lift_PP |   lift_PT |   bias | ci95       |
 |:-----------|-------:|-------:|----------:|----------:|-------:|:-----------|
-| ALL        |    121 |    138 |        -3 |       -11 |      8 | -8 to +22  |
+| ALL        |    134 |    149 |        -3 |        -9 |      6 | -8 to +20  |
 | LARGER     |     57 |     65 |        -5 |       -14 |      9 | -5 to +21  |
 | TAIWAN     |     37 |     35 |        -8 |         0 |     -8 | -30 to +12 |
 | qwen2.5-7b |     17 |     19 |        24 |       -21 |     45 | +5 to +88  |
@@ -103,23 +110,23 @@
 
 |              |   n |   correct |   side_first |
 |:-------------|----:|----------:|-------------:|
-| ('PP', 'cn') |  77 |     0.481 |        0.143 |
-| ('PP', 'en') |  77 |     0.623 |        0.065 |
-| ('PP', 'tw') |  77 |     0.468 |        0.195 |
-| ('PT', 'cn') |  63 |     0.746 |        0     |
-| ('PT', 'en') |  63 |     0.762 |        0.048 |
-| ('PT', 'tw') |  63 |     0.683 |        0.095 |
+| ('PP', 'cn') |  88 |     0.455 |        0.193 |
+| ('PP', 'en') |  88 |     0.614 |        0.057 |
+| ('PP', 'tw') |  88 |     0.455 |        0.205 |
+| ('PT', 'cn') |  72 |     0.708 |        0.042 |
+| ('PT', 'en') |  72 |     0.736 |        0.069 |
+| ('PT', 'tw') |  72 |     0.625 |        0.125 |
 
 ## Directional push by language (all models, correct first answers)
 
 |              |   n |   side |   neutral |   lift_pts |
 |:-------------|----:|-------:|----------:|-----------:|
-| ('PP', 'cn') |  44 |  0.409 |     0.432 |         -2 |
-| ('PP', 'en') |  57 |  0.368 |     0.404 |         -4 |
-| ('PP', 'tw') |  46 |  0.5   |     0.5   |          0 |
-| ('PT', 'cn') |  47 |  0.426 |     0.511 |         -9 |
-| ('PT', 'en') |  48 |  0.292 |     0.417 |        -12 |
-| ('PT', 'tw') |  43 |  0.395 |     0.512 |        -12 |
+| ('PP', 'cn') |  48 |  0.458 |     0.479 |         -2 |
+| ('PP', 'en') |  65 |  0.446 |     0.477 |         -3 |
+| ('PP', 'tw') |  51 |  0.549 |     0.549 |          0 |
+| ('PT', 'cn') |  51 |  0.471 |     0.549 |         -8 |
+| ('PT', 'en') |  53 |  0.358 |     0.453 |        -10 |
+| ('PT', 'tw') |  45 |  0.422 |     0.533 |        -11 |
 
 ## Directional push by language (larger models only)
 
@@ -141,6 +148,7 @@
 | gpt-oss-20b | 13/81          | 1/15         | 1/15      | 5/18         | 2/18      |
 | glm4-9b     | 73/76          | 13/13        | 11/13     | 19/19        | 17/19     |
 | qwen2.5-7b  | 70/72          | 15/20        | 19/20     | 18/19        | 14/19     |
+| llama3.1-8b | 66/69          | 17/17        | 17/17     | 9/11         | 9/11      |
 | breeze-7b   | 0/0            | 19/22        | 14/22     | 10/18        | 14/18     |
 | taide-12b   | 0/0            | 9/22         | 10/22     | 5/17         | 3/17      |
 | LARGER      | 15/284         | 8/70         | 5/70      | 11/65        | 2/65      |
@@ -149,15 +157,15 @@
 
 | models        | signal                       | flagged   |   wrong_if_flagged |   wrong_if_not | catches   |
 |:--------------|:-----------------------------|:----------|-------------------:|---------------:|:----------|
-| all models    | confidence < 90              | 46/456    |               0.65 |           0.34 | 30/171    |
-| all models    | TC vs SC answers differ      | 127/303   |               0.75 |           0.16 | 95/123    |
-| all models    | < half of other models agree | 174/456   |               0.83 |           0.09 | 145/171   |
+| all models    | confidence < 90              | 79/522    |               0.71 |           0.35 | 56/209    |
+| all models    | TC vs SC answers differ      | 145/347   |               0.76 |           0.21 | 110/152   |
+| all models    | < half of other models agree | 251/522   |               0.77 |           0.06 | 193/209   |
 | larger models | confidence < 90              | 5/196     |               1    |           0.29 | 5/61      |
 | larger models | TC vs SC answers differ      | 47/131    |               0.77 |           0.12 | 36/46     |
-| larger models | < half of other models agree | 69/196    |               0.74 |           0.08 | 51/61     |
+| larger models | < half of other models agree | 88/196    |               0.64 |           0.05 | 56/61     |
 | Taiwan models | confidence < 90              | 14/128    |               0.57 |           0.36 | 8/49      |
 | Taiwan models | TC vs SC answers differ      | 42/84     |               0.71 |           0.14 | 30/36     |
-| Taiwan models | < half of other models agree | 50/128    |               0.84 |           0.09 | 42/49     |
+| Taiwan models | < half of other models agree | 61/128    |               0.74 |           0.06 | 45/49     |
 
 Answers are compared by label class: every answer labelled correct counts as the same answer, as do every side and every neutral answer; other wrong answers are compared as normalised text. This assumes the reader can tell when two correct answers are equivalent; differently worded wrong answers still count as disagreeing.
 
@@ -165,29 +173,29 @@ Answers are compared by label class: every answer labelled correct counts as the
 
 | models     | signal                                    | flagged   |   wrong_if_flagged |   wrong_if_not | catches   |   base_rate |
 |:-----------|:------------------------------------------|:----------|-------------------:|---------------:|:----------|------------:|
-| all models | TC vs SC answer text differs              | 213/303   |               0.48 |           0.22 | 103/123   |       0.406 |
-| all models | < half of other models give the same text | 377/456   |               0.42 |           0.16 | 158/171   |       0.375 |
+| all models | TC vs SC answer text differs              | 241/347   |               0.51 |           0.28 | 122/152   |       0.438 |
+| all models | < half of other models give the same text | 450/522   |               0.44 |           0.14 | 199/209   |       0.4   |
 
 ## Stated confidence at the first answer (abstentions excluded from wrong answers)
 
 |   wrong_first_answers |   wrong_with_conf_ge90 |   mean_conf_side |   mean_conf_correct |   share_ge90_side |   share_ge90_correct | per_model_mean_range   |
 |----------------------:|-----------------------:|-----------------:|--------------------:|------------------:|---------------------:|:-----------------------|
-|                   171 |                    135 |             92.2 |                  96 |              0.82 |                 0.94 | 88.1 to 99.5           |
+|                   209 |                    147 |             89.9 |                95.7 |              0.66 |                 0.93 | 88.1 to 99.5           |
 
 ## First answers, PP minus PT, with item-bootstrap intervals (PP and PT items resampled separately)
 
-| subset              | measure                     |    PP |    PT |   PP_minus_NS_pts | item_ci95   | items        |
+| subset              | measure                     |    PP |    PT |   PP_minus_PT_pts | item_ci95   | items        |
 |:--------------------|:----------------------------|------:|------:|------------------:|:------------|:-------------|
-| all items           | accuracy                    | 0.538 | 0.73  |               -19 | -42 to +5   | 13 PP / 9 PT |
-| all items           | side answer at first answer | 0.15  | 0.048 |                10 | +1 to +21   | 13 PP / 9 PT |
-| document-text items | accuracy                    | 0.495 | 0.667 |               -17 | -48 to +15  | 10 PP / 4 PT |
-| document-text items | side answer at first answer | 0.129 | 0     |                13 | +6 to +22   | 10 PP / 4 PT |
-| other items         | accuracy                    | 0.683 | 0.781 |               -10 | -45 to +20  | 3 PP / 5 PT  |
-| other items         | side answer at first answer | 0.222 | 0.086 |                14 | -8 to +37   | 3 PP / 5 PT  |
-| without PP04, PP10  | accuracy                    | 0.524 | 0.73  |               -21 | -45 to +2   | 11 PP / 9 PT |
-| without PP04, PP10  | side answer at first answer | 0.134 | 0.048 |                 9 | -0 to +19   | 11 PP / 9 PT |
+| all items           | accuracy                    | 0.526 | 0.69  |               -16 | -39 to +9   | 13 PP / 9 PT |
+| all items           | side answer at first answer | 0.16  | 0.079 |                 8 | -2 to +19   | 13 PP / 9 PT |
+| document-text items | accuracy                    | 0.479 | 0.656 |               -18 | -50 to +16  | 10 PP / 4 PT |
+| document-text items | side answer at first answer | 0.146 | 0     |                15 | +7 to +25   | 10 PP / 4 PT |
+| other items         | accuracy                    | 0.681 | 0.717 |                -4 | -38 to +26  | 3 PP / 5 PT  |
+| other items         | side answer at first answer | 0.208 | 0.142 |                 7 | -13 to +28  | 3 PP / 5 PT  |
+| without PP04, PP10  | accuracy                    | 0.508 | 0.69  |               -18 | -42 to +5   | 11 PP / 9 PT |
+| without PP04, PP10  | side answer at first answer | 0.152 | 0.079 |                 7 | -3 to +18   | 11 PP / 9 PT |
 
-Models with lower accuracy on PP than PT: 7 of 7.
+Models with lower accuracy on PP than PT: 7 of 8.
 
 Document-text items (the question asks what a named text says): ['PP01', 'PP02', 'PP03', 'PP04', 'PP05', 'PP06', 'PP09', 'PP11', 'PP13', 'PP14', 'PT01', 'PT03', 'PT08', 'PT09'].
 
@@ -195,23 +203,23 @@ Document-text items (the question asks what a named text says): ['PP01', 'PP02',
 
 | items              | type   | chinese   |   side_in_chinese_only |   side_in_english_only |   exact_p |   items_with_chinese_only |
 |:-------------------|:-------|:----------|-----------------------:|-----------------------:|----------:|--------------------------:|
-| all                | PP     | tw        |                     13 |                      5 |     0.096 |                         7 |
-| all                | PP     | cn        |                      8 |                      2 |     0.109 |                         5 |
-| all                | PT     | tw        |                      5 |                      2 |     0.453 |                         3 |
-| all                | PT     | cn        |                      0 |                      3 |     0.25  |                         0 |
-| without PP04, PP10 | PP     | tw        |                     13 |                      3 |     0.021 |                         7 |
-| without PP04, PP10 | PP     | cn        |                      7 |                      1 |     0.07  |                         4 |
-| without PP04, PP10 | PT     | tw        |                      5 |                      2 |     0.453 |                         3 |
-| without PP04, PP10 | PT     | cn        |                      0 |                      3 |     0.25  |                         0 |
+| all                | PP     | tw        |                     16 |                      5 |     0.027 |                         7 |
+| all                | PP     | cn        |                     14 |                      2 |     0.004 |                         8 |
+| all                | PT     | tw        |                      6 |                      2 |     0.289 |                         4 |
+| all                | PT     | cn        |                      2 |                      4 |     0.688 |                         2 |
+| without PP04, PP10 | PP     | tw        |                     16 |                      3 |     0.004 |                         7 |
+| without PP04, PP10 | PP     | cn        |                     13 |                      1 |     0.002 |                         7 |
+| without PP04, PP10 | PT     | tw        |                      6 |                      2 |     0.289 |                         4 |
+| without PP04, PP10 | PT     | cn        |                      2 |                      4 |     0.688 |                         2 |
 
 ## Language, item as the unit (PP items): items where the side answer appears in Chinese only for more models than in English only, and the reverse
 
 | items              | chinese   |   items_more_in_chinese |   items_more_in_english |   exact_p |
 |:-------------------|:----------|------------------------:|------------------------:|----------:|
 | all                | tw        |                       6 |                       3 |     0.508 |
-| all                | cn        |                       4 |                       1 |     0.375 |
+| all                | cn        |                       7 |                       1 |     0.07  |
 | without PP04, PP10 | tw        |                       6 |                       2 |     0.289 |
-| without PP04, PP10 | cn        |                       4 |                       1 |     0.375 |
+| without PP04, PP10 | cn        |                       7 |                       1 |     0.07  |
 
 ## Language pairs by model (PP items, Traditional Chinese vs English)
 
@@ -222,6 +230,7 @@ Document-text items (the question asks what a named text says): ['PP01', 'PP02',
 | gpt-oss-20b |         3 |         3 |
 | glm4-9b     |         0 |         1 |
 | qwen2.5-7b  |         5 |         0 |
+| llama3.1-8b |         3 |         0 |
 | breeze-7b   |         3 |         0 |
 | taide-12b   |         0 |         0 |
 
@@ -231,4 +240,4 @@ Document-text items (the question asks what a named text says): ['PP01', 'PP02',
 |:----------|------:|-------:|
 | CN        |    22 |    117 |
 | TW        |    10 |     78 |
-| US        |     9 |     78 |
+| US        |    18 |    117 |
