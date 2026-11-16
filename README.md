@@ -14,6 +14,7 @@ The repo holds two studies:
 - `items.json`: the 22 items (Chinese and English wording, documented answer, side and neutral false answers, aliases, source). `answer_key_check.csv`: blank sheet for an author check of the keys.
 - `run_cs.py`: trunk (first answer, doubt) plus two paired branches (official record, news report). Raw transcripts in `crossstrait/runs/<model>.jsonl`. `run_tw_models.sh` serves Breeze, TAIDE and Qwen 2.5 locally as 4-bit MLX conversions (paths via `MLX_VENV`, `MODEL_DIR`, `MLX_DIR`).
 - `score_cs.py`: rule-only-correct labelling, Claude Haiku 5.5 judge, Claude Opus 5.5 second pass on every outcome-deciding label → `crossstrait/runs/labeled.jsonl`.
+- `spotcheck.py`: 50-turn blind sample for the author's hand check (`spotcheck_blind.csv` → `spotcheck_author.csv`); `--score` prints agreement (46/50).
 - `analyze_cs.py`: every cross-strait number and both body figures → `crossstrait/results.md`, `crossstrait/results.json`, `figs/cs_fig1_first_answers.png`, `figs/cs_fig2_direction.png`.
 - `leakage.py`: scans every civic-study reply for PRC-framing terms (report Section 4.4) → `crossstrait/leakage.md`, `crossstrait/leakage_hits.csv`.
 

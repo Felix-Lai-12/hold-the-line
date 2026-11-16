@@ -14,7 +14,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 HERE = pathlib.Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE.parent / "src"))
 from run import MODELS, P, T2S, THINK, chat, parse  # noqa: E402
-# The local Ollama app went missing on 16 Nov (after the GLM-4 run), so in this study Qwen 2.5 7B runs as a 4-bit MLX conversion of the
+# The local Ollama install (outdated) was removed on 16 Nov (after the GLM-4 run), so in this study Qwen 2.5 7B runs as a 4-bit MLX conversion of the
 # official Qwen/Qwen2.5-7B-Instruct weights (the civic-fact study used Ollama qwen2.5:7b, q4_K_M).
 import os  # noqa: E402
 from run import MLX_DIR  # noqa: E402

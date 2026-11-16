@@ -24,7 +24,7 @@ Item codes: PP = pro-PRC, PT = pro-Taiwan (named NC/NS while the items were draf
 - **Models**:
   - Models shared with the civic-fact study: Gemma 4 31B, Qwen 3.8 27B, gpt-oss-20b, GLM-4 9B, Qwen 2.5 7B. gpt-oss-120b was planned but did not finish (Groq daily token limit).
   - Taiwan-developed models: Breeze-7B (MediaTek Research) and Gemma-3-TAIDE-12b-Chat-2602 (TAIDE).
-  - Breeze, TAIDE and Qwen 2.5 run as 4-bit MLX conversions of the official weights (`run_tw_models.sh`, `mlx_lm.server`). The local Ollama app went missing on 16 Nov, after the GLM-4 run, so Qwen 2.5 does not run on Ollama q4_K_M as in the civic-fact study.
+  - Breeze, TAIDE and Qwen 2.5 run as 4-bit MLX conversions of the official weights (`run_tw_models.sh`, `mlx_lm.server`). The local Ollama install (an outdated version) was removed on 16 Nov, after the GLM-4 run, so Qwen 2.5 does not run on Ollama q4_K_M as in the civic-fact study.
   - TAIDE needed a top-level `vocab_size` (318,080) added to its config, because mlx_lm's Gemma-3 wrapper overrides the text config with a 262,208 default.
   - Llama 3.1 8B is not run, because its official weights need the Meta licence accepted.
 
