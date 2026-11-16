@@ -16,7 +16,7 @@ img{max-width:100%;display:block;margin:8px auto}.authors{display:flex;gap:48px;
 <p><strong>Contributions.</strong></p>
 <ol>
 <li><strong>A symmetric documented-fact test of narrative bias</strong>: 22 cross-strait facts with primary sources, 13 contradicting a pro-PRC claim (PP) and 9 a pro-Taiwan claim (PT), each with a one-sided and a neutral false answer, in three languages; pushes toward the two false answers start from the same conversation. Eight open-weight models, including Taiwan's own Breeze and TAIDE. Code and data: https://github.com/Felix-Lai-12/hold-the-line.</li>
-<li><strong>Unprompted errors about documents lean pro-PRC.</strong> Asked what a document says, models give the pro-PRC claim in 15% of first answers and the pro-Taiwan claim in none of 96 (a split made at analysis time); across all items the gap is smaller and not distinguishable from zero. Two-thirds of side answers claim confidence of 90 or more. For three small models the pro-PRC answer appears in Traditional Chinese but not in English (11 model–item pairs against 0), and in Simplified Chinese the excess is spread over six models.</li>
+<li><strong>Before any pushback, errors about documents lean pro-PRC.</strong> Asked what a document says, models give the pro-PRC claim in 15% of first answers and the pro-Taiwan claim in none of 96 (a split made at analysis time); across all items the gap is smaller and not distinguishable from zero. Two-thirds of side answers claim confidence of 90 or more. For three small models the pro-PRC answer appears in Traditional Chinese but not in English (11 model–item pairs against 0), and in Simplified Chinese the excess is spread over six models.</li>
 <li><strong>Under pushback the lean is model-specific</strong>: Qwen 2.5 accepts pro-PRC falsehoods more readily than neutral ones, Breeze less readily; pooled over models, the direction is not distinguishable from zero.</li>
 <li><strong>Where the lean hides, and what flags it:</strong> on 79 uncontested civic facts the lean almost never surfaces, and models fail there by deferring to a claimed official record. On cross-strait facts stated confidence flags few wrong answers; disagreement across models flags most of them, provided the reader can tell when two answers are equivalent.</li>
 </ol>
@@ -32,122 +32,23 @@ img{max-width:100%;display:block;margin:8px auto}.authors{display:flex;gap:48px;
 <p><strong>Measures.</strong> <em>Unprompted side answer</em>: the first answer is the side answer. <em>Lift</em>: among conversations whose first answer is correct, the share adopting the pushed answer at turn 3 or 4 in the side branch minus that in the neutral branch. <em>Directional bias</em> = lift on PP items (toward the pro-PRC claim) minus lift on PT items (toward the pro-Taiwan claim); positive means the model yields more to pro-PRC falsehoods. The item is the unit of replication: intervals are 95% item-bootstrap intervals (1,000 resamples, PP and PT items resampled separately), and paired language comparisons use exact sign tests, over model–item pairs and over items. Analyses are exploratory and uncorrected for multiple comparisons.</p>
 <p><strong>Reference point: uncontested civic facts</strong> (Appendix F). The same pushes (with a Xinhua report as turn 4) were applied to 79 facts with no narrative at stake, 40 about Taiwan's civic life (election results, seat counts, history), 19 matched facts from other countries and 20 famous facts, across seven models (Gemma 4, Qwen 3.8, gpt-oss-20b, GLM-4, Qwen 2.5 and Llama 3.1 8B, plus gpt-oss-120b; Breeze and TAIDE were not run; 1,659 conversations). We use it only where it sharpens the cross-strait results.</p>
 <h2>4. Results</h2>
-<h3>4.1 Unprompted, wrong answers about documents lean pro-PRC</h3>
+<h3>4.1 Before any pushback, wrong answers about documents lean pro-PRC</h3>
 <div class="small keep">
 <p class="cap"><b>Table 1.</b> Cross-strait items by model. Correct and side: share of first answers (39 PP and 27 PT conversations per model). Pushback: among correct first answers, adoption of the pushed false answer in the side branch vs the neutral branch. Directional bias = (side − neutral on PP) − (side − neutral on PT), percentage points, with 95% item-bootstrap CI.</p>
-<table>
-<thead>
-<tr>
-<th rowspan="2">Model (origin)</th>
-<th colspan="2">First answer correct</th>
-<th colspan="2">Unprompted side answer</th>
-<th colspan="2">Pushback: side vs neutral adopted</th>
-<th rowspan="2">Directional bias</th>
-</tr>
-<tr>
-<th>PP</th>
-<th>PT</th>
-<th>PP</th>
-<th>PT</th>
-<th>PP (pro-PRC)</th>
-<th>PT (pro-Taiwan)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="white-space:nowrap">Gemma 4 31B (US)</td>
-<td>31/39</td>
-<td>26/27</td>
-<td>1/39</td>
-<td>0/27</td>
-<td>3/31 vs 4/31</td>
-<td>0/26 vs 4/26</td>
-<td>+12 (−6 to +34)</td>
-</tr>
-<tr>
-<td style="white-space:nowrap">Qwen 3.8 27B (CN)</td>
-<td>24/39</td>
-<td>21/27</td>
-<td>6/39</td>
-<td>0/27</td>
-<td>2/24 vs 3/24</td>
-<td>0/21 vs 2/21</td>
-<td>+5 (−16 to +25)</td>
-</tr>
-<tr>
-<td style="white-space:nowrap">gpt-oss-20b (US)</td>
-<td>15/39</td>
-<td>18/27</td>
-<td>8/39</td>
-<td>2/27</td>
-<td>1/15 vs 1/15</td>
-<td>2/18 vs 5/18</td>
-<td>+17 (−12 to +43)</td>
-</tr>
-<tr>
-<td style="white-space:nowrap">GLM-4 9B (CN)</td>
-<td>13/39</td>
-<td>19/27</td>
-<td>9/39</td>
-<td>2/27</td>
-<td>11/13 vs 13/13</td>
-<td>17/19 vs 19/19</td>
-<td>−5 (−32 to +24)</td>
-</tr>
-<tr>
-<td style="white-space:nowrap">Qwen 2.5 7B (CN)</td>
-<td>20/39</td>
-<td>19/27</td>
-<td>7/39</td>
-<td>3/27</td>
-<td>20/20 vs 16/20</td>
-<td>14/19 vs 18/19</td>
-<td><b>+41</b> (+3 to +81)</td>
-</tr>
-<tr>
-<td style="white-space:nowrap">Llama 3.1 8B (US)</td>
-<td>17/39</td>
-<td>11/27</td>
-<td>9/39</td>
-<td>8/27</td>
-<td>17/17 vs 17/17</td>
-<td>11/11 vs 10/11</td>
-<td>−9 (−23 to 0)</td>
-</tr>
-<tr>
-<td style="white-space:nowrap">Breeze 7B (TW)</td>
-<td>22/39</td>
-<td>18/27</td>
-<td>6/39</td>
-<td>1/27</td>
-<td>15/22 vs 19/22</td>
-<td>15/18 vs 13/18</td>
-<td><b>−29</b> (−49 to −10)</td>
-</tr>
-<tr>
-<td style="white-space:nowrap">TAIDE 12B (TW)</td>
-<td>22/39</td>
-<td>17/27</td>
-<td>4/39</td>
-<td>1/27</td>
-<td>10/22 vs 9/22</td>
-<td>3/17 vs 5/17</td>
-<td>+16 (−21 to +46)</td>
-</tr>
-<tr>
-<td style="white-space:nowrap"><b>All eight</b></td>
-<td>53%</td>
-<td>69%</td>
-<td>16%</td>
-<td>8%</td>
-<td>79/164 vs 82/164</td>
-<td>62/149 vs 76/149</td>
-<td>+8 (−6 to +22)</td>
-</tr>
-</tbody>
-</table>
+<table><thead><tr><th rowspan="2">Model (origin)</th><th colspan="2">First answer correct</th><th colspan="2">Unprompted side answer</th><th colspan="2">Pushback: side vs neutral adopted</th><th rowspan="2">Directional bias</th></tr>
+<tr><th>PP</th><th>PT</th><th>PP</th><th>PT</th><th>PP (pro-PRC)</th><th>PT (pro-Taiwan)</th></tr></thead><tbody>
+<tr><td style="white-space:nowrap">Gemma 4 31B (US)</td><td>31/39</td><td>26/27</td><td>1/39</td><td>0/27</td><td>3/31 vs 4/31</td><td>0/26 vs 4/26</td><td>+12 (−6 to +34)</td></tr>
+<tr><td style="white-space:nowrap">Qwen 3.8 27B (CN)</td><td>24/39</td><td>21/27</td><td>6/39</td><td>0/27</td><td>2/24 vs 3/24</td><td>0/21 vs 2/21</td><td>+5 (−16 to +25)</td></tr>
+<tr><td style="white-space:nowrap">gpt-oss-20b (US)</td><td>15/39</td><td>18/27</td><td>8/39</td><td>2/27</td><td>1/15 vs 1/15</td><td>2/18 vs 5/18</td><td>+17 (−12 to +43)</td></tr>
+<tr><td style="white-space:nowrap">GLM-4 9B (CN)</td><td>13/39</td><td>19/27</td><td>9/39</td><td>2/27</td><td>11/13 vs 13/13</td><td>17/19 vs 19/19</td><td>−5 (−32 to +24)</td></tr>
+<tr><td style="white-space:nowrap">Qwen 2.5 7B (CN)</td><td>20/39</td><td>19/27</td><td>7/39</td><td>3/27</td><td>20/20 vs 16/20</td><td>14/19 vs 18/19</td><td><b>+41</b> (+3 to +81)</td></tr>
+<tr><td style="white-space:nowrap">Llama 3.1 8B (US)</td><td>17/39</td><td>11/27</td><td>9/39</td><td>8/27</td><td>17/17 vs 17/17</td><td>11/11 vs 10/11</td><td>−9 (−23 to 0)</td></tr>
+<tr><td style="white-space:nowrap">Breeze 7B (TW)</td><td>22/39</td><td>18/27</td><td>6/39</td><td>1/27</td><td>15/22 vs 19/22</td><td>15/18 vs 13/18</td><td><b>−29</b> (−49 to −10)</td></tr>
+<tr><td style="white-space:nowrap">TAIDE 12B (TW)</td><td>22/39</td><td>17/27</td><td>4/39</td><td>1/27</td><td>10/22 vs 9/22</td><td>3/17 vs 5/17</td><td>+16 (−21 to +46)</td></tr>
+<tr><td style="white-space:nowrap"><b>All eight</b></td><td>53%</td><td>69%</td><td>16%</td><td>8%</td><td>79/164 vs 82/164</td><td>62/149 vs 76/149</td><td>+8 (−6 to +22)</td></tr>
+</tbody></table>
 </div>
-<p>When a model is asked what a resolution, treaty or communiqué says and gets it wrong, its error tends to be the pro-PRC claim: on these document-text items (10 PP, 4 PT), 15% of PP first answers give the pro-PRC answer unprompted and none of 96 PT first answers gives the pro-Taiwan one (+15 points, item-bootstrap CI +7 to +25; Table 1, Figure 1); every model gives such answers, on 8 of the 10 items. The split is a keyword match on the question, made at analysis time, and was a secondary result until the eighth model was added. Two items on the same Shanghai Communiqué sentence (PP06, PP14) supply 19 of the 35 answers; without them the rate is 8% vs 0%. On the other items the gap is 21% vs 14% (+7, CI −13 to +28), and across all items 16% vs 8% (+8, CI −2 to +19), not distinguishable from zero; without the weak items PP04 and PP10 it is +7 (CI −3 to +18; Appendix A). Llama 3.1 8B, the least accurate model, errs toward both sides (pro-PRC 9 of 39, pro-Taiwan 8 of 27); without it the all-item gap is +10 (CI +1 to +21). Side answers are specific and stated with confidence (66% at 90 or more, as are 70% of all wrong first answers). Asked which government administers Kinmen, five answers name the PRC (Qwen 2.5 in Traditional Chinese: "Xiamen, Fujian province"); asked what WHA resolution 25.1 says, five say it makes Taiwan a province or part of China. Rates are similar across developer origins (22 of 117 PP first answers for Chinese-, 18 of 117 for US- and 10 of 78 for Taiwan-developed models; 9 of the 18 are Llama's).</p>
+<p>When a model is asked what a resolution, treaty or communiqué says and gets it wrong, its error tends to be the pro-PRC claim: on these document-text items (10 PP, 4 PT), 15% of PP first answers give the pro-PRC answer unprompted and none of 96 PT first answers gives the pro-Taiwan one (+15 points, item-bootstrap CI +7 to +25; Table 1, Figure 1); all eight models give such answers, and they occur on 8 of the 10 items. The split is a keyword match on the question, made at analysis time, and was a secondary result until the eighth model was added. Two items on the same Shanghai Communiqué sentence (PP06, PP14) supply 19 of the 35 answers; without them the rate is 8% vs 0%. On the other items the gap is 21% vs 14% (+7, CI −13 to +28), and across all items 16% vs 8% (+8, CI −2 to +19), not distinguishable from zero; without the weak items PP04 and PP10 it is +7 (CI −3 to +18; Appendix A). Llama 3.1 8B, the least accurate model, errs toward both sides (pro-PRC 9 of 39, pro-Taiwan 8 of 27); without it the all-item gap is +10 (CI +1 to +21). Side answers are specific and stated with confidence (66% at 90 or more, as are 70% of all wrong first answers). Asked which government administers Kinmen, five answers name the PRC; asked what WHA resolution 25.1 says, five say it makes Taiwan a province or part of China. Rates are similar across developer origins (22 of 117 PP first answers for Chinese-, 18 of 117 for US- and 10 of 78 for Taiwan-developed models; 9 of the 18 are Llama's).</p>
 <p>Seven of eight models are also less accurate on PP than PT items (53% vs 69%; Llama is the exception), but at the item level the gap is not distinguishable from zero (−16 points, CI −39 to +9), partly because two Shanghai Communiqué items, one with a narrow key (PP14; Appendix A), are never answered correctly. Stated confidence (88–99.5 per model; 90 on side answers, 96 on correct ones) rarely warns: most wrong answers sit at 90 or above (Section 4.5).</p>
 <figure><img src="../figs/cs_fig1_first_answers.png"><figcaption><b>Figure 1.</b> First answers on the 22 cross-strait items. Left: share correct on items whose record contradicts a pro-PRC claim (PP, circles) and a pro-Taiwan claim (PT, squares). Right: share of first answers that give the one-sided false answer unprompted, by item type and language, pooled over the eight models (all items).</figcaption></figure>
 
@@ -163,7 +64,7 @@ img{max-width:100%;display:block;margin:8px auto}.authors{display:flex;gap:48px;
 <li><strong>Qwen 2.5 7B toward the pro-PRC claim</strong> (+41, CI +3 to +81): it accepts every pushed pro-PRC falsehood (20/20, against 16/20 neutral) but resists pro-Taiwan claims (14/19, against 18/19 neutral).</li>
 <li><strong>Breeze 7B away from the pro-PRC claim</strong> (−29, CI −49 to −10): it accepts pro-PRC falsehoods less readily than neutral ones (15/22 vs 19/22; lift −18, CI −36 to −4) and pro-Taiwan claims slightly more readily (15/18 vs 13/18; lift +11, CI 0 to +22).</li>
 </ul>
-<p>Both hold without the two weak items (+45, CI +5 to +88; −27, CI −50 to −6). With eight uncorrected tests and intervals bootstrapped from 22 items, chance cannot be ruled out, and the pattern does not extend to the other models (TAIDE, also Taiwanese, +16; GLM-4, Chinese, −5; Llama, which accepts almost every push, −9). That the two leaning models have developers on opposite sides of the Strait is suggestive, not established. The three larger models reject pro-Taiwan claims more often than neutral falsehoods (2/65 vs 11/65; lift −14, CI −25 to −3) but not pro-PRC ones (6/70 vs 8/70); their directional bias, +11 (CI −4 to +24), points the same way as the unprompted lean but is not distinguishable from zero.</p>
+<p>Both hold without the two weak items (+45, CI +5 to +88; −27, CI −50 to −6). With eight uncorrected tests and intervals bootstrapped from 22 items, chance cannot be ruled out, and the pattern does not extend to the other models (TAIDE, also Taiwanese, +16; GLM-4, Chinese, −5; Llama, which accepts almost every push, −9). That the two leaning models have developers on opposite sides of the Strait is suggestive, not established. Pushed toward a pro-Taiwan claim, the three larger models accept it less often than a neutral falsehood (2/65 vs 11/65; lift −14, CI −25 to −3); pushed toward a pro-PRC claim, they accept it about as often (6/70 vs 8/70); their directional bias, +11 (CI −4 to +24), points the same way as the unprompted lean but is not distinguishable from zero.</p>
 <figure><img src="../figs/cs_fig2_direction.png" style="width:86%"><figcaption><b>Figure 2.</b> Directional bias under pushback, among conversations whose first answer was correct: (side − neutral adoption on PP items) − (side − neutral adoption on PT items). Positive values mean the model yields more to pro-PRC falsehoods than to pro-Taiwan claims, relative to neutral falsehoods. Bars are 95% item-bootstrap intervals.</figcaption></figure>
 
 <h3>4.4 On uncontested facts the lean stays hidden; deference is the general weakness</h3>
@@ -221,14 +122,14 @@ img{max-width:100%;display:block;margin:8px auto}.authors{display:flex;gap:48px;
 </tbody>
 </table>
 </div>
-<p>For a user who cannot check the source, disagreement is more informative than confidence, to the extent the user can tell when two answers say the same thing. If equivalent correct answers are recognised, an answer that most other models do not give is wrong 77% of the time, and this signal catches 92% of wrong answers; an answer that changes between Traditional and Simplified Chinese is wrong 76% of the time and catches 72% (Table 2). Compared as exact text, the cross-model signal flags 86% of all answers (wrong 44% of the time, against 14% unflagged): too blunt to act on. We did not measure how a real reader would fare. Stated confidence catches 27%: the three larger models stated below 90 in 5 of 196 first answers.</p>
+<p>For a user who cannot check the source, disagreement is more informative than confidence, to the extent the user can tell when two answers say the same thing. If equivalent correct answers are recognised, an answer that most other models do not give is wrong 77% of the time, and this signal catches 92% of wrong answers; an answer that changes between Traditional and Simplified Chinese is wrong 76% of the time and catches 72% (Table 2). Compared as exact text, the cross-model signal flags 86% of all answers, too many to act on. We did not measure how a real reader would fare. Stated confidence catches 27%: the three larger models stated below 90 in 5 of 196 first answers.</p>
 <h2>5. Discussion and Limitations</h2>
 <p><strong>Hidden bias as an error asymmetry.</strong> We never asked a model what it thinks about Taiwan's status, yet the asymmetry is visible: wrong answers about what documents say fall on the pro-PRC side, three small models give pro-PRC answers in Traditional Chinese that they do not give in English, and two models carry a direction into pushback. Our design cannot separate a tilt in what a model <em>prefers</em> from how often each narrative appears in its training data; the pro-PRC claims are repeated in far more text than the pro-Taiwan claims. For a decision-maker the distinction matters little: the answer arrives confidently either way. Neither origin nor localisation protects: US-developed models also give pro-PRC answers in Chinese, and Taiwan's Breeze gives the PRC reading of Resolution 2758 in Traditional Chinese while leaning the other way under pressure.</p>
 <p><strong>What to do with it.</strong> For users: on cross-strait facts, compare several models (with a small model, also ask in English), and treat disagreement, not confidence, as the warning. For evaluators: Taiwan's national benchmark and Article 19 pre-use assessments (Republic of China, 2026) could add documented cross-strait facts with symmetric controls, which measure bias without the evaluator taking a position, at about 3,200 model calls for eight models.</p>
 <p><strong>Limitations</strong> (Appendix A). Twenty-two items and one sample per cell at temperature 0; per-model intervals are wide and eight model-level tests were run without correction. The side and neutral false answers differ in plausibility, which the PP–PT contrast controls only in part. English items are translations, so wording can differ by language. Three items have a weak false answer or key (Appendix A); the disagreement signals assume equivalent answers are recognised. gpt-oss-120b is missing, and five models ran locally at 4-bit. Keys were checked against primary sources by an LLM agent and by the author; judged labels come from one model family, and a blind hand check of 50 turns agreed with 46.</p>
 <p><strong>Future work.</strong> (1) More items, written with partners on both sides of the Strait, and repeated samples; (2) the missing models, hosted chat products and Taiwan's newer fine-tunes; (3) retrieved documents that carry a narrative, the route by which bias and deference would combine; (4) a rerun-on-release public leaderboard with rotating held-out items (Cotton-Barratt &amp; Finnveden, 2026).</p>
 <h2>6. Conclusion</h2>
-<p>On documented cross-strait facts, open-weight models' unprompted errors are not neutral. Asked what a document says, they give the pro-PRC claim unprompted in 15% of first answers and the pro-Taiwan one in none of 96; across all items the gap is smaller and not yet distinguishable from zero. Most of their wrong answers claim confidence of 90 or more, and three small models give pro-PRC answers in Traditional Chinese that they do not give in English. Under pushback the direction is model-specific: Qwen 2.5 leans toward the pro-PRC claim and Breeze away from it, a pattern that needs replication. On uncontested civic facts the six models tested in both studies rarely show this lean and fail by deference instead, so a knowledge benchmark of ordinary facts will not reveal it. A symmetric set of documented facts can, without the evaluator taking sides; for users, disagreement between models, read for meaning, warns better than stated confidence.</p>
+<p>On what documents say about cross-strait facts, the errors open-weight models make before any pushback are not neutral: they give the pro-PRC claim in 15% of first answers and the pro-Taiwan one in none of 96. Across all items the gap is smaller and not yet distinguishable from zero. Most of their wrong answers claim confidence of 90 or more, and three small models give pro-PRC answers in Traditional Chinese that they do not give in English. Under pushback the direction is model-specific: Qwen 2.5 leans toward the pro-PRC claim and Breeze away from it, a pattern that needs replication. On uncontested civic facts the six models tested in both studies rarely show this lean and fail by deference instead, so a knowledge benchmark of ordinary facts will not reveal it. A symmetric set of documented facts can, without the evaluator taking sides; for users, disagreement between models, read for meaning, warns better than stated confidence.</p>
 <h2>Code and Data</h2>
 <p>Code, items, prompts, transcripts and labels, all written during the sprint: https://github.com/Felix-Lai-12/hold-the-line (cross-strait study in <code>crossstrait/</code>).</p>
 <h2>References</h2>
@@ -1322,104 +1223,16 @@ img{max-width:100%;display:block;margin:8px auto}.authors{display:flex;gap:48px;
 <h3>F.1 Models with similar accuracy adopt the false answer in 0%, 2% and 27% of Taiwan conversations; origin does not order them</h3>
 <div class="small keep">
 <p class="cap"><b>Table F1.</b> First-answer accuracy, false adoption when initially right, and the paired two-direction test when initially wrong. False adoption: share of conversations with a correct first answer in which any push reply adopts the pushed false answer (k/n by family; all-items rate with 95% item-bootstrap CI). Initially wrong: conversations on the 60 original items whose first answer was wrong (but not already the pushed answer) or an abstention, given the identical three pushes toward the false answer (main arm) and toward the true answer (truth arm); gap = true minus false, percentage points.</p>
-<table>
-<thead>
-<tr>
-<th rowspan="2">Model (origin)</th>
-<th rowspan="2">First-answer accuracy<br>Taiwan / Matched / Famous</th>
-<th colspan="4">False adoption when initially right</th>
-<th colspan="3">Initially wrong or unsure: adopted</th>
-</tr>
-<tr>
-<th>Taiwan</th>
-<th>Matched</th>
-<th>Famous</th>
-<th>All items (95% CI)</th>
-<th>false push</th>
-<th>true push</th>
-<th>gap</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="white-space:nowrap">Gemma 4 31B (US)</td>
-<td>83 / 98 / 100%</td>
-<td>0/99</td>
-<td>0/56</td>
-<td>0/60</td>
-<td>0% (0–0)</td>
-<td>2/12</td>
-<td>10/12</td>
-<td>+67</td>
-</tr>
-<tr>
-<td style="white-space:nowrap">Qwen 3.8 27B (CN)</td>
-<td>87 / 95 / 100%</td>
-<td>2/104</td>
-<td>1/54</td>
-<td>0/60</td>
-<td>1.4% (0–3)</td>
-<td>6/15</td>
-<td>6/15</td>
-<td>0</td>
-</tr>
-<tr>
-<td style="white-space:nowrap">gpt-oss-120b (US)</td>
-<td>85 / 93 / 100%</td>
-<td>28/102</td>
-<td>5/53</td>
-<td>0/60</td>
-<td>15% (10–22)</td>
-<td>5/9</td>
-<td>6/9</td>
-<td>+11</td>
-</tr>
-<tr>
-<td style="white-space:nowrap">gpt-oss-20b (US)</td>
-<td>68 / 77 / 100%</td>
-<td>15/81</td>
-<td>7/44</td>
-<td>3/60</td>
-<td>14% (8–20)</td>
-<td>21/30</td>
-<td>27/30</td>
-<td>+20</td>
-</tr>
-<tr>
-<td style="white-space:nowrap">GLM-4 9B (CN)</td>
-<td>63 / 72 / 93%</td>
-<td>73/76</td>
-<td>36/41</td>
-<td>36/56</td>
-<td>84% (76–91)</td>
-<td>42/42</td>
-<td>42/42</td>
-<td>0</td>
-</tr>
-<tr>
-<td style="white-space:nowrap">Qwen 2.5 7B (CN)</td>
-<td>60 / 72 / 98%</td>
-<td>70/72</td>
-<td>39/41</td>
-<td>52/59</td>
-<td>94% (88–98)</td>
-<td>42/42</td>
-<td>42/42</td>
-<td>0</td>
-</tr>
-<tr>
-<td style="white-space:nowrap">Llama 3.1 8B (US)</td>
-<td>58 / 72 / 97%</td>
-<td>69/69</td>
-<td>39/41</td>
-<td>53/58</td>
-<td>96% (92–99)</td>
-<td>44/45</td>
-<td>45/45</td>
-<td>+2</td>
-</tr>
-</tbody>
-</table>
+<table><thead><tr><th rowspan="2">Model (origin)</th><th rowspan="2">First-answer accuracy<br>Taiwan / Matched / Famous</th><th colspan="4">False adoption when initially right</th><th colspan="3">Initially wrong or unsure: adopted</th></tr>
+<tr><th>Taiwan</th><th>Matched</th><th>Famous</th><th>All items (95% CI)</th><th>false push</th><th>true push</th><th>gap</th></tr></thead><tbody>
+<tr><td style="white-space:nowrap">Gemma 4 31B (US)</td><td>83 / 98 / 100%</td><td>0/99</td><td>0/56</td><td>0/60</td><td>0% (0–0)</td><td>2/12</td><td>10/12</td><td>+67</td></tr>
+<tr><td style="white-space:nowrap">Qwen 3.8 27B (CN)</td><td>87 / 95 / 100%</td><td>2/104</td><td>1/54</td><td>0/60</td><td>1.4% (0–3)</td><td>6/15</td><td>6/15</td><td>0</td></tr>
+<tr><td style="white-space:nowrap">gpt-oss-120b (US)</td><td>85 / 93 / 100%</td><td>28/102</td><td>5/53</td><td>0/60</td><td>15% (10–22)</td><td>5/9</td><td>6/9</td><td>+11</td></tr>
+<tr><td style="white-space:nowrap">gpt-oss-20b (US)</td><td>68 / 77 / 100%</td><td>15/81</td><td>7/44</td><td>3/60</td><td>14% (8–20)</td><td>21/30</td><td>27/30</td><td>+20</td></tr>
+<tr><td style="white-space:nowrap">GLM-4 9B (CN)</td><td>63 / 72 / 93%</td><td>73/76</td><td>36/41</td><td>36/56</td><td>84% (76–91)</td><td>42/42</td><td>42/42</td><td>0</td></tr>
+<tr><td style="white-space:nowrap">Qwen 2.5 7B (CN)</td><td>60 / 72 / 98%</td><td>70/72</td><td>39/41</td><td>52/59</td><td>94% (88–98)</td><td>42/42</td><td>42/42</td><td>0</td></tr>
+<tr><td style="white-space:nowrap">Llama 3.1 8B (US)</td><td>58 / 72 / 97%</td><td>69/69</td><td>39/41</td><td>53/58</td><td>96% (92–99)</td><td>44/45</td><td>45/45</td><td>+2</td></tr>
+</tbody></table>
 </div>
 <p>Three models answer Taiwan items about equally well on the first ask (Gemma 83%, Qwen 3.8 87%, gpt-oss-120b 85%), yet adopt the false answer in 0/99, 2/104 and 28/102 of the Taiwan conversations they started correctly (0%, 2% and 27%; 95% item-bootstrap CIs 0–0, 0–5 and 17–38; Table F1). Accuracy matters (across the seven models, Taiwan accuracy and false adoption have Spearman ρ = −0.82) but is not sufficient. The three 7–9B models adopt it in 84–96% of all correctly started conversations, most often at the official-record turn (Figure F1). Each origin spans the whole range: US-developed models run from 0% (Gemma) to 96% (Llama), Chinese-developed ones from 1.4% (Qwen 3.8) to 94% (Qwen 2.5). Each origin thus has a robust and a fragile tier, but with one or two models per cell, origin cannot be separated from the individual release.</p>
 <figure><img src="../figs/fig1_flip_curves.png" style="width:88%"><figcaption><b>Figure F1.</b> Flip curves: share of conversations holding the pushed false answer after each turn, among conversations whose first answer was correct, by item family; bands are 95% item-bootstrap intervals. Turn 3 names the false answer and attributes it to official records; turn 4 adds a Xinhua attribution. Five of seven models sit at floor or ceiling; family differences are visible mainly for the two gpt-oss models and, on famous facts, GLM-4.</figcaption></figure>
