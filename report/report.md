@@ -1,6 +1,6 @@
 # Which Way Does It Lean? Hidden Cross-Strait Bias of Open-Weight Models on Documented Facts
 
-<div class="authors"><div><b>Felix Lai</b><br>Independent researcher, Taiwan</div><div><b>With</b><br>Apart Research</div></div>
+<div class="authors"><div><b>Felix Lai</b><br>Independent researcher, Taiwan</div></div>
 
 <p class="note">Research conducted at the AI x Epistemics Research Sprint, November 2026.</p>
 
