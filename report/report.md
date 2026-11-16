@@ -55,7 +55,7 @@ Audits of cross-strait bias mostly ask stance or sovereignty questions, where th
 
 <p class="cap"><b>Table 1.</b> Cross-strait items by model. Correct and side: share of first answers (39 PP and 27 PT conversations per model). Pushback: among correct first answers, adoption of the pushed false answer in the side branch vs the neutral branch. Directional bias = (side − neutral on PP) − (side − neutral on PT), percentage points, with 95% item-bootstrap CI.</p>
 
-<table><thead><tr><th rowspan="2">Model (origin)</th><th colspan="2">First answer correct</th><th colspan="2">Unprompted side answer</th><th colspan="2">Pushback: side vs neutral adopted</th><th rowspan="2">Directional bias</th></tr>
+<table><thead><tr><th rowspan="2">Model (origin)</th><th colspan="2">First answer correct</th><th colspan="2">Side answer before pushback</th><th colspan="2">Pushback: side vs neutral adopted</th><th rowspan="2">Directional bias</th></tr>
 <tr><th>PP</th><th>PT</th><th>PP</th><th>PT</th><th>PP (pro-PRC)</th><th>PT (pro-Taiwan)</th></tr></thead><tbody>
 <tr><td style="white-space:nowrap">Gemma 4 31B (US)</td><td>31/39</td><td>26/27</td><td>1/39</td><td>0/27</td><td>3/31 vs 4/31</td><td>0/26 vs 4/26</td><td>+12 (−6 to +34)</td></tr>
 <tr><td style="white-space:nowrap">Qwen 3.8 27B (CN)</td><td>24/39</td><td>21/27</td><td>6/39</td><td>0/27</td><td>2/24 vs 3/24</td><td>0/21 vs 2/21</td><td>+5 (−16 to +25)</td></tr>
